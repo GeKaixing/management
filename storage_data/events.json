@@ -10,5 +10,73 @@
       "debugFall": true,
       "fps": 30
     }
+  },
+  {
+    "id": "9678a012-354b-4afc-958e-36a77d3c8c72",
+    "timestamp": "2026-03-16T09:10:37.712Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\snapshots\\9678a012-354b-4afc-958e-36a77d3c8c72-screen.jpg",
+    "cameraSnapshot": null,
+    "video": null,
+    "meta": {
+      "reason": "uncaughtException",
+      "lastSeen": "2026-03-16T09:10:37.695Z",
+      "offlineAt": "2026-03-16T09:10:37.712Z",
+      "screenTimestamp": "2026-03-16T09:10:37.324Z",
+      "cameraTimestamp": null,
+      "fps": null
+    }
+  },
+  {
+    "id": "6a8e8496-a7b1-4c17-9325-e3e60738cdcb",
+    "timestamp": "2026-03-16T09:10:43.518Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\snapshots\\6a8e8496-a7b1-4c17-9325-e3e60738cdcb-screen.jpg",
+    "cameraSnapshot": null,
+    "video": null,
+    "meta": {
+      "reason": "uncaughtException",
+      "lastSeen": "2026-03-16T09:10:43.500Z",
+      "offlineAt": "2026-03-16T09:10:43.518Z",
+      "screenTimestamp": "2026-03-16T09:10:43.377Z",
+      "cameraTimestamp": null,
+      "fps": null
+    }
+  },
+  {
+    "id": "34c63622-81d8-48c3-bcb4-1f343f718ca2",
+    "timestamp": "2026-03-16T09:12:34.636Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\snapshots\\34c63622-81d8-48c3-bcb4-1f343f718ca2-screen.jpg",
+    "cameraSnapshot": null,
+    "video": null,
+    "meta": {
+      "reason": "uncaughtException",
+      "lastSeen": "2026-03-16T09:12:34.614Z",
+      "offlineAt": "2026-03-16T09:12:34.636Z",
+      "screenTimestamp": "2026-03-16T09:12:34.213Z",
+      "cameraTimestamp": null,
+      "fps": null
+    }
+  },
+  {
+    "id": "69c0fae1-f59a-4948-8557-d47bc31903f9",
+    "timestamp": "2026-03-16T09:12:39.046Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\snapshots\\69c0fae1-f59a-4948-8557-d47bc31903f9-screen.jpg",
+    "cameraSnapshot": null,
+    "video": null,
+    "meta": {
+      "reason": "uncaughtException",
+      "lastSeen": "2026-03-16T09:12:39.030Z",
+      "offlineAt": "2026-03-16T09:12:39.046Z",
+      "screenTimestamp": "2026-03-16T09:12:38.716Z",
+      "cameraTimestamp": null,
+      "fps": null
+    }
   }
 ]

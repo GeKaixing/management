@@ -98968,5 +98968,3765 @@
       "clicks": 1228
     },
     "timestamp": "2026-03-16T09:05:00.788Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1373
+    },
+    "timestamp": "2026-03-16T09:09:17.013Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1374
+    },
+    "timestamp": "2026-03-16T09:09:18.249Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1375
+    },
+    "timestamp": "2026-03-16T09:09:18.657Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1376
+    },
+    "timestamp": "2026-03-16T09:09:20.628Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1377
+    },
+    "timestamp": "2026-03-16T09:09:23.390Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1378
+    },
+    "timestamp": "2026-03-16T09:09:46.011Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1379
+    },
+    "timestamp": "2026-03-16T09:09:46.328Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1380
+    },
+    "timestamp": "2026-03-16T09:09:46.511Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1381
+    },
+    "timestamp": "2026-03-16T09:09:46.902Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1382
+    },
+    "timestamp": "2026-03-16T09:09:47.075Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1383
+    },
+    "timestamp": "2026-03-16T09:09:48.908Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3616
+    },
+    "timestamp": "2026-03-16T09:09:50.734Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3617
+    },
+    "timestamp": "2026-03-16T09:09:50.958Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3618
+    },
+    "timestamp": "2026-03-16T09:09:51.150Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3619
+    },
+    "timestamp": "2026-03-16T09:09:51.707Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3620
+    },
+    "timestamp": "2026-03-16T09:09:51.798Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3621
+    },
+    "timestamp": "2026-03-16T09:09:52.238Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3622
+    },
+    "timestamp": "2026-03-16T09:09:52.747Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1384
+    },
+    "timestamp": "2026-03-16T09:09:52.893Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 17,
+      "count": 3623
+    },
+    "timestamp": "2026-03-16T09:09:53.520Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3624
+    },
+    "timestamp": "2026-03-16T09:09:53.754Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3625
+    },
+    "timestamp": "2026-03-16T09:09:53.927Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3626
+    },
+    "timestamp": "2026-03-16T09:09:54.051Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3627
+    },
+    "timestamp": "2026-03-16T09:09:54.727Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3628
+    },
+    "timestamp": "2026-03-16T09:09:54.928Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3629
+    },
+    "timestamp": "2026-03-16T09:09:55.380Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 44,
+      "count": 3630
+    },
+    "timestamp": "2026-03-16T09:09:55.427Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3631
+    },
+    "timestamp": "2026-03-16T09:09:56.317Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3632
+    },
+    "timestamp": "2026-03-16T09:09:56.825Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3633
+    },
+    "timestamp": "2026-03-16T09:09:56.865Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3634
+    },
+    "timestamp": "2026-03-16T09:09:56.897Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3635
+    },
+    "timestamp": "2026-03-16T09:09:56.928Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3636
+    },
+    "timestamp": "2026-03-16T09:09:56.941Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1385
+    },
+    "timestamp": "2026-03-16T09:09:59.509Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1386
+    },
+    "timestamp": "2026-03-16T09:09:59.765Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1387
+    },
+    "timestamp": "2026-03-16T09:10:00.536Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 44,
+      "count": 3637
+    },
+    "timestamp": "2026-03-16T09:10:01.251Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3638
+    },
+    "timestamp": "2026-03-16T09:10:01.486Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 18,
+      "count": 3639
+    },
+    "timestamp": "2026-03-16T09:10:01.616Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 34,
+      "count": 3640
+    },
+    "timestamp": "2026-03-16T09:10:01.699Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3641
+    },
+    "timestamp": "2026-03-16T09:10:01.840Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3642
+    },
+    "timestamp": "2026-03-16T09:10:02.323Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3643
+    },
+    "timestamp": "2026-03-16T09:10:02.513Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3644
+    },
+    "timestamp": "2026-03-16T09:10:02.682Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3645
+    },
+    "timestamp": "2026-03-16T09:10:02.904Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3646
+    },
+    "timestamp": "2026-03-16T09:10:03.284Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3647
+    },
+    "timestamp": "2026-03-16T09:10:03.456Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3648
+    },
+    "timestamp": "2026-03-16T09:10:03.547Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3649
+    },
+    "timestamp": "2026-03-16T09:10:03.628Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3650
+    },
+    "timestamp": "2026-03-16T09:10:03.956Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3651
+    },
+    "timestamp": "2026-03-16T09:10:04.124Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3652
+    },
+    "timestamp": "2026-03-16T09:10:04.308Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3653
+    },
+    "timestamp": "2026-03-16T09:10:04.666Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3654
+    },
+    "timestamp": "2026-03-16T09:10:05.455Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3655
+    },
+    "timestamp": "2026-03-16T09:10:05.656Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3656
+    },
+    "timestamp": "2026-03-16T09:10:05.806Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3657
+    },
+    "timestamp": "2026-03-16T09:10:06.029Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 44,
+      "count": 3658
+    },
+    "timestamp": "2026-03-16T09:10:06.201Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3659
+    },
+    "timestamp": "2026-03-16T09:10:06.282Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 21,
+      "count": 3660
+    },
+    "timestamp": "2026-03-16T09:10:06.450Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 18,
+      "count": 3661
+    },
+    "timestamp": "2026-03-16T09:10:06.521Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3662
+    },
+    "timestamp": "2026-03-16T09:10:06.724Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3663
+    },
+    "timestamp": "2026-03-16T09:10:06.734Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3664
+    },
+    "timestamp": "2026-03-16T09:10:07.025Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3665
+    },
+    "timestamp": "2026-03-16T09:10:07.346Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3666
+    },
+    "timestamp": "2026-03-16T09:10:07.506Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 44,
+      "count": 3667
+    },
+    "timestamp": "2026-03-16T09:10:07.711Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3668
+    },
+    "timestamp": "2026-03-16T09:10:07.927Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3669
+    },
+    "timestamp": "2026-03-16T09:10:08.119Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 44,
+      "count": 3670
+    },
+    "timestamp": "2026-03-16T09:10:08.252Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3671
+    },
+    "timestamp": "2026-03-16T09:10:08.412Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 18,
+      "count": 3672
+    },
+    "timestamp": "2026-03-16T09:10:08.493Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 21,
+      "count": 3673
+    },
+    "timestamp": "2026-03-16T09:10:08.635Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3674
+    },
+    "timestamp": "2026-03-16T09:10:08.721Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3675
+    },
+    "timestamp": "2026-03-16T09:10:08.838Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "count": 3676
+    },
+    "timestamp": "2026-03-16T09:10:08.843Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3677
+    },
+    "timestamp": "2026-03-16T09:10:09.342Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3678
+    },
+    "timestamp": "2026-03-16T09:10:09.600Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3679
+    },
+    "timestamp": "2026-03-16T09:10:09.782Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1388
+    },
+    "timestamp": "2026-03-16T09:10:12.554Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1389
+    },
+    "timestamp": "2026-03-16T09:10:13.232Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1390
+    },
+    "timestamp": "2026-03-16T09:10:13.542Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1391
+    },
+    "timestamp": "2026-03-16T09:10:13.850Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1392
+    },
+    "timestamp": "2026-03-16T09:10:21.586Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1393
+    },
+    "timestamp": "2026-03-16T09:10:30.941Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1394
+    },
+    "timestamp": "2026-03-16T09:10:34.429Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3680
+    },
+    "timestamp": "2026-03-16T09:10:34.905Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3681
+    },
+    "timestamp": "2026-03-16T09:10:35.027Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1395
+    },
+    "timestamp": "2026-03-16T09:10:35.691Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3682
+    },
+    "timestamp": "2026-03-16T09:10:36.029Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3683
+    },
+    "timestamp": "2026-03-16T09:10:36.177Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3684
+    },
+    "timestamp": "2026-03-16T09:10:36.746Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 57416,
+      "count": 3685
+    },
+    "timestamp": "2026-03-16T09:10:40.081Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3686
+    },
+    "timestamp": "2026-03-16T09:10:40.531Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3687
+    },
+    "timestamp": "2026-03-16T09:10:40.723Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3688
+    },
+    "timestamp": "2026-03-16T09:10:42.002Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3689
+    },
+    "timestamp": "2026-03-16T09:10:42.260Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3690
+    },
+    "timestamp": "2026-03-16T09:10:42.540Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1396
+    },
+    "timestamp": "2026-03-16T09:10:45.786Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3691
+    },
+    "timestamp": "2026-03-16T09:10:47.678Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3692
+    },
+    "timestamp": "2026-03-16T09:10:47.951Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3693
+    },
+    "timestamp": "2026-03-16T09:10:48.352Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3694
+    },
+    "timestamp": "2026-03-16T09:10:48.460Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1397
+    },
+    "timestamp": "2026-03-16T09:10:49.162Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3695
+    },
+    "timestamp": "2026-03-16T09:10:49.408Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3696
+    },
+    "timestamp": "2026-03-16T09:10:49.512Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1398
+    },
+    "timestamp": "2026-03-16T09:10:50.081Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1399
+    },
+    "timestamp": "2026-03-16T09:10:58.136Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1400
+    },
+    "timestamp": "2026-03-16T09:11:00.333Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1401
+    },
+    "timestamp": "2026-03-16T09:11:35.861Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3697
+    },
+    "timestamp": "2026-03-16T09:11:36.745Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3698
+    },
+    "timestamp": "2026-03-16T09:11:36.876Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3699
+    },
+    "timestamp": "2026-03-16T09:11:36.987Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3700
+    },
+    "timestamp": "2026-03-16T09:11:37.177Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3701
+    },
+    "timestamp": "2026-03-16T09:11:37.340Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3702
+    },
+    "timestamp": "2026-03-16T09:11:37.557Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3703
+    },
+    "timestamp": "2026-03-16T09:11:37.684Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3704
+    },
+    "timestamp": "2026-03-16T09:11:37.849Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3705
+    },
+    "timestamp": "2026-03-16T09:11:38.105Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3706
+    },
+    "timestamp": "2026-03-16T09:11:38.260Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3707
+    },
+    "timestamp": "2026-03-16T09:11:38.449Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3708
+    },
+    "timestamp": "2026-03-16T09:11:38.561Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "count": 3709
+    },
+    "timestamp": "2026-03-16T09:11:38.743Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 22,
+      "count": 3710
+    },
+    "timestamp": "2026-03-16T09:11:38.863Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3711
+    },
+    "timestamp": "2026-03-16T09:11:38.956Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 35,
+      "count": 3712
+    },
+    "timestamp": "2026-03-16T09:11:39.025Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3713
+    },
+    "timestamp": "2026-03-16T09:11:39.135Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3714
+    },
+    "timestamp": "2026-03-16T09:11:39.202Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "count": 3715
+    },
+    "timestamp": "2026-03-16T09:11:39.791Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3716
+    },
+    "timestamp": "2026-03-16T09:11:39.935Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3717
+    },
+    "timestamp": "2026-03-16T09:11:39.963Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3718
+    },
+    "timestamp": "2026-03-16T09:11:40.097Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 45,
+      "count": 3719
+    },
+    "timestamp": "2026-03-16T09:11:40.161Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3720
+    },
+    "timestamp": "2026-03-16T09:11:40.295Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 18,
+      "count": 3721
+    },
+    "timestamp": "2026-03-16T09:11:40.374Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3722
+    },
+    "timestamp": "2026-03-16T09:11:40.529Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3723
+    },
+    "timestamp": "2026-03-16T09:11:40.812Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3724
+    },
+    "timestamp": "2026-03-16T09:11:40.968Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3725
+    },
+    "timestamp": "2026-03-16T09:11:41.135Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "count": 3726
+    },
+    "timestamp": "2026-03-16T09:11:41.379Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3727
+    },
+    "timestamp": "2026-03-16T09:11:41.556Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3728
+    },
+    "timestamp": "2026-03-16T09:11:41.596Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3729
+    },
+    "timestamp": "2026-03-16T09:11:41.721Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 45,
+      "count": 3730
+    },
+    "timestamp": "2026-03-16T09:11:41.790Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3731
+    },
+    "timestamp": "2026-03-16T09:11:41.862Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 18,
+      "count": 3732
+    },
+    "timestamp": "2026-03-16T09:11:41.998Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3733
+    },
+    "timestamp": "2026-03-16T09:11:42.115Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3734
+    },
+    "timestamp": "2026-03-16T09:11:42.280Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3735
+    },
+    "timestamp": "2026-03-16T09:11:42.342Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 31,
+      "count": 3736
+    },
+    "timestamp": "2026-03-16T09:11:42.579Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3737
+    },
+    "timestamp": "2026-03-16T09:11:42.782Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 21,
+      "count": 3738
+    },
+    "timestamp": "2026-03-16T09:11:43.042Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 24,
+      "count": 3739
+    },
+    "timestamp": "2026-03-16T09:11:43.195Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3740
+    },
+    "timestamp": "2026-03-16T09:11:43.351Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3741
+    },
+    "timestamp": "2026-03-16T09:11:43.492Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3742
+    },
+    "timestamp": "2026-03-16T09:11:43.721Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3743
+    },
+    "timestamp": "2026-03-16T09:11:43.965Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3744
+    },
+    "timestamp": "2026-03-16T09:11:44.118Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3745
+    },
+    "timestamp": "2026-03-16T09:11:44.181Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3746
+    },
+    "timestamp": "2026-03-16T09:11:44.386Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3747
+    },
+    "timestamp": "2026-03-16T09:11:44.590Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3748
+    },
+    "timestamp": "2026-03-16T09:11:44.795Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3749
+    },
+    "timestamp": "2026-03-16T09:11:44.950Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3750
+    },
+    "timestamp": "2026-03-16T09:11:45.093Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3751
+    },
+    "timestamp": "2026-03-16T09:11:45.482Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3752
+    },
+    "timestamp": "2026-03-16T09:11:46.370Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3753
+    },
+    "timestamp": "2026-03-16T09:11:46.497Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3754
+    },
+    "timestamp": "2026-03-16T09:11:46.667Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3755
+    },
+    "timestamp": "2026-03-16T09:11:46.954Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3756
+    },
+    "timestamp": "2026-03-16T09:11:47.164Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3757
+    },
+    "timestamp": "2026-03-16T09:11:47.322Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3758
+    },
+    "timestamp": "2026-03-16T09:11:47.520Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 51,
+      "count": 3759
+    },
+    "timestamp": "2026-03-16T09:11:47.525Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3760
+    },
+    "timestamp": "2026-03-16T09:11:47.661Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3761
+    },
+    "timestamp": "2026-03-16T09:11:47.778Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3762
+    },
+    "timestamp": "2026-03-16T09:11:48.070Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3763
+    },
+    "timestamp": "2026-03-16T09:11:48.221Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3764
+    },
+    "timestamp": "2026-03-16T09:11:48.381Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3765
+    },
+    "timestamp": "2026-03-16T09:11:48.716Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3766
+    },
+    "timestamp": "2026-03-16T09:11:48.922Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3767
+    },
+    "timestamp": "2026-03-16T09:11:49.097Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3768
+    },
+    "timestamp": "2026-03-16T09:11:49.223Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3769
+    },
+    "timestamp": "2026-03-16T09:11:49.390Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3770
+    },
+    "timestamp": "2026-03-16T09:11:49.778Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 38,
+      "count": 3771
+    },
+    "timestamp": "2026-03-16T09:11:49.972Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 30,
+      "count": 3772
+    },
+    "timestamp": "2026-03-16T09:11:50.059Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3773
+    },
+    "timestamp": "2026-03-16T09:11:50.191Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3774
+    },
+    "timestamp": "2026-03-16T09:11:50.358Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 16,
+      "count": 3775
+    },
+    "timestamp": "2026-03-16T09:11:50.576Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 23,
+      "count": 3776
+    },
+    "timestamp": "2026-03-16T09:11:50.604Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 32,
+      "count": 3777
+    },
+    "timestamp": "2026-03-16T09:11:50.834Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 24,
+      "count": 3778
+    },
+    "timestamp": "2026-03-16T09:11:50.961Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 49,
+      "count": 3779
+    },
+    "timestamp": "2026-03-16T09:11:51.131Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3780
+    },
+    "timestamp": "2026-03-16T09:11:51.264Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 50,
+      "count": 3781
+    },
+    "timestamp": "2026-03-16T09:11:51.556Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 2,
+      "count": 3782
+    },
+    "timestamp": "2026-03-16T09:11:51.681Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3783
+    },
+    "timestamp": "2026-03-16T09:11:51.855Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1402
+    },
+    "timestamp": "2026-03-16T09:12:11.028Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3784
+    },
+    "timestamp": "2026-03-16T09:12:12.266Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3785
+    },
+    "timestamp": "2026-03-16T09:12:12.453Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1403
+    },
+    "timestamp": "2026-03-16T09:12:12.781Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3786
+    },
+    "timestamp": "2026-03-16T09:12:12.964Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1404
+    },
+    "timestamp": "2026-03-16T09:12:13.067Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3787
+    },
+    "timestamp": "2026-03-16T09:12:13.277Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1405
+    },
+    "timestamp": "2026-03-16T09:12:13.845Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1406
+    },
+    "timestamp": "2026-03-16T09:12:14.120Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1407
+    },
+    "timestamp": "2026-03-16T09:12:30.100Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1408
+    },
+    "timestamp": "2026-03-16T09:12:30.375Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3788
+    },
+    "timestamp": "2026-03-16T09:12:31.803Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3789
+    },
+    "timestamp": "2026-03-16T09:12:31.937Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1409
+    },
+    "timestamp": "2026-03-16T09:12:32.768Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3790
+    },
+    "timestamp": "2026-03-16T09:12:32.936Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3791
+    },
+    "timestamp": "2026-03-16T09:12:33.090Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3792
+    },
+    "timestamp": "2026-03-16T09:12:33.646Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 57416,
+      "count": 3793
+    },
+    "timestamp": "2026-03-16T09:12:36.973Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 14,
+      "count": 3794
+    },
+    "timestamp": "2026-03-16T09:12:37.412Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 28,
+      "count": 3795
+    },
+    "timestamp": "2026-03-16T09:12:38.068Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1410
+    },
+    "timestamp": "2026-03-16T09:12:42.955Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3796
+    },
+    "timestamp": "2026-03-16T09:12:44.885Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 46,
+      "count": 3797
+    },
+    "timestamp": "2026-03-16T09:12:45.078Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3798
+    },
+    "timestamp": "2026-03-16T09:12:45.496Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3799
+    },
+    "timestamp": "2026-03-16T09:12:45.549Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1411
+    },
+    "timestamp": "2026-03-16T09:12:46.016Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 29,
+      "count": 3800
+    },
+    "timestamp": "2026-03-16T09:12:46.312Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 47,
+      "count": 3801
+    },
+    "timestamp": "2026-03-16T09:12:46.400Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1412
+    },
+    "timestamp": "2026-03-16T09:12:47.050Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3802
+    },
+    "timestamp": "2026-03-16T09:12:58.515Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3803
+    },
+    "timestamp": "2026-03-16T09:12:58.643Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3804
+    },
+    "timestamp": "2026-03-16T09:12:58.849Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3805
+    },
+    "timestamp": "2026-03-16T09:12:58.910Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3806
+    },
+    "timestamp": "2026-03-16T09:13:00.676Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3807
+    },
+    "timestamp": "2026-03-16T09:13:00.777Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3808
+    },
+    "timestamp": "2026-03-16T09:13:01.004Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3809
+    },
+    "timestamp": "2026-03-16T09:13:01.061Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3810
+    },
+    "timestamp": "2026-03-16T09:13:01.255Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3811
+    },
+    "timestamp": "2026-03-16T09:13:01.341Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3812
+    },
+    "timestamp": "2026-03-16T09:13:01.508Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3813
+    },
+    "timestamp": "2026-03-16T09:13:01.592Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3814
+    },
+    "timestamp": "2026-03-16T09:13:01.757Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3815
+    },
+    "timestamp": "2026-03-16T09:13:01.836Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3816
+    },
+    "timestamp": "2026-03-16T09:13:02.020Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3817
+    },
+    "timestamp": "2026-03-16T09:13:02.078Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3818
+    },
+    "timestamp": "2026-03-16T09:13:02.275Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3819
+    },
+    "timestamp": "2026-03-16T09:13:02.342Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3820
+    },
+    "timestamp": "2026-03-16T09:13:02.529Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3821
+    },
+    "timestamp": "2026-03-16T09:13:02.582Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3822
+    },
+    "timestamp": "2026-03-16T09:13:02.773Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3823
+    },
+    "timestamp": "2026-03-16T09:13:02.835Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3824
+    },
+    "timestamp": "2026-03-16T09:13:03.012Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3825
+    },
+    "timestamp": "2026-03-16T09:13:03.079Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3826
+    },
+    "timestamp": "2026-03-16T09:13:03.253Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3827
+    },
+    "timestamp": "2026-03-16T09:13:03.311Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3828
+    },
+    "timestamp": "2026-03-16T09:13:03.492Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3829
+    },
+    "timestamp": "2026-03-16T09:13:03.574Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3830
+    },
+    "timestamp": "2026-03-16T09:13:03.739Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3831
+    },
+    "timestamp": "2026-03-16T09:13:03.822Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3832
+    },
+    "timestamp": "2026-03-16T09:13:04.005Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3833
+    },
+    "timestamp": "2026-03-16T09:13:04.076Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3834
+    },
+    "timestamp": "2026-03-16T09:13:04.258Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3835
+    },
+    "timestamp": "2026-03-16T09:13:04.323Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3836
+    },
+    "timestamp": "2026-03-16T09:13:04.513Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3837
+    },
+    "timestamp": "2026-03-16T09:13:04.580Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3838
+    },
+    "timestamp": "2026-03-16T09:13:04.769Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3839
+    },
+    "timestamp": "2026-03-16T09:13:04.836Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3840
+    },
+    "timestamp": "2026-03-16T09:13:04.999Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3841
+    },
+    "timestamp": "2026-03-16T09:13:05.078Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3842
+    },
+    "timestamp": "2026-03-16T09:13:05.266Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3843
+    },
+    "timestamp": "2026-03-16T09:13:05.350Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3844
+    },
+    "timestamp": "2026-03-16T09:13:05.539Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3845
+    },
+    "timestamp": "2026-03-16T09:13:05.606Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3846
+    },
+    "timestamp": "2026-03-16T09:13:05.818Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3847
+    },
+    "timestamp": "2026-03-16T09:13:05.859Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3848
+    },
+    "timestamp": "2026-03-16T09:13:06.091Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3849
+    },
+    "timestamp": "2026-03-16T09:13:06.139Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3850
+    },
+    "timestamp": "2026-03-16T09:13:06.342Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3851
+    },
+    "timestamp": "2026-03-16T09:13:06.412Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3852
+    },
+    "timestamp": "2026-03-16T09:13:06.598Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3853
+    },
+    "timestamp": "2026-03-16T09:13:06.658Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3854
+    },
+    "timestamp": "2026-03-16T09:13:06.856Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3855
+    },
+    "timestamp": "2026-03-16T09:13:06.916Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3856
+    },
+    "timestamp": "2026-03-16T09:13:07.115Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3857
+    },
+    "timestamp": "2026-03-16T09:13:07.184Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3858
+    },
+    "timestamp": "2026-03-16T09:13:07.347Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3859
+    },
+    "timestamp": "2026-03-16T09:13:07.420Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3860
+    },
+    "timestamp": "2026-03-16T09:13:07.706Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3861
+    },
+    "timestamp": "2026-03-16T09:13:07.805Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3862
+    },
+    "timestamp": "2026-03-16T09:13:07.998Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3863
+    },
+    "timestamp": "2026-03-16T09:13:08.081Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3864
+    },
+    "timestamp": "2026-03-16T09:13:08.308Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3865
+    },
+    "timestamp": "2026-03-16T09:13:08.380Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3866
+    },
+    "timestamp": "2026-03-16T09:13:08.605Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3867
+    },
+    "timestamp": "2026-03-16T09:13:08.686Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3868
+    },
+    "timestamp": "2026-03-16T09:13:08.873Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3869
+    },
+    "timestamp": "2026-03-16T09:13:08.956Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3870
+    },
+    "timestamp": "2026-03-16T09:13:09.183Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3871
+    },
+    "timestamp": "2026-03-16T09:13:09.270Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3872
+    },
+    "timestamp": "2026-03-16T09:13:09.489Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3873
+    },
+    "timestamp": "2026-03-16T09:13:09.559Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3874
+    },
+    "timestamp": "2026-03-16T09:13:09.807Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3875
+    },
+    "timestamp": "2026-03-16T09:13:09.884Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3876
+    },
+    "timestamp": "2026-03-16T09:13:10.128Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3877
+    },
+    "timestamp": "2026-03-16T09:13:10.214Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1413
+    },
+    "timestamp": "2026-03-16T09:13:12.123Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1414
+    },
+    "timestamp": "2026-03-16T09:13:12.296Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1415
+    },
+    "timestamp": "2026-03-16T09:13:13.058Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1416
+    },
+    "timestamp": "2026-03-16T09:13:13.982Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3878
+    },
+    "timestamp": "2026-03-16T09:13:14.216Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3879
+    },
+    "timestamp": "2026-03-16T09:13:14.312Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1417
+    },
+    "timestamp": "2026-03-16T09:13:14.645Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1418
+    },
+    "timestamp": "2026-03-16T09:13:19.067Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1419
+    },
+    "timestamp": "2026-03-16T09:13:19.367Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1420
+    },
+    "timestamp": "2026-03-16T09:13:19.968Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1421
+    },
+    "timestamp": "2026-03-16T09:13:20.192Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1422
+    },
+    "timestamp": "2026-03-16T09:13:20.407Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1423
+    },
+    "timestamp": "2026-03-16T09:13:20.683Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1424
+    },
+    "timestamp": "2026-03-16T09:13:20.985Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1425
+    },
+    "timestamp": "2026-03-16T09:13:21.187Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1426
+    },
+    "timestamp": "2026-03-16T09:13:21.446Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1427
+    },
+    "timestamp": "2026-03-16T09:13:21.809Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1428
+    },
+    "timestamp": "2026-03-16T09:13:22.057Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1429
+    },
+    "timestamp": "2026-03-16T09:13:22.306Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1430
+    },
+    "timestamp": "2026-03-16T09:13:23.059Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3880
+    },
+    "timestamp": "2026-03-16T09:13:23.245Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3881
+    },
+    "timestamp": "2026-03-16T09:13:23.363Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1431
+    },
+    "timestamp": "2026-03-16T09:13:26.027Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1432
+    },
+    "timestamp": "2026-03-16T09:13:26.328Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3882
+    },
+    "timestamp": "2026-03-16T09:13:26.772Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3883
+    },
+    "timestamp": "2026-03-16T09:13:26.859Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1433
+    },
+    "timestamp": "2026-03-16T09:13:27.919Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1434
+    },
+    "timestamp": "2026-03-16T09:13:28.160Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1435
+    },
+    "timestamp": "2026-03-16T09:13:28.486Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1436
+    },
+    "timestamp": "2026-03-16T09:13:35.271Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1437
+    },
+    "timestamp": "2026-03-16T09:13:35.466Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1438
+    },
+    "timestamp": "2026-03-16T09:13:35.829Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1439
+    },
+    "timestamp": "2026-03-16T09:13:36.119Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1440
+    },
+    "timestamp": "2026-03-16T09:13:36.322Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1441
+    },
+    "timestamp": "2026-03-16T09:13:36.622Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1442
+    },
+    "timestamp": "2026-03-16T09:13:36.821Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1443
+    },
+    "timestamp": "2026-03-16T09:13:37.032Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1444
+    },
+    "timestamp": "2026-03-16T09:13:37.257Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1445
+    },
+    "timestamp": "2026-03-16T09:13:37.523Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1446
+    },
+    "timestamp": "2026-03-16T09:13:37.758Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1447
+    },
+    "timestamp": "2026-03-16T09:13:37.988Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1448
+    },
+    "timestamp": "2026-03-16T09:13:38.175Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1449
+    },
+    "timestamp": "2026-03-16T09:13:38.402Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1450
+    },
+    "timestamp": "2026-03-16T09:13:38.664Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1451
+    },
+    "timestamp": "2026-03-16T09:13:38.914Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1452
+    },
+    "timestamp": "2026-03-16T09:13:39.119Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1453
+    },
+    "timestamp": "2026-03-16T09:13:39.386Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1454
+    },
+    "timestamp": "2026-03-16T09:13:39.630Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1455
+    },
+    "timestamp": "2026-03-16T09:13:39.875Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1456
+    },
+    "timestamp": "2026-03-16T09:13:40.107Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1457
+    },
+    "timestamp": "2026-03-16T09:13:40.346Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1458
+    },
+    "timestamp": "2026-03-16T09:13:40.598Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1459
+    },
+    "timestamp": "2026-03-16T09:13:40.849Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1460
+    },
+    "timestamp": "2026-03-16T09:13:41.168Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1461
+    },
+    "timestamp": "2026-03-16T09:13:41.391Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1462
+    },
+    "timestamp": "2026-03-16T09:13:41.637Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1463
+    },
+    "timestamp": "2026-03-16T09:13:41.820Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1464
+    },
+    "timestamp": "2026-03-16T09:13:42.066Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1465
+    },
+    "timestamp": "2026-03-16T09:13:42.284Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1466
+    },
+    "timestamp": "2026-03-16T09:13:42.532Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1467
+    },
+    "timestamp": "2026-03-16T09:13:42.795Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3884
+    },
+    "timestamp": "2026-03-16T09:13:43.302Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3885
+    },
+    "timestamp": "2026-03-16T09:13:43.399Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3886
+    },
+    "timestamp": "2026-03-16T09:13:43.684Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3887
+    },
+    "timestamp": "2026-03-16T09:13:43.772Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3888
+    },
+    "timestamp": "2026-03-16T09:13:43.990Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3889
+    },
+    "timestamp": "2026-03-16T09:13:44.081Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3890
+    },
+    "timestamp": "2026-03-16T09:13:44.353Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3891
+    },
+    "timestamp": "2026-03-16T09:13:44.466Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 56,
+      "count": 3892
+    },
+    "timestamp": "2026-03-16T09:13:44.702Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "count": 3893
+    },
+    "timestamp": "2026-03-16T09:13:45.051Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1468
+    },
+    "timestamp": "2026-03-16T09:13:45.471Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1469
+    },
+    "timestamp": "2026-03-16T09:13:47.270Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "type": "mouse",
+    "action": "click",
+    "detail": {
+      "button": 1,
+      "clicks": 1470
+    },
+    "timestamp": "2026-03-16T09:13:48.414Z"
   }
 ]

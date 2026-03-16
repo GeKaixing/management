@@ -6,6 +6,7 @@
   "scripts": {
     "server": "node server/index.js",
     "agent": "node agent/cli.js",
+    "agent:start": "node agent/cli.js start",
     "dashboard": "npm --prefix dashboard run dev",
     "test": "node tests/run.js"
   },
