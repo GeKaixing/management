@@ -35,6 +35,32 @@ async function registerDevice(serverUrl, deviceId, token) {
   return res.json().catch(() => ({}));
 }
 
+async function notifyOffline(serverUrl, deviceId, token, reason) {
+  const headers = { "Content-Type": "application/json" };
+  if (token) headers["x-device-token"] = token;
+
+  await fetch(`${serverUrl}/device/offline`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ deviceId, reason })
+  });
+}
+
+function withTimeout(promise, ms) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("timeout")), ms);
+    promise
+      .then((value) => {
+        clearTimeout(timer);
+        resolve(value);
+      })
+      .catch((err) => {
+        clearTimeout(timer);
+        reject(err);
+      });
+  });
+}
+
 function printUsage() {
   console.log("Usage:");
   console.log("  node agent/cli.js start [options]");
@@ -58,6 +84,7 @@ function printUsage() {
   console.log("  --mic-bitrate <rate>");
   console.log("  --camera-frames");
   console.log("  --camera-frames-interval <ms>");
+  console.log("  --no-camera");
 }
 
 async function main() {
@@ -143,26 +170,33 @@ async function main() {
     overrides.cameraFrameMonitoring.intervalMs = Number(camFrameInterval);
   }
 
+  const noCamera = hasFlag(args, "--no-camera");
+
   const config = resolveConfig(overrides);
 
   await registerDevice(config.serverUrl, config.deviceId, token);
   console.log("Device registered:", config.deviceId);
 
-  startCamera(config);
-  startInputMonitor({
+  let cameraProc = null;
+  if (!noCamera) {
+    cameraProc = startCamera(config);
+  } else {
+    console.log("Camera capture disabled (--no-camera).");
+  }
+  const inputMonitor = startInputMonitor({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
     enabled: config.inputMonitoring && config.inputMonitoring.enabled
   });
-  startScreenMonitor({
+  const screenMonitor = startScreenMonitor({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
     enabled: config.screenMonitoring && config.screenMonitoring.enabled,
     intervalMs: config.screenMonitoring && config.screenMonitoring.intervalMs
   });
-  startMicRecorder({
+  const micRecorder = startMicRecorder({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
@@ -172,7 +206,7 @@ async function main() {
     input: config.micMonitoring && config.micMonitoring.input,
     bitrate: config.micMonitoring && config.micMonitoring.bitrate
   });
-  startCameraFrameMonitor({
+  const cameraFrameMonitor = startCameraFrameMonitor({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
@@ -183,6 +217,40 @@ async function main() {
     resolution: config.camera && config.camera.resolution
   });
   console.log("Camera streaming started.");
+
+  let shuttingDown = false;
+  async function gracefulShutdown(reason) {
+    if (shuttingDown) return;
+    shuttingDown = true;
+
+    try {
+      inputMonitor && inputMonitor.stop && inputMonitor.stop();
+      screenMonitor && screenMonitor.stop && screenMonitor.stop();
+      micRecorder && micRecorder.stop && micRecorder.stop();
+      cameraFrameMonitor && cameraFrameMonitor.stop && cameraFrameMonitor.stop();
+      if (cameraProc && cameraProc.kill) cameraProc.kill();
+    } catch (err) {
+      // Ignore shutdown errors.
+    }
+
+    try {
+      await withTimeout(
+        notifyOffline(config.serverUrl, config.deviceId, token, reason || "shutdown"),
+        2000
+      );
+    } catch (err) {
+      // Best-effort notify.
+    }
+
+    process.exit(0);
+  }
+
+  process.on("SIGINT", () => gracefulShutdown("sigint"));
+  process.on("SIGTERM", () => gracefulShutdown("sigterm"));
+  process.on("uncaughtException", (err) => {
+    console.error(err && err.message ? err.message : err);
+    gracefulShutdown("uncaughtException");
+  });
 }
 
 main().catch((err) => {

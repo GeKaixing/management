@@ -4,7 +4,8 @@ function loadIoHook() {
   if (ioHook) return ioHook;
   try {
     // uiohook-napi is optional and requires native build.
-    ioHook = require("uiohook-napi");
+    const mod = require("uiohook-napi");
+    ioHook = mod.uIOhook || mod;
   } catch (err) {
     ioHook = null;
   }

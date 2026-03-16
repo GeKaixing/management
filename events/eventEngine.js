@@ -28,8 +28,39 @@ function createEventEngine() {
     return event;
   }
 
+  async function handleDeviceOffline({ deviceId, screenBuffer, cameraBuffer, frames, meta }) {
+    const id = randomUUID();
+    const timestamp = new Date().toISOString();
+
+    const screenSnapshot = screenBuffer
+      ? saveSnapshot(screenBuffer, { eventId: `${id}-screen` })
+      : null;
+    const cameraSnapshot = cameraBuffer
+      ? saveSnapshot(cameraBuffer, { eventId: `${id}-camera` })
+      : null;
+
+    const videoPath = frames && frames.length > 0 ? saveVideoClip(frames, { eventId: `${id}-stream`, fps: meta && meta.fps }) : null;
+
+    const event = {
+      id,
+      timestamp,
+      deviceId,
+      type: "device_offline",
+      screenSnapshot,
+      cameraSnapshot,
+      video: videoPath,
+      meta: meta || {}
+    };
+
+    appendEvent(event);
+    notify(event);
+
+    return event;
+  }
+
   return {
-    handleFall
+    handleFall,
+    handleDeviceOffline
   };
 }
 

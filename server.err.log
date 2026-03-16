@@ -1,18 +1,27 @@
-node:fs:2705
-      const stats = binding.lstat(base, true, undefined, true /* throwIfNoEntry */);
-                            ^
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
 
-Error: EPERM: operation not permitted, lstat 'C:\Users\KaiXing'
-    at Object.realpathSync (node:fs:2705:29)
-    at toRealPath (node:internal/modules/helpers:63:13)
-    at Function._findPath (node:internal/modules/cjs/loader:777:22)
-    at resolveMainPath (node:internal/modules/run_main:39:23)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:162:20)
-    at node:internal/main/run_main_module:36:49 {
-  errno: -4048,
-  code: 'EPERM',
-  syscall: 'lstat',
-  path: 'C:\\Users\\KaiXing'
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at Object.<anonymous> (C:\Users\KaiXing\Desktop\管理学\remote-camera-system\server\index.js:23:8)
+    at Module._compile (node:internal/modules/cjs/loader:1565:14)
+    at Object..js (node:internal/modules/cjs/loader:1708:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (node:events:524:28)
+    at emitErrorNT (node:net:1948:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
 }
 
 Node.js v22.12.0

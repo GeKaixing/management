@@ -27,7 +27,15 @@ function createPipeline({ eventEngine, fps = 30, seconds = 10 }) {
   }
 
   return {
-    ingestFrame
+    ingestFrame,
+    getFrames(deviceId) {
+      if (!buffers.has(deviceId)) return [];
+      return buffers.get(deviceId).getFrames();
+    },
+    clearFrames(deviceId) {
+      if (!buffers.has(deviceId)) return;
+      buffers.get(deviceId).clear();
+    }
   };
 }
 
