@@ -1,0 +1,5 @@
+{
+  "workHoursPerDay": 8,
+  "aiProvider": "gemini",
+  "geminiApiKey": "AIzaSyAJXWjLfncdFodJKHNXdq8yioePqrQqViA"
+}

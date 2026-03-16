@@ -3,7 +3,9 @@ const path = require("path");
 const { ensureStorage, getStoragePaths } = require("./files");
 
 const DEFAULT_SETTINGS = {
-  workHoursPerDay: 8
+  workHoursPerDay: 8,
+  aiProvider: "gemini",
+  geminiApiKey: ""
 };
 
 function getSettingsPath() {

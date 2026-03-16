@@ -25,6 +25,8 @@ const OFFLINE_CHECK_INTERVAL_MS = Number(process.env.DEVICE_OFFLINE_CHECK_MS || 
 const LAZE_SCREEN_WINDOW_MS = Number(process.env.LAZE_SCREEN_WINDOW_MS || 10 * 60 * 1000);
 const LAZE_BUCKET_MS = Number(process.env.LAZE_BUCKET_MS || 10 * 60 * 1000);
 const LAZE_WINDOW_MS = Number(process.env.LAZE_WINDOW_MS || 6 * 60 * 60 * 1000);
+const LONG_OFFLINE_MS = Number(process.env.LONG_OFFLINE_MS || 30 * 60 * 1000);
+const AI_TIMEOUT_MS = Number(process.env.AI_TIMEOUT_MS || 8000);
 
 function hashBuffer(buffer) {
   if (!buffer || buffer.length === 0) return null;
@@ -73,6 +75,50 @@ function computeDeviceLaze(deviceId, events, nowMs) {
   const keyboardLaze = isInputLaze(events, deviceId, "keyboard", nowMs);
   const mouseLaze = isInputLaze(events, deviceId, "mouse", nowMs);
   return screenLaze || keyboardLaze || mouseLaze;
+}
+
+function buildDeviceList(nowMs) {
+  const settings = loadSettings();
+  const requiredHours = Number(settings.workHoursPerDay || 8);
+  const requiredMs = Math.max(requiredHours, 0) * 60 * 60 * 1000;
+  const todayKey = toDateKey(nowMs);
+  const todayStart = startOfDay(nowMs);
+  const inputEvents = loadInputEvents();
+  const deviceMeta = loadDeviceMeta();
+  const deviceIds = new Set([
+    ...Array.from(devices.keys()),
+    ...Object.keys(deviceMeta || {})
+  ]);
+
+  return Array.from(deviceIds)
+    .map((id) => {
+      const meta = deviceMeta[id] || {};
+      if (meta.deleted) return null;
+      const device = devices.get(id) || { id, status: "offline", lastSeen: null };
+      const baseMs = getOnlineDuration(id, todayKey);
+      const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
+      const onlineMsToday = baseMs + currentMs;
+      return {
+        ...device,
+        name: meta.name || device.name || null,
+        note: meta.note || device.note || null,
+        laze: computeDeviceLaze(id, inputEvents, nowMs),
+        onlineMsToday,
+        workHoursPerDay: requiredHours,
+        lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
+      };
+    })
+    .filter(Boolean);
+}
+
+async function fetchWithTimeout(url, options, timeoutMs) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function touchDevice(id, source) {
@@ -165,38 +211,7 @@ router.post("/device/heartbeat", verifyDevice, (req, res) => {
 });
 
 router.get("/devices", (req, res) => {
-  const nowMs = Date.now();
-  const settings = loadSettings();
-  const requiredHours = Number(settings.workHoursPerDay || 8);
-  const requiredMs = Math.max(requiredHours, 0) * 60 * 60 * 1000;
-  const todayKey = toDateKey(nowMs);
-  const todayStart = startOfDay(nowMs);
-  const inputEvents = loadInputEvents();
-  const deviceMeta = loadDeviceMeta();
-  const deviceIds = new Set([
-    ...Array.from(devices.keys()),
-    ...Object.keys(deviceMeta || {})
-  ]);
-
-  const list = Array.from(deviceIds)
-    .map((id) => {
-      const meta = deviceMeta[id] || {};
-      if (meta.deleted) return null;
-      const device = devices.get(id) || { id, status: "offline", lastSeen: null };
-      const baseMs = getOnlineDuration(id, todayKey);
-      const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
-      const onlineMsToday = baseMs + currentMs;
-      return {
-        ...device,
-        name: meta.name || device.name || null,
-        note: meta.note || device.note || null,
-        laze: computeDeviceLaze(id, inputEvents, nowMs),
-        onlineMsToday,
-        workHoursPerDay: requiredHours,
-        lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
-      };
-    })
-    .filter(Boolean);
+  const list = buildDeviceList(Date.now());
   res.json({ devices: list });
 });
 
@@ -430,6 +445,110 @@ router.post("/settings/work-hours", (req, res) => {
   }
   const next = updateSettings({ workHoursPerDay: hours });
   return res.json({ ok: true, workHoursPerDay: next.workHoursPerDay });
+});
+
+router.get("/settings/ai", (req, res) => {
+  const settings = loadSettings();
+  res.json({
+    provider: settings.aiProvider || "gemini",
+    hasKey: Boolean(settings.geminiApiKey)
+  });
+});
+
+router.post("/settings/ai", (req, res) => {
+  const body = req.body || {};
+  const provider = typeof body.provider === "string" ? body.provider : "gemini";
+  const apiKey = typeof body.apiKey === "string" ? body.apiKey.trim() : "";
+  if (!apiKey) return res.status(400).json({ error: "missing apiKey" });
+  const next = updateSettings({ aiProvider: provider, geminiApiKey: apiKey });
+  return res.json({ ok: true, provider: next.aiProvider, hasKey: Boolean(next.geminiApiKey) });
+});
+
+async function generateAiSummary(devicesList) {
+  const settings = loadSettings();
+  const apiKey = settings.geminiApiKey;
+  if (!apiKey) throw new Error("missing_api_key");
+  const now = new Date().toISOString();
+
+  const reportData = devicesList.map((device) => {
+    const lastTs = device.lastSeen
+      ? device.lastSeen
+      : device.offlineAt
+        ? Date.parse(device.offlineAt)
+        : null;
+    const longOffline = device.status === "offline" && (!lastTs || Date.now() - lastTs >= LONG_OFFLINE_MS);
+    return {
+      id: device.id,
+      name: device.name || null,
+      status: device.status || "offline",
+      onlineMsToday: Number(device.onlineMsToday || 0),
+      requiredHours: Number(device.workHoursPerDay || 0),
+      lazy: Boolean(device.laze || device.lazyByWorkHours),
+      longOffline
+    };
+  });
+
+  const payload = {
+    now,
+    total: reportData.length,
+    devices: reportData
+  };
+
+  const prompt = [
+    "You are an operations assistant. Provide a concise, factual summary in Chinese and English.",
+    "Rules:",
+    "- Only summarize the data given. Do NOT make HR decisions (no firing, promotion, workload changes).",
+    "- Highlight risks and trends without judgments.",
+    "- Output two sections: Chinese then English.",
+    "",
+    "DATA:",
+    JSON.stringify(payload)
+  ].join("\n");
+
+  let response;
+  try {
+    response = await fetchWithTimeout(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ role: "user", parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.2, maxOutputTokens: 512 }
+        })
+      },
+      AI_TIMEOUT_MS
+    );
+  } catch (err) {
+    if (err && err.name === "AbortError") {
+      throw new Error("timeout");
+    }
+    throw new Error("network_error");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const message = data?.error?.message || "gemini_error";
+    throw new Error(message);
+  }
+
+  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!text) throw new Error("empty_response");
+  return text;
+}
+
+router.post("/report/ai-summary", async (req, res) => {
+  const devicesList = buildDeviceList(Date.now());
+  try {
+    const summary = await generateAiSummary(devicesList);
+    res.json({ ok: true, summary });
+  } catch (err) {
+    const message = err && err.message ? err.message : "ai_error";
+    if (message === "missing_api_key") {
+      return res.status(400).json({ error: "ai_key_not_configured" });
+    }
+    return res.status(500).json({ error: "ai_summary_failed", message });
+  }
 });
 
 module.exports = router;

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,6 +11,7 @@ type SidebarProps = {
 const navItems = [
   { href: "/", zh: "概览", en: "Overview" },
   { href: "/live", zh: "监控", en: "Monitor" },
+  { href: "/report", zh: "汇报", en: "Report" },
   { href: "/events", zh: "事件", en: "Events" },
   { href: "/docs", zh: "说明", en: "Docs" },
   { href: "/settings", zh: "设置", en: "Settings" }

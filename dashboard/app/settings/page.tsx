@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import DashboardShell from "../components/DashboardShell";
@@ -12,6 +12,11 @@ export default function Settings() {
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
 
+  const [aiKey, setAiKey] = useState("");
+  const [aiHasKey, setAiHasKey] = useState(false);
+  const [aiSaving, setAiSaving] = useState(false);
+  const [aiStatus, setAiStatus] = useState<string | null>(null);
+
   useEffect(() => {
     fetch(`${SERVER_URL}/settings/work-hours`)
       .then((res) => res.json())
@@ -22,6 +27,17 @@ export default function Settings() {
       })
       .catch(() => {
         setStatus(t(lang, "无法加载设置", "Failed to load settings"));
+      });
+  }, [lang]);
+
+  useEffect(() => {
+    fetch(`${SERVER_URL}/settings/ai`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAiHasKey(Boolean(data.hasKey));
+      })
+      .catch(() => {
+        setAiStatus(t(lang, "无法加载AI设置", "Failed to load AI settings"));
       });
   }, [lang]);
 
@@ -48,6 +64,34 @@ export default function Settings() {
     }
   }
 
+  async function saveAiKey() {
+    if (!aiKey.trim()) {
+      setAiStatus(t(lang, "请输入有效的Key", "Please enter a valid key"));
+      return;
+    }
+    setAiSaving(true);
+    setAiStatus(null);
+    try {
+      const res = await fetch(`${SERVER_URL}/settings/ai`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ provider: "gemini", apiKey: aiKey.trim() })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setAiStatus(t(lang, "保存失败", "Save failed"));
+      } else {
+        setAiHasKey(Boolean(data.hasKey));
+        setAiKey("");
+        setAiStatus(t(lang, "已保存", "Saved"));
+      }
+    } catch {
+      setAiStatus(t(lang, "保存失败", "Save failed"));
+    } finally {
+      setAiSaving(false);
+    }
+  }
+
   return (
     <DashboardShell lang={lang} setLang={setLang} title={t(lang, "系统设置", "Settings")}>
       <section className="card">
@@ -55,7 +99,7 @@ export default function Settings() {
         <p className="mono">
           {t(
             lang,
-            "被监控用户每日在线不足该时长将标记为 LAZY。",
+            "被监控用户每日在线不达标将标记为 LAZY。",
             "Monitored users below this daily online time will be marked LAZY."
           )}
         </p>
@@ -82,6 +126,36 @@ export default function Settings() {
             {saving ? t(lang, "保存中...", "Saving...") : t(lang, "保存设置", "Save Settings")}
           </button>
           {status && <div className="status-text">{status}</div>}
+        </div>
+      </section>
+
+      <section className="card" style={{ marginTop: 24 }}>
+        <h3>{t(lang, "AI 配置", "AI Configuration")}</h3>
+        <p className="mono">
+          {t(
+            lang,
+            "用于汇报页 AI 总结（仅做事实汇总与风险提示）。",
+            "Used for AI summaries on the report page (facts and risk signals only)."
+          )}
+        </p>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="aiKey">
+            {t(lang, "Gemini API Key", "Gemini API Key")}
+          </label>
+          <input
+            id="aiKey"
+            className="settings-input"
+            type="password"
+            value={aiKey}
+            onChange={(e) => setAiKey(e.target.value)}
+            placeholder={aiHasKey ? t(lang, "已配置（重新输入可替换）", "Configured (enter to replace)") : ""}
+          />
+        </div>
+        <div className="settings-actions">
+          <button className="button" type="button" onClick={saveAiKey} disabled={aiSaving}>
+            {aiSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存AI Key", "Save AI Key")}
+          </button>
+          {aiStatus && <div className="status-text">{aiStatus}</div>}
         </div>
       </section>
     </DashboardShell>
