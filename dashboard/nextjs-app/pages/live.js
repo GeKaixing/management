@@ -1,13 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useLang, t } from "../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
 
 export default function Live() {
+  const { lang, setLang } = useLang();
   const [devices, setDevices] = useState([]);
   const [inputEvents, setInputEvents] = useState([]);
   const [audioSegments, setAudioSegments] = useState([]);
   const [expanded, setExpanded] = useState({});
+  const [cameraOk, setCameraOk] = useState({});
+  const [screenOk, setScreenOk] = useState({});
   const [tick, setTick] = useState(0);
 
   const userNames = {
@@ -113,11 +117,15 @@ export default function Live() {
   return (
     <main>
       <header>
-        <h1>Live View</h1>
+        <h1>{t(lang, "实时监控", "Live View")}</h1>
         <nav>
-          <Link href="/">Home</Link>
-          <Link href="/events">Events</Link>
+          <Link href="/">{t(lang, "首页", "Home")}</Link>
+          <Link href="/events">{t(lang, "事件", "Events")}</Link>
+          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
         </nav>
+        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
+          {lang === "zh" ? "EN" : "中文"}
+        </button>
       </header>
 
       {deviceCards.map((device) => {
@@ -129,47 +137,106 @@ export default function Live() {
         );
         const audioForDevice = audioSegments.filter((seg) => seg.deviceId === device.id);
 
+        const cameraKey = device.id;
+
         return (
           <section key={device.id} className="device-card">
             <div className="device-header">
               <div>
-                <h2>{userNames[device.id] || "Monitored User"}</h2>
-                <div className="mono">Device ID: {device.id}</div>
+                <h2>{userNames[device.id] || t(lang, "被监控用户", "Monitored User")}</h2>
+                <div className="mono">
+                  {t(lang, "设备 ID：", "Device ID: ")}
+                  {device.id}
+                </div>
               </div>
-              <div className="status-pill">{device.lastSeen ? "Online" : "Offline"}</div>
+              <div className="status-pill">{device.lastSeen ? t(lang, "在线", "Online") : t(lang, "离线", "Offline")}</div>
             </div>
 
             <div className="grid-2">
               <div className="card">
                 <div className="card-title">
-                  <h3>Screen</h3>
+                  <h3>{t(lang, "屏幕", "Screen")}</h3>
                   <span className="mono">/screen/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
+                  {screenOk[device.id] === false && (
+                    <div style={{ padding: 16, textAlign: "center" }}>
+                      {t(lang, "无屏幕画面", "No screen feed")}
+                      <div className="mono" style={{ marginTop: 6 }}>
+                        {t(
+                          lang,
+                          "设备未授权屏幕录制或未启用 --screen。",
+                          "Device may not allow screen capture or agent not started with --screen."
+                        )}
+                      </div>
+                    </div>
+                  )}
                   <img
                     src={`${SERVER_URL}/screen/latest?deviceId=${device.id}&ts=${tick}`}
                     alt="Screen Stream"
-                    style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 16 }}
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                      borderRadius: 16,
+                      display: screenOk[device.id] === false ? "none" : "block"
                     }}
+                    onLoad={() =>
+                      setScreenOk((prev) => ({
+                        ...prev,
+                        [device.id]: true
+                      }))
+                    }
+                    onError={() =>
+                      setScreenOk((prev) => ({
+                        ...prev,
+                        [device.id]: false
+                      }))
+                    }
                   />
                 </div>
               </div>
 
               <div className="card">
                 <div className="card-title">
-                  <h3>Camera</h3>
+                  <h3>{t(lang, "摄像头", "Camera")}</h3>
                   <span className="mono">/camera/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
+                  {cameraOk[cameraKey] === false && (
+                    <div style={{ padding: 16, textAlign: "center" }}>
+                      {t(lang, "无摄像头画面", "No camera feed")}
+                      <div className="mono" style={{ marginTop: 6 }}>
+                        {t(
+                          lang,
+                          "设备无摄像头或未启用 --camera-frames。",
+                          "Device may not have a camera or agent not started with --camera-frames."
+                        )}
+                      </div>
+                    </div>
+                  )}
                   <img
                     src={`${SERVER_URL}/camera/latest?deviceId=${device.id}&ts=${tick}`}
                     alt="Camera Stream"
-                    style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 16 }}
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                      borderRadius: 16,
+                      display: cameraOk[cameraKey] === false ? "none" : "block"
                     }}
+                    onLoad={() =>
+                      setCameraOk((prev) => ({
+                        ...prev,
+                        [cameraKey]: true
+                      }))
+                    }
+                    onError={() =>
+                      setCameraOk((prev) => ({
+                        ...prev,
+                        [cameraKey]: false
+                      }))
+                    }
                   />
                 </div>
               </div>
@@ -178,10 +245,14 @@ export default function Live() {
             <div className="input-grid">
               <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "keyboard")}>
                 <div>
-                  <strong>Keyboard</strong>
-                  <div className="mono">{summarize(keyboardEvents)}</div>
+                  <strong>{t(lang, "键盘", "Keyboard")}</strong>
+                  <div className="mono">
+                    {keyboardEvents.length === 0 ? t(lang, "无数据", "No data") : summarize(keyboardEvents)}
+                  </div>
                 </div>
-                <span className="mono">{expanded[device.id] === "keyboard" ? "Hide" : "Details"}</span>
+                <span className="mono">
+                  {expanded[device.id] === "keyboard" ? t(lang, "收起", "Hide") : t(lang, "详情", "Details")}
+                </span>
               </button>
 
               {expanded[device.id] === "keyboard" && (
@@ -192,10 +263,12 @@ export default function Live() {
 
               <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "mouse")}>
                 <div>
-                  <strong>Mouse</strong>
-                  <div className="mono">{summarize(mouseEvents)}</div>
+                  <strong>{t(lang, "鼠标", "Mouse")}</strong>
+                  <div className="mono">{mouseEvents.length === 0 ? t(lang, "无数据", "No data") : summarize(mouseEvents)}</div>
                 </div>
-                <span className="mono">{expanded[device.id] === "mouse" ? "Hide" : "Details"}</span>
+                <span className="mono">
+                  {expanded[device.id] === "mouse" ? t(lang, "收起", "Hide") : t(lang, "详情", "Details")}
+                </span>
               </button>
 
               {expanded[device.id] === "mouse" && (
@@ -206,16 +279,24 @@ export default function Live() {
 
               <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "audio")}>
                 <div>
-                  <strong>Audio</strong>
+                  <strong>{t(lang, "语音", "Audio")}</strong>
                   <div className="mono">
                     {audioForDevice.length > 0
-                      ? `${audioForDevice.length} segments · last ${new Date(
-                          audioForDevice[audioForDevice.length - 1].timestamp
-                        ).toLocaleString()}`
-                      : "No data"}
+                      ? t(
+                          lang,
+                          `${audioForDevice.length} 段 · 最近 ${new Date(
+                            audioForDevice[audioForDevice.length - 1].timestamp
+                          ).toLocaleString()}`,
+                          `${audioForDevice.length} segments · last ${new Date(
+                            audioForDevice[audioForDevice.length - 1].timestamp
+                          ).toLocaleString()}`
+                        )
+                      : t(lang, "无数据", "No data")}
                   </div>
                 </div>
-                <span className="mono">{expanded[device.id] === "audio" ? "Hide" : "Details"}</span>
+                <span className="mono">
+                  {expanded[device.id] === "audio" ? t(lang, "收起", "Hide") : t(lang, "详情", "Details")}
+                </span>
               </button>
 
               {expanded[device.id] === "audio" && (

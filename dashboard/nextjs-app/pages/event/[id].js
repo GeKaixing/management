@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useLang, t } from "../../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
 
 export default function EventDetail() {
+  const { lang, setLang } = useLang();
   const router = useRouter();
   const { id } = router.query;
   const [event, setEvent] = useState(null);
@@ -20,36 +22,40 @@ export default function EventDetail() {
   return (
     <main>
       <header>
-        <h1>Event Detail</h1>
+        <h1>{t(lang, "事件详情", "Event Detail")}</h1>
         <nav>
-          <Link href="/events">Events</Link>
-          <Link href="/live">Live</Link>
+          <Link href="/events">{t(lang, "事件", "Events")}</Link>
+          <Link href="/live">{t(lang, "实时", "Live")}</Link>
+          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
         </nav>
+        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
+          {lang === "zh" ? "EN" : "中文"}
+        </button>
       </header>
 
       {!event ? (
-        <div className="card">Loading event...</div>
+        <div className="card">{t(lang, "正在加载事件...", "Loading event...")}</div>
       ) : (
         <div className="grid">
           <div className="card">
-            <h3>Metadata</h3>
+            <h3>{t(lang, "元数据", "Metadata")}</h3>
             <p>
-              <strong>ID:</strong> {event.id}
+              <strong>{t(lang, "ID：", "ID:")}</strong> {event.id}
             </p>
             <p>
-              <strong>Device:</strong> {event.deviceId}
+              <strong>{t(lang, "设备：", "Device:")}</strong> {event.deviceId}
             </p>
             <p>
-              <strong>Type:</strong> {event.type}
+              <strong>{t(lang, "类型：", "Type:")}</strong> {event.type}
             </p>
             <p>
-              <strong>Timestamp:</strong> {new Date(event.timestamp).toLocaleString()}
+              <strong>{t(lang, "时间：", "Timestamp:")}</strong> {new Date(event.timestamp).toLocaleString()}
             </p>
           </div>
           <div className="card">
-            <h3>Files</h3>
-            <p className="mono">Snapshot: {event.snapshot}</p>
-            <p className="mono">Video: {event.video}</p>
+            <h3>{t(lang, "文件", "Files")}</h3>
+            <p className="mono">{t(lang, "快照：", "Snapshot:")} {event.snapshot}</p>
+            <p className="mono">{t(lang, "视频：", "Video:")} {event.video}</p>
           </div>
         </div>
       )}
