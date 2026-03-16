@@ -2,11 +2,11 @@ const path = require("path");
 const { getOrCreateDeviceId } = require("./deviceId");
 
 const defaultConfig = {
-  deviceId: "cam-001",
-  serverUrl: "http://localhost:3000",
+  deviceId: "",
+  serverUrl: "http://127.0.0.1:3000",
   stream: {
     protocol: "rtsp",
-    url: "rtsp://localhost:8554/live/{deviceId}"
+    url: "rtsp://127.0.0.1:8554/live/{deviceId}"
   },
   camera: {
     fps: 30,

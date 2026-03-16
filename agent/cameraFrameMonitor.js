@@ -2,25 +2,50 @@ const { spawn } = require("child_process");
 const { getDefaultCameraConfig } = require("./cameraDefaults");
 const { resolveFfmpegBin } = require("../utils/ffmpeg");
 
-function captureFrame({ format, input, resolution, ffmpegPath }) {
+function captureFrame({ format, input, resolution, fps, ffmpegPath }) {
   return new Promise((resolve, reject) => {
-    const args = [
-      "-f",
-      format,
-      "-i",
-      input,
-      "-vframes",
-      "1",
-      "-q:v",
-      "4",
-      "-s",
-      resolution || "1280x720",
-      "-f",
-      "image2pipe",
-      "-vcodec",
-      "mjpeg",
-      "-"
-    ];
+    const frameRate = String(fps || 30);
+    const size = resolution || "1280x720";
+    let args;
+    if (format === "avfoundation") {
+      args = [
+        "-f",
+        format,
+        "-framerate",
+        frameRate,
+        "-video_size",
+        size,
+        "-i",
+        input,
+        "-vframes",
+        "1",
+        "-q:v",
+        "4",
+        "-f",
+        "image2pipe",
+        "-vcodec",
+        "mjpeg",
+        "-"
+      ];
+    } else {
+      args = [
+        "-f",
+        format,
+        "-i",
+        input,
+        "-vframes",
+        "1",
+        "-q:v",
+        "4",
+        "-s",
+        size,
+        "-f",
+        "image2pipe",
+        "-vcodec",
+        "mjpeg",
+        "-"
+      ];
+    }
 
     const ffmpegBin = ffmpegPath || resolveFfmpegBin();
     const ffmpeg = spawn(ffmpegBin, args, { stdio: ["ignore", "pipe", "ignore"] });
@@ -43,6 +68,7 @@ function startCameraFrameMonitor({
   intervalMs = 1000,
   format,
   input,
+  fps,
   resolution,
   ffmpegPath
 }) {
@@ -59,7 +85,13 @@ function startCameraFrameMonitor({
     if (inFlight) return;
     inFlight = true;
     try {
-      const buffer = await captureFrame({ format: camFormat, input: camInput, resolution, ffmpegPath });
+      const buffer = await captureFrame({
+        format: camFormat,
+        input: camInput,
+        resolution,
+        fps,
+        ffmpegPath
+      });
       const headers = { "Content-Type": "application/json" };
       if (token) headers["x-device-token"] = token;
 

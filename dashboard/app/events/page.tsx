@@ -32,16 +32,16 @@ export default function EventsPage() {
   }, []);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "事件", "Events")}
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "浜嬩欢", "Events")}
     >
       <div className="card">
         <table className="table">
           <thead>
             <tr>
-              <th>{t(lang, "时间", "Time")}</th>
-              <th>{t(lang, "设备", "Device")}</th>
-              <th>{t(lang, "类型", "Type")}</th>
-              <th>{t(lang, "查看", "View")}</th>
+              <th>{t(lang, "鏃堕棿", "Time")}</th>
+              <th>{t(lang, "璁惧", "Device")}</th>
+              <th>{t(lang, "绫诲瀷", "Type")}</th>
+              <th>{t(lang, "鏌ョ湅", "View")}</th>
             </tr>
           </thead>
           <tbody>
@@ -52,14 +52,14 @@ export default function EventsPage() {
                 <td>{event.type}</td>
                 <td>
                   <Link className="button" href={`/event/${event.id}`}>
-                    {t(lang, "打开", "Open")}
+                    {t(lang, "鎵撳紑", "Open")}
                   </Link>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        {events.length === 0 && <div className="mono">{t(lang, "暂无事件", "No events")}</div>}
+        {events.length === 0 && <div className="mono">{t(lang, "鏆傛棤浜嬩欢", "No events")}</div>}
       </div>
     </DashboardShell>
   );

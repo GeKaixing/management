@@ -54,6 +54,7 @@ export default function Live() {
   const [processSnapshots, setProcessSnapshots] = useState<ProcessSnapshot[]>([]);
   const [cameraOk, setCameraOk] = useState<Record<string, boolean>>({});
   const [screenOk, setScreenOk] = useState<Record<string, boolean>>({});
+  const [hideOfflineMedia, setHideOfflineMedia] = useState(true);
   const [tick, setTick] = useState(0);
   const [editState, setEditState] = useState<Record<string, { name: string; note: string }>>({});
   const [detailOpen, setDetailOpen] = useState<Record<string, boolean>>({});
@@ -82,6 +83,17 @@ export default function Live() {
       active = false;
       clearInterval(timer);
     };
+  }, []);
+
+  useEffect(() => {
+    fetch(`${SERVER_URL}/settings/live-view`)
+      .then((res) => res.json())
+      .then((data) => {
+        setHideOfflineMedia(data.hideOfflineMedia !== false);
+      })
+      .catch(() => {
+        setHideOfflineMedia(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -253,9 +265,11 @@ export default function Live() {
           />
         </div>
       </div>
-      {filteredDevices.map((device) => {
+      <div className="device-grid">
+        {filteredDevices.map((device) => {
         const isLazy = Boolean(device.laze || device.lazyByWorkHours);
         const isOnline = device.status ? device.status === "online" : Boolean(device.lastSeen);
+        const hideMedia = hideOfflineMedia && !isOnline;
         const edit = editState[device.id] || { name: "", note: "" };
         const keyboardEvents = inputEvents.filter(
           (e) => e.type === "keyboard" && e.deviceId === device.id
@@ -268,6 +282,7 @@ export default function Live() {
         const audioForDevice = audioSegments.filter((e) => e.deviceId === device.id);
         const processInfo = processSnapshots.find((p) => p.deviceId === device.id) || null;
         const processKey = `${device.id}-process`;
+        const maxProcessCount = processInfo?.top?.reduce((max, item) => Math.max(max, item.count || 0), 0) || 0;
 
         const keyboardSeries = buildSeries(keyboardEvents, 5 * 60 * 1000, 60 * 60 * 1000);
         const mouseSeries = buildSeries(mouseEvents, 5 * 60 * 1000, 60 * 60 * 1000);
@@ -385,7 +400,12 @@ export default function Live() {
                   <span className="mono">/screen/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
-                  {screenOk[device.id] === false && (
+                  {hideMedia && (
+                    <div style={{ padding: 16, textAlign: "center" }}>
+                      {t(lang, "设备离线", "Device offline")}
+                    </div>
+                  )}
+                  {!hideMedia && screenOk[device.id] === false && (
                     <div style={{ padding: 16, textAlign: "center" }}>
                       {t(lang, "无屏幕画面", "No screen feed")}
                       <div className="mono" style={{ marginTop: 6 }}>
@@ -405,7 +425,7 @@ export default function Live() {
                       height: "100%",
                       objectFit: "contain",
                       borderRadius: 16,
-                      display: screenOk[device.id] === false ? "none" : "block"
+                      display: hideMedia || screenOk[device.id] === false ? "none" : "block"
                     }}
                     onLoad={() => setScreenOk((prev) => ({ ...prev, [device.id]: true }))}
                     onError={() => setScreenOk((prev) => ({ ...prev, [device.id]: false }))}
@@ -419,7 +439,12 @@ export default function Live() {
                   <span className="mono">/camera/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
-                  {cameraOk[device.id] === false && (
+                  {hideMedia && (
+                    <div style={{ padding: 16, textAlign: "center" }}>
+                      {t(lang, "设备离线", "Device offline")}
+                    </div>
+                  )}
+                  {!hideMedia && cameraOk[device.id] === false && (
                     <div style={{ padding: 16, textAlign: "center" }}>
                       {t(lang, "无摄像头画面", "No camera feed")}
                       <div className="mono" style={{ marginTop: 6 }}>
@@ -439,7 +464,7 @@ export default function Live() {
                       height: "100%",
                       objectFit: "contain",
                       borderRadius: 16,
-                      display: cameraOk[device.id] === false ? "none" : "block"
+                      display: hideMedia || cameraOk[device.id] === false ? "none" : "block"
                     }}
                     onLoad={() => setCameraOk((prev) => ({ ...prev, [device.id]: true }))}
                     onError={() => setCameraOk((prev) => ({ ...prev, [device.id]: false }))}
@@ -524,21 +549,32 @@ export default function Live() {
                       : t(lang, "无数据", "No data")}
                   </div>
                 </div>
-                <div className="mono">{detailOpen[processKey] ? t(lang, "收起", "Hide") : t(lang, "展开", "Show")}</div>
+                <div className="process-toggle">
+                  {detailOpen[processKey] ? t(lang, "收起", "Hide") : t(lang, "展开", "Show")}
+                </div>
               </div>
               {detailOpen[processKey] && processInfo?.top?.length ? (
-                <div className="input-detail">
-                  <div className="mono" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                    {processInfo.top.map((item) => (
-                      <span key={item.name}>{item.name}×{item.count}</span>
-                    ))}
-                  </div>
+                <div className="input-detail process-detail">
+                  {processInfo.top.map((item) => {
+                    const count = item.count || 0;
+                    const percent = maxProcessCount ? Math.min(100, Math.round((count / maxProcessCount) * 100)) : 0;
+                    return (
+                      <div className="process-item" key={item.name}>
+                        <div className="process-name">{item.name}</div>
+                        <div className="process-count">{count}</div>
+                        <div className="process-bar">
+                          <span style={{ width: `${percent}%` }} />
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               ) : null}
             </div>
           </section>
         );
-      })}
+        })}
+      </div>
     </DashboardShell>
   );
 }

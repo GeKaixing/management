@@ -4,6 +4,7 @@ const { ensureStorage, getStoragePaths } = require("./files");
 
 const DEFAULT_SETTINGS = {
   workHoursPerDay: 8,
+  hideOfflineMedia: true,
   aiProvider: "gemini",
   geminiApiKey: ""
 };

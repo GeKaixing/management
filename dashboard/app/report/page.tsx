@@ -32,6 +32,9 @@ function formatHours(ms?: number) {
 export default function ReportPage() {
   const { lang, setLang } = useLang();
   const [devices, setDevices] = useState<Device[]>([]);
+  const [nameEdits, setNameEdits] = useState<Record<string, string>>({});
+  const [nameSaving, setNameSaving] = useState<Record<string, boolean>>({});
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [aiSummary, setAiSummary] = useState<string | null>(null);
   const [aiStatus, setAiStatus] = useState<string | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
@@ -57,6 +60,23 @@ export default function ReportPage() {
     };
   }, []);
 
+  async function saveName(deviceId: string) {
+    const nextName = (nameEdits[deviceId] ?? "").trim();
+    setNameSaving((prev) => ({ ...prev, [deviceId]: true }));
+    try {
+      await fetch(`${getServerUrl()}/device/${encodeURIComponent(deviceId)}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: nextName })
+      });
+      setDevices((prev) =>
+        prev.map((d) => (d.id === deviceId ? { ...d, name: nextName || null } : d))
+      );
+    } finally {
+      setNameSaving((prev) => ({ ...prev, [deviceId]: false }));
+    }
+  }
+
   async function loadAiSummary() {
     setAiLoading(true);
     setAiStatus(null);
@@ -65,15 +85,15 @@ export default function ReportPage() {
       const data = await res.json();
       if (!res.ok) {
         if (data?.error === "ai_key_not_configured") {
-          setAiStatus(t(lang, "ÇëÏÈÔÚÉèÖÃÖĞÅäÖÃAI Key", "Please configure the AI key in Settings"));
+          setAiStatus(t(lang, "è¯·å…ˆåœ¨è®¾ç½®ä¸­é…ç½®AI Key", "Please configure the AI key in Settings"));
         } else {
           const message = data?.message ? String(data.message) : "";
-          const base = t(lang, "AIÉú³ÉÊ§°Ü", "AI generation failed");
+          const base = t(lang, "AIç”Ÿæˆå¤±è´¥", "AI generation failed");
           const friendly =
             message === "timeout"
-              ? t(lang, "AIÇëÇó³¬Ê±£¬Çë¼ì²éÍøÂç/´úÀí", "AI request timed out. Check network/proxy.")
+              ? t(lang, "AIè¯·æ±‚è¶…æ—¶ï¼Œè¯·æ£€æŸ¥ç½‘ç»œ/ä»£ç†", "AI request timed out. Check network/proxy.")
               : message === "network_error"
-                ? t(lang, "ÎŞ·¨Á¬½Óµ½Gemini£¬Çë¼ì²éÍøÂç/´úÀí", "Unable to reach Gemini. Check network/proxy.")
+                ? t(lang, "æ— æ³•è¿æ¥åˆ°Geminiï¼Œè¯·æ£€æŸ¥ç½‘ç»œ/ä»£ç†", "Unable to reach Gemini. Check network/proxy.")
                 : message;
           setAiStatus(friendly ? `${base}: ${friendly}` : base);
         }
@@ -82,7 +102,7 @@ export default function ReportPage() {
         setAiSummary(String(data.summary || ""));
       }
     } catch {
-      setAiStatus(t(lang, "AIÉú³ÉÊ§°Ü", "AI generation failed"));
+      setAiStatus(t(lang, "AIç”Ÿæˆå¤±è´¥", "AI generation failed"));
       setAiSummary(null);
     } finally {
       setAiLoading(false);
@@ -104,40 +124,40 @@ export default function ReportPage() {
   }, [devices]);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "½ñÈÕ»ã±¨", "Daily Report")}>
-      <section className="grid" style={{ marginBottom: 24 }}>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ä»Šæ—¥æ±‡æŠ¥", "Daily Report")}>
+      <section className="grid report-summary" style={{ marginBottom: 24 }}>
         <div className="card">
-          <div className="badge">{t(lang, "×ÜÉè±¸", "Total")}</div>
+          <div className="badge">{t(lang, "æ€»è®¾å¤‡", "Total")}</div>
           <h3>{summary.total}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "ÔÚÏß", "Online")}</div>
+          <div className="badge">{t(lang, "åœ¨çº¿", "Online")}</div>
           <h3>{summary.online}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "ÒÉËÆÍµÀÁ", "Lazy")}</div>
+          <div className="badge">{t(lang, "ç–‘ä¼¼å·æ‡’", "Lazy")}</div>
           <h3>{summary.lazy}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "³¤Ê±¼äÀëÏß", "Long Offline")}</div>
+          <div className="badge">{t(lang, "é•¿æ—¶é—´ç¦»çº¿", "Long Offline")}</div>
           <h3>{summary.longOffline}</h3>
         </div>
       </section>
 
       <section className="card">
         <div className="card-title">
-          <h3>{t(lang, "Ô±¹¤½ñÈÕ×´Ì¬", "Employee Status Today")}</h3>
+          <h3>{t(lang, "å‘˜å·¥ä»Šæ—¥çŠ¶æ€", "Employee Status Today")}</h3>
         </div>
-        <table className="table">
+        <table className="table report-table">
           <thead>
             <tr>
-              <th>{t(lang, "ĞÕÃû", "Name")}</th>
-              <th>{t(lang, "Éè±¸ID", "Device ID")}</th>
-              <th>{t(lang, "×´Ì¬", "Status")}</th>
-              <th>{t(lang, "½ñÈÕÔÚÏß(h)", "Online Today (h)")}</th>
-              <th>{t(lang, "ÍµÀÁ", "Lazy")}</th>
-              <th>{t(lang, "³¤ÀëÏß", "Long Offline")}</th>
-              <th>{t(lang, "×î½üÔÚÏß", "Last Seen")}</th>
+              <th>{t(lang, "å§“å", "Name")}</th>
+              <th>{t(lang, "è®¾å¤‡ID", "Device ID")}</th>
+              <th>{t(lang, "çŠ¶æ€", "Status")}</th>
+              <th>{t(lang, "ä»Šæ—¥åœ¨çº¿(h)", "Online Today (h)")}</th>
+              <th>{t(lang, "å·æ‡’", "Lazy")}</th>
+              <th>{t(lang, "é•¿ç¦»çº¿", "Long Offline")}</th>
+              <th>{t(lang, "æœ€è¿‘åœ¨çº¿", "Last Seen")}</th>
             </tr>
           </thead>
           <tbody>
@@ -147,7 +167,7 @@ export default function ReportPage() {
                 ? safeDateString(new Date(device.lastSeen).toISOString())
                 : device.offlineAt
                   ? safeDateString(device.offlineAt)
-                  : t(lang, "Î´Öª", "unknown");
+                  : t(lang, "æœªçŸ¥", "unknown");
               const lastTs = device.lastSeen
                 ? device.lastSeen
                 : device.offlineAt
@@ -158,12 +178,65 @@ export default function ReportPage() {
 
               return (
                 <tr key={device.id}>
-                  <td>{device.name || t(lang, "Î´ÃüÃû", "Unnamed")}</td>
+                  <td className="report-name-cell">
+                    {editingId === device.id ? (
+                      <div style={{ display: "grid", gap: 8 }}>
+                        <input
+                          className="settings-input report-name-input"
+                          value={nameEdits[device.id] ?? device.name ?? ""}
+                          onChange={(e) =>
+                            setNameEdits((prev) => ({ ...prev, [device.id]: e.target.value }))
+                          }
+                          placeholder={t(lang, "æœªå‘½å", "Unnamed")}
+                          autoFocus
+                        />
+                        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                          <button
+                            className="button"
+                            type="button"
+                            onClick={async () => {
+                              await saveName(device.id);
+                              setEditingId(null);
+                            }}
+                            disabled={Boolean(nameSaving[device.id])}
+                          >
+                            {nameSaving[device.id]
+                              ? t(lang, "ä¿å­˜ä¸­...", "Saving...")
+                              : t(lang, "ä¿å­˜", "Save")}
+                          </button>
+                          <button
+                            className="ghost-button"
+                            type="button"
+                            onClick={() => {
+                              setEditingId(null);
+                              setNameEdits((prev) => ({
+                                ...prev,
+                                [device.id]: device.name ?? ""
+                              }));
+                            }}
+                          >
+                            {t(lang, "å–æ¶ˆ", "Cancel")}
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        className="ghost-button report-name-button"
+                        onClick={() => {
+                          setNameEdits((prev) => ({ ...prev, [device.id]: device.name ?? "" }));
+                          setEditingId(device.id);
+                        }}
+                      >
+                        {device.name || t(lang, "æœªå‘½å", "Unnamed")}
+                      </button>
+                    )}
+                  </td>
                   <td className="mono">{device.id}</td>
-                  <td>{device.status === "online" ? t(lang, "ÔÚÏß", "Online") : t(lang, "ÀëÏß", "Offline")}</td>
+                  <td>{device.status === "online" ? t(lang, "åœ¨çº¿", "Online") : t(lang, "ç¦»çº¿", "Offline")}</td>
                   <td>{formatHours(device.onlineMsToday)}</td>
-                  <td>{isLazy ? t(lang, "ÊÇ", "Yes") : t(lang, "·ñ", "No")}</td>
-                  <td>{longOffline ? t(lang, "ÊÇ", "Yes") : t(lang, "·ñ", "No")}</td>
+                  <td>{isLazy ? t(lang, "æ˜¯", "Yes") : t(lang, "å¦", "No")}</td>
+                  <td>{longOffline ? t(lang, "æ˜¯", "Yes") : t(lang, "å¦", "No")}</td>
                   <td>{lastSeen}</td>
                 </tr>
               );
@@ -174,15 +247,15 @@ export default function ReportPage() {
 
       <section className="card" style={{ marginTop: 24 }}>
         <div className="card-title">
-          <h3>{t(lang, "AI »ã×Ü", "AI Summary")}</h3>
+          <h3>{t(lang, "AI æ±‡æ€»", "AI Summary")}</h3>
           <button className="button" type="button" onClick={loadAiSummary} disabled={aiLoading}>
-            {aiLoading ? t(lang, "Éú³ÉÖĞ...", "Generating...") : t(lang, "Éú³É»ã±¨", "Generate")}
+            {aiLoading ? t(lang, "ç”Ÿæˆä¸­...", "Generating...") : t(lang, "ç”Ÿæˆæ±‡æŠ¥", "Generate")}
           </button>
         </div>
         <p className="mono" style={{ marginTop: 0 }}>
           {t(
             lang,
-            "AI ½ö×öÊÂÊµ»ã×ÜÓë·çÏÕÌáÊ¾£¬²»×öÓÃ¹¤¾ö²ß¡£",
+            "AI ä»…åšäº‹å®æ±‡æ€»ä¸é£é™©æç¤ºï¼Œä¸åšç”¨å·¥å†³ç­–ã€‚",
             "AI provides factual summaries and risk signals only, not HR decisions."
           )}
         </p>

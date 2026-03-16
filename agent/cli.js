@@ -8,6 +8,7 @@ const { startMicRecorder } = require("./micRecorder");
 const { startCameraFrameMonitor } = require("./cameraFrameMonitor");
 const { startProcessMonitor } = require("./processMonitor");
 const { resolveFfmpegBin } = require("../utils/ffmpeg");
+const { ensureRtspServer } = require("./rtspServer");
 
 function getArgValue(args, name) {
   const idx = args.indexOf(name);
@@ -103,6 +104,7 @@ function printUsage() {
   console.log("  --process");
   console.log("  --process-interval <ms>");
   console.log("  --no-camera");
+  console.log("  --no-rtsp-server");
 }
 
 async function main() {
@@ -207,6 +209,7 @@ async function main() {
     overrides.inputMonitoring = { enabled: true };
     overrides.screenMonitoring = { enabled: true };
     overrides.micMonitoring = { enabled: true };
+    overrides.cameraFrameMonitoring = { enabled: true };
     overrides.processMonitoring = { enabled: true };
   }
 
@@ -223,9 +226,12 @@ async function main() {
   }
 
   const noCamera = hasFlag(args, "--no-camera");
+  const noRtspServer = hasFlag(args, "--no-rtsp-server");
 
   const config = resolveConfig(overrides);
   const ffmpegPath = resolveFfmpegPath(config);
+
+  const rtspServer = await ensureRtspServer({ config, disabled: noRtspServer });
 
   await registerDevice(config.serverUrl, config.deviceId, token);
   console.log("Device registered:", config.deviceId);
@@ -281,6 +287,7 @@ async function main() {
     intervalMs: config.cameraFrameMonitoring && config.cameraFrameMonitoring.intervalMs,
     format: config.camera && config.camera.format,
     input: config.camera && config.camera.input,
+    fps: config.camera && config.camera.fps,
     resolution: config.camera && config.camera.resolution,
     ffmpegPath: config.ffmpegPath
   });
@@ -317,6 +324,7 @@ async function main() {
       cameraFrameMonitor && cameraFrameMonitor.stop && cameraFrameMonitor.stop();
       processMonitor && processMonitor.stop && processMonitor.stop();
       if (cameraProc && cameraProc.kill) cameraProc.kill();
+      if (rtspServer && rtspServer.stop) rtspServer.stop();
     } catch (err) {
       // Ignore shutdown errors.
     }

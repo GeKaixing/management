@@ -29,6 +29,34 @@ const LAZE_WINDOW_MS = Number(process.env.LAZE_WINDOW_MS || 6 * 60 * 60 * 1000);
 const LONG_OFFLINE_MS = Number(process.env.LONG_OFFLINE_MS || 30 * 60 * 1000);
 const AI_TIMEOUT_MS = Number(process.env.AI_TIMEOUT_MS || 8000);
 
+function updateEnvFile(filePath, updates) {
+  const nextUpdates = updates || {};
+  const keys = Object.keys(nextUpdates);
+  if (keys.length === 0) return { ok: true, changed: false };
+
+  const content = fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
+  const lines = content.split(/\r?\n/);
+  const seen = new Set();
+  const nextLines = lines.map((line) => {
+    const match = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)\s*$/);
+    if (!match) return line;
+    const key = match[1];
+    if (!Object.prototype.hasOwnProperty.call(nextUpdates, key)) return line;
+    seen.add(key);
+    return `${key}=${nextUpdates[key]}`;
+  });
+
+  for (const key of keys) {
+    if (!seen.has(key)) {
+      nextLines.push(`${key}=${nextUpdates[key]}`);
+    }
+  }
+
+  const nextContent = nextLines.join("\n").replace(/\n{3,}/g, "\n\n");
+  fs.writeFileSync(filePath, `${nextContent.trim()}\n`, "utf8");
+  return { ok: true, changed: true };
+}
+
 function hashBuffer(buffer) {
   if (!buffer || buffer.length === 0) return null;
   return crypto.createHash("sha256").update(buffer).digest("hex");
@@ -202,6 +230,10 @@ setInterval(() => {
     }
   }
 }, OFFLINE_CHECK_INTERVAL_MS);
+
+router.get("/health", (req, res) => {
+  res.json({ ok: true, time: new Date().toISOString() });
+});
 
 router.post("/device/register", verifyDevice, (req, res) => {
   const id = req.body && req.body.id;
@@ -486,12 +518,47 @@ router.post("/settings/work-hours", (req, res) => {
   return res.json({ ok: true, workHoursPerDay: next.workHoursPerDay });
 });
 
+router.get("/settings/live-view", (req, res) => {
+  const settings = loadSettings();
+  res.json({ hideOfflineMedia: settings.hideOfflineMedia !== false });
+});
+
+router.post("/settings/live-view", (req, res) => {
+  const body = req.body || {};
+  const hideOfflineMedia = body.hideOfflineMedia !== false;
+  const next = updateSettings({ hideOfflineMedia });
+  return res.json({ ok: true, hideOfflineMedia: next.hideOfflineMedia !== false });
+});
+
 router.get("/settings/ai", (req, res) => {
   const settings = loadSettings();
   res.json({
     provider: settings.aiProvider || "gemini",
     hasKey: Boolean(settings.geminiApiKey)
   });
+});
+
+router.post("/settings/server-url", (req, res) => {
+  const body = req.body || {};
+  const url = typeof body.url === "string" ? body.url.trim() : "";
+  if (!url) return res.status(400).json({ error: "missing url" });
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return res.status(400).json({ error: "invalid url" });
+  }
+  if (!["http:", "https:"].includes(parsed.protocol)) {
+    return res.status(400).json({ error: "invalid url protocol" });
+  }
+  try {
+    const envPath = path.resolve(__dirname, "..", ".env");
+    updateEnvFile(envPath, { SERVER_URL: url, NEXT_PUBLIC_SERVER_URL: url });
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error("Failed to update .env:", err);
+    return res.status(500).json({ error: "env_update_failed" });
+  }
 });
 
 router.post("/settings/ai", (req, res) => {

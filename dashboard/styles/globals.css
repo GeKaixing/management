@@ -212,6 +212,16 @@ nav a:hover {
   display: grid;
 }
 
+.report-summary {
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+
+@media (max-width: 600px) {
+  .report-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
 .docs-grid {
   max-width: 860px;
   gap: 24px;
@@ -330,6 +340,25 @@ nav a:hover {
   width: 100%;
 }
 
+.report-table {
+  table-layout: fixed;
+}
+
+.report-name-cell {
+  width: 220px;
+}
+
+.report-name-input {
+  width: 100%;
+  max-width: 100%;
+}
+
+.report-name-button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
 .table th,
 .table td {
   text-align: left;
@@ -365,6 +394,22 @@ nav a:hover {
   margin-bottom: 32px;
   padding: 20px;
   display: grid;
+}
+
+.device-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+  display: grid;
+}
+
+@media (min-width: 1200px) {
+  .device-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.device-grid .device-card {
+  margin-bottom: 0;
 }
 
 .device-card.laze {
@@ -447,6 +492,59 @@ nav a:hover {
   border: 1px solid #1c262b1a;
   border-radius: 16px;
   padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.process-toggle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #355c64;
+}
+
+.process-detail {
+  display: grid;
+  gap: 10px;
+}
+
+.process-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  align-items: center;
+  min-width: 0;
+}
+
+.process-name {
+  font-weight: 600;
+  color: #1d3439;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.process-count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #1b4c55;
+}
+
+.process-bar {
+  grid-column: 1 / -1;
+  height: 8px;
+  border-radius: 999px;
+  background: #d7e5e8;
+  overflow: hidden;
+}
+
+.process-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #2a7a85, #c2552e);
+  border-radius: inherit;
 }
 
 .device-actions {
@@ -556,12 +654,47 @@ nav a:hover {
   font-weight: 600;
 }
 
+.settings-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .settings-input {
   border: 1px solid #1c262b33;
   border-radius: 12px;
   padding: 10px 12px;
   background: #fff;
   width: 180px;
+}
+
+.settings-input--wide {
+  width: min(520px, 100%);
+  flex: 1 1 240px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #9aa5ad;
+  box-shadow: 0 0 0 4px #9aa5ad26;
+}
+
+.status-dot--idle {
+  background: #9aa5ad;
+  box-shadow: 0 0 0 4px #9aa5ad26;
+}
+
+.status-dot--ok {
+  background: #1f9d5a;
+  box-shadow: 0 0 0 4px #1f9d5a26;
+}
+
+.status-dot--bad {
+  background: #d64545;
+  box-shadow: 0 0 0 4px #d6454526;
 }
 
 .settings-actions {

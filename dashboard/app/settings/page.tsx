@@ -10,6 +10,9 @@ export default function Settings() {
   const [workHoursPerDay, setWorkHoursPerDay] = useState(8);
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
+  const [hideOfflineMedia, setHideOfflineMedia] = useState(true);
+  const [liveViewSaving, setLiveViewSaving] = useState(false);
+  const [liveViewStatus, setLiveViewStatus] = useState<string | null>(null);
 
   const [serverUrl, setServerUrlState] = useState(getServerUrl());
   const [serverSaving, setServerSaving] = useState(false);
@@ -29,7 +32,18 @@ export default function Settings() {
         }
       })
       .catch(() => {
-        setStatus(t(lang, "ÎŞ·¨¼ÓÔØÉèÖÃ", "Failed to load settings"));
+        setStatus(t(lang, "æ— æ³•åŠ è½½è®¾ç½®", "Failed to load settings"));
+      });
+  }, [lang]);
+
+  useEffect(() => {
+    fetch(`${getServerUrl()}/settings/live-view`)
+      .then((res) => res.json())
+      .then((data) => {
+        setHideOfflineMedia(data.hideOfflineMedia !== false);
+      })
+      .catch(() => {
+        setLiveViewStatus(t(lang, "æ— æ³•åŠ è½½å®æ—¶è®¾ç½®", "Failed to load live view settings"));
       });
   }, [lang]);
 
@@ -40,7 +54,7 @@ export default function Settings() {
         setAiHasKey(Boolean(data.hasKey));
       })
       .catch(() => {
-        setAiStatus(t(lang, "ÎŞ·¨¼ÓÔØAIÉèÖÃ", "Failed to load AI settings"));
+        setAiStatus(t(lang, "æ— æ³•åŠ è½½AIè®¾ç½®", "Failed to load AI settings"));
       });
   }, [lang]);
 
@@ -51,9 +65,9 @@ export default function Settings() {
       const next = serverUrl.trim();
       if (!next) throw new Error("empty");
       setServerUrl(next);
-      setServerStatus(t(lang, "ÒÑ±£´æ", "Saved"));
+      setServerStatus(t(lang, "å·²ä¿å­˜", "Saved"));
     } catch {
-      setServerStatus(t(lang, "±£´æÊ§°Ü", "Save failed"));
+      setServerStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
     } finally {
       setServerSaving(false);
     }
@@ -70,21 +84,44 @@ export default function Settings() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setStatus(t(lang, "±£´æÊ§°Ü£¬Çë¼ì²éÊäÈë", "Save failed. Please check your input."));
+        setStatus(t(lang, "ä¿å­˜å¤±è´¥ï¼Œè¯·æ£€æŸ¥è¾“å…¥", "Save failed. Please check your input."));
       } else {
         setWorkHoursPerDay(Number(data.workHoursPerDay));
-        setStatus(t(lang, "ÒÑ±£´æ", "Saved"));
+        setStatus(t(lang, "å·²ä¿å­˜", "Saved"));
       }
     } catch {
-      setStatus(t(lang, "±£´æÊ§°Ü", "Save failed"));
+      setStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
     } finally {
       setSaving(false);
     }
   }
 
+  async function saveLiveViewSettings() {
+    setLiveViewSaving(true);
+    setLiveViewStatus(null);
+    try {
+      const res = await fetch(`${getServerUrl()}/settings/live-view`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ hideOfflineMedia })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setLiveViewStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
+      } else {
+        setHideOfflineMedia(data.hideOfflineMedia !== false);
+        setLiveViewStatus(t(lang, "å·²ä¿å­˜", "Saved"));
+      }
+    } catch {
+      setLiveViewStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
+    } finally {
+      setLiveViewSaving(false);
+    }
+  }
+
   async function saveAiKey() {
     if (!aiKey.trim()) {
-      setAiStatus(t(lang, "ÇëÊäÈëÓĞĞ§µÄKey", "Please enter a valid key"));
+      setAiStatus(t(lang, "è¯·è¾“å…¥æœ‰æ•ˆçš„Key", "Please enter a valid key"));
       return;
     }
     setAiSaving(true);
@@ -97,33 +134,33 @@ export default function Settings() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setAiStatus(t(lang, "±£´æÊ§°Ü", "Save failed"));
+        setAiStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
       } else {
         setAiHasKey(Boolean(data.hasKey));
         setAiKey("");
-        setAiStatus(t(lang, "ÒÑ±£´æ", "Saved"));
+        setAiStatus(t(lang, "å·²ä¿å­˜", "Saved"));
       }
     } catch {
-      setAiStatus(t(lang, "±£´æÊ§°Ü", "Save failed"));
+      setAiStatus(t(lang, "ä¿å­˜å¤±è´¥", "Save failed"));
     } finally {
       setAiSaving(false);
     }
   }
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ÏµÍ³ÉèÖÃ", "Settings")}>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ç³»ç»Ÿè®¾ç½®", "Settings")}>
       <section className="card">
-        <h3>{t(lang, "·şÎñ¶ËµØÖ·", "Server URL")}</h3>
+        <h3>{t(lang, "æœåŠ¡ç«¯åœ°å€", "Server URL")}</h3>
         <p className="mono">
           {t(
             lang,
-            "Dashboard ½«Ê¹ÓÃ¸ÃµØÖ·ÇëÇóÊı¾İ¡£",
+            "Dashboard å°†ä½¿ç”¨è¯¥åœ°å€è¯·æ±‚æ•°æ®ã€‚",
             "Dashboard will use this base URL for API requests."
           )}
         </p>
         <div className="settings-row">
           <label className="settings-label" htmlFor="serverUrl">
-            {t(lang, "·şÎñ¶ËµØÖ·", "Server URL")}
+            {t(lang, "æœåŠ¡ç«¯åœ°å€", "Server URL")}
           </label>
           <input
             id="serverUrl"
@@ -135,24 +172,24 @@ export default function Settings() {
         </div>
         <div className="settings-actions">
           <button className="button" type="button" onClick={saveServerUrl} disabled={serverSaving}>
-            {serverSaving ? t(lang, "±£´æÖĞ...", "Saving...") : t(lang, "±£´æµØÖ·", "Save URL")}
+            {serverSaving ? t(lang, "ä¿å­˜ä¸­...", "Saving...") : t(lang, "ä¿å­˜åœ°å€", "Save URL")}
           </button>
           {serverStatus && <div className="status-text">{serverStatus}</div>}
         </div>
       </section>
 
       <section className="card" style={{ marginTop: 24 }}>
-        <h3>{t(lang, "¹¤×÷Ê±¼äãĞÖµ", "Daily Work Hours Threshold")}</h3>
+        <h3>{t(lang, "å·¥ä½œæ—¶é—´é˜ˆå€¼", "Daily Work Hours Threshold")}</h3>
         <p className="mono">
           {t(
             lang,
-            "±»¼à¿ØÓÃ»§Ã¿ÈÕÔÚÏß²»´ï±ê½«±ê¼ÇÎª LAZY¡£",
+            "è¢«ç›‘æ§ç”¨æˆ·æ¯æ—¥åœ¨çº¿ä¸è¾¾æ ‡å°†æ ‡è®°ä¸º LAZYã€‚",
             "Monitored users below this daily online time will be marked LAZY."
           )}
         </p>
         <div className="settings-row">
           <label className="settings-label" htmlFor="workHours">
-            {t(lang, "Ã¿ÈÕÔÚÏßÒªÇó£¨Ğ¡Ê±£©", "Required hours per day")}
+            {t(lang, "æ¯æ—¥åœ¨çº¿è¦æ±‚ï¼ˆå°æ—¶ï¼‰", "Required hours per day")}
           </label>
           <input
             id="workHours"
@@ -170,18 +207,47 @@ export default function Settings() {
         </div>
         <div className="settings-actions">
           <button className="button" type="button" onClick={saveSettings} disabled={saving}>
-            {saving ? t(lang, "±£´æÖĞ...", "Saving...") : t(lang, "±£´æÉèÖÃ", "Save Settings")}
+            {saving ? t(lang, "ä¿å­˜ä¸­...", "Saving...") : t(lang, "ä¿å­˜è®¾ç½®", "Save Settings")}
           </button>
           {status && <div className="status-text">{status}</div>}
         </div>
       </section>
 
       <section className="card" style={{ marginTop: 24 }}>
-        <h3>{t(lang, "AI ÅäÖÃ", "AI Configuration")}</h3>
+        <h3>{t(lang, "å®æ—¶ç”»é¢è®¾ç½®", "Live View Settings")}</h3>
         <p className="mono">
           {t(
             lang,
-            "ÓÃÓÚ»ã±¨Ò³ AI ×Ü½á£¨½ö×öÊÂÊµ»ã×ÜÓë·çÏÕÌáÊ¾£©¡£",
+            "è®¾å¤‡ç¦»çº¿æ—¶æ˜¯å¦éšè—å±å¹•/æ‘„åƒå¤´ç”»é¢ã€‚",
+            "Hide screen/camera frames when the device is offline."
+          )}
+        </p>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="hideOfflineMedia">
+            {t(lang, "ç¦»çº¿éšè—ç”»é¢", "Hide offline media")}
+          </label>
+          <input
+            id="hideOfflineMedia"
+            className="settings-input"
+            type="checkbox"
+            checked={hideOfflineMedia}
+            onChange={(e) => setHideOfflineMedia(e.target.checked)}
+          />
+        </div>
+        <div className="settings-actions">
+          <button className="button" type="button" onClick={saveLiveViewSettings} disabled={liveViewSaving}>
+            {liveViewSaving ? t(lang, "ä¿å­˜ä¸­...", "Saving...") : t(lang, "ä¿å­˜è®¾ç½®", "Save Settings")}
+          </button>
+          {liveViewStatus && <div className="status-text">{liveViewStatus}</div>}
+        </div>
+      </section>
+
+      <section className="card" style={{ marginTop: 24 }}>
+        <h3>{t(lang, "AI é…ç½®", "AI Configuration")}</h3>
+        <p className="mono">
+          {t(
+            lang,
+            "ç”¨äºæ±‡æŠ¥é¡µ AI æ€»ç»“ï¼ˆä»…åšäº‹å®æ±‡æ€»ä¸é£é™©æç¤ºï¼‰ã€‚",
             "Used for AI summaries on the report page (facts and risk signals only)."
           )}
         </p>
@@ -195,12 +261,12 @@ export default function Settings() {
             type="password"
             value={aiKey}
             onChange={(e) => setAiKey(e.target.value)}
-            placeholder={aiHasKey ? t(lang, "ÒÑÅäÖÃ£¨ÖØĞÂÊäÈë¿ÉÌæ»»£©", "Configured (enter to replace)") : ""}
+            placeholder={aiHasKey ? t(lang, "å·²é…ç½®ï¼ˆé‡æ–°è¾“å…¥å¯æ›¿æ¢ï¼‰", "Configured (enter to replace)") : ""}
           />
         </div>
         <div className="settings-actions">
           <button className="button" type="button" onClick={saveAiKey} disabled={aiSaving}>
-            {aiSaving ? t(lang, "±£´æÖĞ...", "Saving...") : t(lang, "±£´æAI Key", "Save AI Key")}
+            {aiSaving ? t(lang, "ä¿å­˜ä¸­...", "Saving...") : t(lang, "ä¿å­˜AI Key", "Save AI Key")}
           </button>
           {aiStatus && <div className="status-text">{aiStatus}</div>}
         </div>

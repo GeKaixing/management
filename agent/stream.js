@@ -14,21 +14,43 @@ function buildFfmpegArgs(config) {
   const format = camera.format || defaults.format;
   const input = camera.input || defaults.input;
 
-  const args = [
-    "-f",
-    format,
-    "-i",
-    input,
-    "-r",
-    String(camera.fps || 30),
-    "-s",
-    camera.resolution || "1280x720",
-    "-vcodec",
-    "libx264",
-    "-f",
-    "rtsp",
-    stream.url
-  ];
+  const fps = String(camera.fps || 30);
+  const resolution = camera.resolution || "1280x720";
+
+  let args;
+  if (format === "avfoundation") {
+    args = [
+      "-f",
+      format,
+      "-framerate",
+      fps,
+      "-video_size",
+      resolution,
+      "-i",
+      input,
+      "-vcodec",
+      "libx264",
+      "-f",
+      "rtsp",
+      stream.url
+    ];
+  } else {
+    args = [
+      "-f",
+      format,
+      "-i",
+      input,
+      "-r",
+      fps,
+      "-s",
+      resolution,
+      "-vcodec",
+      "libx264",
+      "-f",
+      "rtsp",
+      stream.url
+    ];
+  }
 
   return args;
 }

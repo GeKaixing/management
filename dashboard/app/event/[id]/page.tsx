@@ -36,14 +36,14 @@ export default function EventDetail() {
   }, [id]);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ÊÂ¼þÏêÇé", "Event Detail")}>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "äº‹ä»¶è¯¦æƒ…", "Event Detail")}>
       <div className="page-links">
         <Link className="ghost-button" href="/events">
-          {t(lang, "·µ»ØÊÂ¼þ", "Back to Events")}
+          {t(lang, "è¿”å›žäº‹ä»¶", "Back to Events")}
         </Link>
       </div>
 
-      {!event && <div className="card">{t(lang, "Î´ÕÒµ½ÊÂ¼þ", "Event not found")}</div>}
+      {!event && <div className="card">{t(lang, "æœªæ‰¾åˆ°äº‹ä»¶", "Event not found")}</div>}
       {event && (
         <div className="card">
           <div className="card-title">
@@ -51,7 +51,7 @@ export default function EventDetail() {
             <span className="mono">{safeDateString(event.timestamp)}</span>
           </div>
           <p className="mono">
-            {t(lang, "Éè±¸", "Device")}: {event.deviceId}
+            {t(lang, "è®¾å¤‡", "Device")}: {event.deviceId}
           </p>
           <div className="grid-2" style={{ marginTop: 16 }}>
             {event.snapshot && (
