@@ -1,4 +1,19 @@
+const os = require("os");
 const { spawn } = require("child_process");
+
+function getDefaultCameraConfig() {
+  if (os.platform() === "darwin") {
+    return {
+      format: "avfoundation",
+      input: "0"
+    };
+  }
+
+  return {
+    format: "dshow",
+    input: "video=Integrated Camera"
+  };
+}
 
 function buildFfmpegArgs(config) {
   const camera = config.camera || {};
@@ -8,11 +23,15 @@ function buildFfmpegArgs(config) {
     throw new Error("Only RTSP is implemented in the agent skeleton.");
   }
 
+  const defaults = getDefaultCameraConfig();
+  const format = camera.format || defaults.format;
+  const input = camera.input || defaults.input;
+
   const args = [
     "-f",
-    camera.format || "dshow",
+    format,
     "-i",
-    camera.input || "video=Integrated Camera",
+    input,
     "-r",
     String(camera.fps || 30),
     "-s",

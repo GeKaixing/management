@@ -8,13 +8,15 @@ const defaultConfig = {
     url: "rtsp://localhost:8554/live/{deviceId}"
   },
   camera: {
-    format: "dshow",
-    input: "video=Integrated Camera",
     fps: 30,
     resolution: "1280x720"
   },
   inputMonitoring: {
     enabled: false
+  },
+  screenMonitoring: {
+    enabled: false,
+    intervalMs: 500
   }
 };
 
@@ -29,6 +31,14 @@ function resolveConfig(overrides = {}) {
     camera: {
       ...defaultConfig.camera,
       ...(overrides.camera || {})
+    },
+    inputMonitoring: {
+      ...defaultConfig.inputMonitoring,
+      ...(overrides.inputMonitoring || {})
+    },
+    screenMonitoring: {
+      ...defaultConfig.screenMonitoring,
+      ...(overrides.screenMonitoring || {})
     }
   };
 
