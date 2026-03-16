@@ -77,7 +77,7 @@ export default function Live() {
     return `${count} events · last ${time}`;
   }
 
-  function buildBuckets(events, bucketMs = 10000, windowMs = 10 * 60 * 1000) {
+  function buildBuckets(events, bucketMs = 10 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
     const now = Date.now();
     const start = now - windowMs;
     const buckets = new Map();
@@ -89,7 +89,7 @@ export default function Live() {
     }
     return Array.from(buckets.entries())
       .sort((a, b) => a[0] - b[0])
-      .slice(-60);
+      .slice(-36);
   }
 
   function MiniChart({ events }) {

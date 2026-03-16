@@ -7,7 +7,7 @@
 ## Agent 行为
 
 - 启动参数 `--mic` 时启用。
-- 默认按 10 秒切片上传（`--mic-segment <seconds>`）。
+- 默认按 10 秒切片上传（`--mic-segment <seconds>`），启用后为全程连续录音。
 - 使用 FFmpeg 录制为 `ogg/opus`。
 
 Windows 默认：
