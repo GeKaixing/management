@@ -1,5 +1,5 @@
 node_modules/
 .env
 storage_data/tmp/
-dashboard/nextjs-app/node_modules/
-dashboard/nextjs-app/.next/
+dashboard/node_modules/
+dashboard/.next/

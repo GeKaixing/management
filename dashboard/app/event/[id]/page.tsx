@@ -7,11 +7,20 @@ import { useLang, t } from "../../../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
 
+type EventItem = {
+  id: string;
+  deviceId: string;
+  type: string;
+  timestamp: string;
+  snapshot?: string;
+  video?: string;
+};
+
 export default function EventDetail() {
   const { lang, setLang } = useLang();
   const params = useParams();
-  const id = params?.id;
-  const [event, setEvent] = useState(null);
+  const id = typeof params?.id === "string" ? params.id : Array.isArray(params?.id) ? params?.id[0] : "";
+  const [event, setEvent] = useState<EventItem | null>(null);
 
   useEffect(() => {
     if (!id) return;

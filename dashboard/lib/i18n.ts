@@ -2,12 +2,14 @@
 
 const STORAGE_KEY = "rcs_lang";
 
-export function useLang(defaultLang = "zh") {
-  const [lang, setLang] = useState(defaultLang);
+export type Lang = "zh" | "en";
+
+export function useLang(defaultLang: Lang = "zh") {
+  const [lang, setLang] = useState<Lang>(defaultLang);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const saved = window.localStorage.getItem(STORAGE_KEY);
+    const saved = window.localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (saved === "en" || saved === "zh") {
       setLang(saved);
     }
@@ -21,6 +23,6 @@ export function useLang(defaultLang = "zh") {
   return { lang, setLang };
 }
 
-export function t(lang, zhText, enText) {
+export function t(lang: Lang, zhText: string, enText: string) {
   return lang === "en" ? enText : zhText;
 }

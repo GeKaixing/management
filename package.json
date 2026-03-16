@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server/index.js",
     "agent": "node agent/cli.js",
-    "dashboard": "npm --prefix dashboard/nextjs-app run dev",
+    "dashboard": "npm --prefix dashboard run dev",
     "test": "node tests/run.js"
   },
   "dependencies": {

@@ -13,7 +13,12 @@ import {
 
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Filler);
 
-export default function MiniLineChart({ labels, values }) {
+type Props = {
+  labels: string[];
+  values: number[];
+};
+
+export default function MiniLineChart({ labels, values }: Props) {
   const data = {
     labels,
     datasets: [

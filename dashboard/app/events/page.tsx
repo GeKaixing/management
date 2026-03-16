@@ -6,14 +6,21 @@ import { useLang, t } from "../../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
 
+type EventItem = {
+  id: string;
+  deviceId: string;
+  type: string;
+  timestamp: string;
+};
+
 export default function Events() {
   const { lang, setLang } = useLang();
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<EventItem[]>([]);
 
   useEffect(() => {
     fetch(`${SERVER_URL}/events`)
       .then((res) => res.json())
-      .then((data) => setEvents(data.events || []))
+      .then((data) => setEvents(Array.isArray(data.events) ? data.events : []))
       .catch(() => setEvents([]));
   }, []);
 
@@ -44,7 +51,7 @@ export default function Events() {
           <tbody>
             {events.length === 0 ? (
               <tr>
-                <td colSpan="4">{t(lang, "暂无事件。", "No events found.")}</td>
+                <td colSpan={4}>{t(lang, "暂无事件。", "No events found.")}</td>
               </tr>
             ) : (
               events.map((event) => (
