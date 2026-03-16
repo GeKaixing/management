@@ -17,6 +17,11 @@ type Device = {
   lazyByWorkHours?: boolean;
   onlineMsToday?: number;
   workHoursPerDay?: number;
+  name?: string | null;
+  note?: string | null;
+  offlineAt?: string | null;
+  offlineReason?: string | null;
+  source?: string | null;
 };
 
 type InputEvent = {
@@ -41,25 +46,33 @@ export default function Live() {
   const [cameraOk, setCameraOk] = useState<Record<string, boolean>>({});
   const [screenOk, setScreenOk] = useState<Record<string, boolean>>({});
   const [tick, setTick] = useState(0);
+  const [editState, setEditState] = useState<Record<string, { name: string; note: string }>>({});
+  const [detailOpen, setDetailOpen] = useState<Record<string, boolean>>({});
+  const [searchQuery, setSearchQuery] = useState("");
 
   const userNames: Record<string, string> = {
     "cam-001": "Monitored User"
   };
 
   useEffect(() => {
+    let active = true;
+
     async function loadDevices() {
       try {
         const res = await fetch(`${SERVER_URL}/devices`);
         const data = await res.json();
-        setDevices(Array.isArray(data.devices) ? data.devices : []);
+        if (active) setDevices(Array.isArray(data.devices) ? data.devices : []);
       } catch {
-        setDevices([]);
+        if (active) setDevices([]);
       }
     }
 
     loadDevices();
     const timer = setInterval(loadDevices, 3000);
-    return () => clearInterval(timer);
+    return () => {
+      active = false;
+      clearInterval(timer);
+    };
   }, []);
 
   useEffect(() => {
@@ -99,6 +112,21 @@ export default function Live() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    setEditState((prev) => {
+      const next = { ...prev };
+      devices.forEach((device) => {
+        if (!next[device.id]) {
+          next[device.id] = {
+            name: device.name ? String(device.name) : "",
+            note: device.note ? String(device.note) : ""
+          };
+        }
+      });
+      return next;
+    });
+  }, [devices]);
+
   function summarize(events: InputEvent[]) {
     if (events.length === 0) return t(lang, "无数据", "No data");
     const last = events[events.length - 1];
@@ -113,7 +141,7 @@ export default function Live() {
     return (safeMs / (60 * 60 * 1000)).toFixed(1);
   }
 
-  function buildSeries(events: { timestamp?: string }[], bucketMs = 10 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
+  function buildSeries(events: { timestamp?: string }[], bucketMs = 5 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
     const now = Date.now();
     const start = now - windowMs;
 
@@ -141,23 +169,73 @@ export default function Live() {
       values.push(buckets.get(ts) || 0);
     }
 
+    const maxPoints = Math.min(totalBuckets, Math.floor(windowMs / bucketMs));
     return {
-      labels: labels.slice(-36),
-      values: values.slice(-36)
+      labels: labels.slice(-maxPoints),
+      values: values.slice(-maxPoints)
     };
   }
 
+  async function refreshDevices() {
+    try {
+      const res = await fetch(`${SERVER_URL}/devices`);
+      const data = await res.json();
+      setDevices(Array.isArray(data.devices) ? data.devices : []);
+    } catch {
+      setDevices([]);
+    }
+  }
+
+  async function saveDevice(deviceId: string) {
+    const current = editState[deviceId] || { name: "", note: "" };
+    await fetch(`${SERVER_URL}/device/${encodeURIComponent(deviceId)}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: current.name, note: current.note })
+    });
+    await refreshDevices();
+  }
+
+  async function deleteDevice(deviceId: string) {
+    const ok = window.confirm(t(lang, "确定删除该设备？", "Delete this device?"));
+    if (!ok) return;
+    await fetch(`${SERVER_URL}/device/${encodeURIComponent(deviceId)}`, { method: "DELETE" });
+    await refreshDevices();
+  }
+
   const deviceCards = devices.length > 0 ? devices : [{ id: "cam-001", lastSeen: null }];
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+  const filteredDevices = normalizedQuery
+    ? deviceCards.filter((device) => {
+        const edit = editState[device.id];
+        const name = edit?.name || device.name || userNames[device.id] || "";
+        return String(name).toLowerCase().includes(normalizedQuery);
+      })
+    : deviceCards;
 
   return (
     <DashboardShell lang={lang} setLang={setLang} title={t(lang, "实时监控", "Live View")}>
       <div className="page-links">
-        <Link href="/">{t(lang, "返回概览", "Back to Overview")}</Link>
-        <Link href="/settings">{t(lang, "设置工作时间", "Work Hours Settings")}</Link>
+        <Link className="ghost-button" href="/">
+          {t(lang, "返回概览", "Back to Overview")}
+        </Link>
+        <Link className="ghost-button" href="/settings">
+          {t(lang, "设置工作时间", "Work Hours Settings")}
+        </Link>
+        <div className="device-field" style={{ marginLeft: "auto", minWidth: 220 }}>
+          <label>{t(lang, "搜索名称", "Search name")}</label>
+          <input
+            className="device-input"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder={t(lang, "输入姓名过滤", "Type to filter")}
+          />
+        </div>
       </div>
-      {deviceCards.map((device) => {
+      {filteredDevices.map((device) => {
         const isLazy = Boolean(device.laze || device.lazyByWorkHours);
         const isOnline = device.status ? device.status === "online" : Boolean(device.lastSeen);
+        const edit = editState[device.id] || { name: "", note: "" };
         const keyboardEvents = inputEvents.filter(
           (e) => e.type === "keyboard" && e.deviceId === device.id
         );
@@ -170,16 +248,19 @@ export default function Live() {
 
         const keyboardSeries = buildSeries(keyboardEvents);
         const mouseSeries = buildSeries(mouseEvents);
-        const audioSeries = buildSeries(audioForDevice);
 
         const onlineHours = formatHours(device.onlineMsToday);
         const requiredHours = device.workHoursPerDay ?? 8;
+        const displayName = edit.name || device.name || userNames[device.id] || t(lang, "被监控用户", "Monitored User");
+        const lastSeenText = device.lastSeen
+          ? safeDateString(new Date(device.lastSeen).toISOString())
+          : t(lang, "未知", "unknown");
 
         return (
           <section key={device.id} className={`device-card${isLazy ? " laze" : ""}`}>
             <div className="device-header">
               <div>
-                <h2>{userNames[device.id] || t(lang, "被监控用户", "Monitored User")}</h2>
+                <h2>{displayName}</h2>
                 <div className="mono">
                   {t(lang, "设备 ID：", "Device ID: ")}
                   {device.id}
@@ -199,6 +280,80 @@ export default function Live() {
                 {isLazy && <div className="laze-pill">LAZY 😴</div>}
               </div>
             </div>
+
+            <div className="device-actions">
+              <div className="device-field">
+                <label>{t(lang, "名称", "Name")}</label>
+                <input
+                  className="device-input"
+                  value={edit.name}
+                  onChange={(event) =>
+                    setEditState((prev) => ({
+                      ...prev,
+                      [device.id]: { ...edit, name: event.target.value }
+                    }))
+                  }
+                  placeholder={t(lang, "例如：张三", "e.g. Alex")}
+                />
+              </div>
+              <div className="device-field">
+                <label>{t(lang, "备注", "Note")}</label>
+                <input
+                  className="device-input"
+                  value={edit.note}
+                  onChange={(event) =>
+                    setEditState((prev) => ({
+                      ...prev,
+                      [device.id]: { ...edit, note: event.target.value }
+                    }))
+                  }
+                  placeholder={t(lang, "例如：研发部工位", "e.g. R&D desk")}
+                />
+              </div>
+              <div className="device-buttons">
+                <button className="button" type="button" onClick={() => saveDevice(device.id)}>
+                  {t(lang, "保存", "Save")}
+                </button>
+                <button className="danger-button" type="button" onClick={() => deleteDevice(device.id)}>
+                  {t(lang, "删除", "Delete")}
+                </button>
+                <button
+                  className="ghost-button"
+                  type="button"
+                  onClick={() =>
+                    setDetailOpen((prev) => ({
+                      ...prev,
+                      [device.id]: !prev[device.id]
+                    }))
+                  }
+                >
+                  {detailOpen[device.id] ? t(lang, "收起", "Hide") : t(lang, "查看", "View")}
+                </button>
+              </div>
+            </div>
+
+            {detailOpen[device.id] && (
+              <div className="device-detail">
+                <div>
+                  <strong>{t(lang, "状态", "Status")}:</strong>{" "}
+                  {isOnline ? t(lang, "在线", "Online") : t(lang, "离线", "Offline")}
+                </div>
+                <div>
+                  <strong>{t(lang, "最近在线", "Last seen")}:</strong> {lastSeenText}
+                </div>
+                <div>
+                  <strong>{t(lang, "离线原因", "Offline reason")}:</strong>{" "}
+                  {device.offlineReason || t(lang, "无", "n/a")}
+                </div>
+                <div>
+                  <strong>{t(lang, "来源", "Source")}:</strong> {device.source || t(lang, "无", "n/a")}
+                </div>
+                <div>
+                  <strong>{t(lang, "离线时间", "Offline at")}:</strong>{" "}
+                  {device.offlineAt ? safeDateString(device.offlineAt) : t(lang, "无", "n/a")}
+                </div>
+              </div>
+            )}
 
             <div className="grid-2">
               <div className="card">
@@ -308,9 +463,21 @@ export default function Live() {
                       : t(lang, "无数据", "No data")}
                   </div>
                 </div>
-              </div>
-              <div className="input-detail">
-                <MiniLineChart labels={audioSeries.labels} values={audioSeries.values} />
+                {audioForDevice.length > 0 && (
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    {audioForDevice.slice(-3).map((segment, idx) => (
+                      <a
+                        key={`${segment.timestamp || "audio"}-${idx}`}
+                        className="button"
+                        href={`${SERVER_URL}/audio/play?file=${encodeURIComponent(segment.file || "")}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t(lang, "播放", "Play")} {idx + 1}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </section>

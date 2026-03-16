@@ -1,4 +1,5 @@
 const path = require("path");
+const { getOrCreateDeviceId } = require("./deviceId");
 
 const defaultConfig = {
   deviceId: "cam-001",
@@ -53,6 +54,8 @@ function resolveConfig(overrides = {}) {
 
   if (process.env.DEVICE_ID) config.deviceId = process.env.DEVICE_ID;
   if (process.env.SERVER_URL) config.serverUrl = process.env.SERVER_URL;
+
+  config.deviceId = getOrCreateDeviceId(config.deviceId);
 
   if (config.stream && typeof config.stream.url === "string") {
     config.stream.url = config.stream.url.replace("{deviceId}", config.deviceId);

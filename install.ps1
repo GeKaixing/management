@@ -19,8 +19,7 @@ if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
 $serverHost = Read-Host "Server host (e.g. 192.168.1.23 or server.local)"
 if (-not $serverHost) { Write-Error "Server host is required."; exit 1 }
 
-$deviceId = Read-Host "Device ID (e.g. cam-002)"
-if (-not $deviceId) { Write-Error "Device ID is required."; exit 1 }
+$deviceId = Read-Host "Device ID (e.g. cam-002, blank = auto-bind to this machine)"
 
 $enableInput = Read-Host "Enable keyboard/mouse input monitoring? (y/N)"
 $enableScreen = Read-Host "Enable screen capture? (y/N)"
@@ -53,4 +52,8 @@ Set-Location $InstallDir
 
 $serverUrl = "http://$serverHost:3000"
 
-node agent/cli.js start --device $deviceId --server $serverUrl @flags
+$args = @("agent/cli.js", "start", "--server", $serverUrl)
+if ($deviceId) { $args += @("--device", $deviceId) }
+$args += $flags
+
+node @args

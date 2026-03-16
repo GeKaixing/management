@@ -55,6 +55,7 @@ Common flags:
 - `--mic` microphone recording (continuous, segmented)
 - `--camera-frames` camera frame capture for dashboard
 - `--no-camera` disable camera capture
+- Device ID is persisted per machine in `~/.remote-camera-device-id`. Pass `--device` once to bind.
 
 ## One-line install (interactive)
 

@@ -10,6 +10,7 @@ const { loadInputEvents, appendInputEvent, filterInputEvents } = require("../sto
 const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
 const { loadSettings, updateSettings } = require("../storage/settingsDb");
+const { loadDeviceMeta, getDeviceMeta, updateDeviceMeta, deleteDeviceMeta } = require("../storage/deviceDb");
 const { addOnlineDuration, getOnlineDuration, toDateKey, startOfDay } = require("../storage/onlineDb");
 
 const screenFrames = new Map();
@@ -156,6 +157,13 @@ router.post("/device/register", verifyDevice, (req, res) => {
   return res.json({ ok: true, id });
 });
 
+router.post("/device/heartbeat", verifyDevice, (req, res) => {
+  const deviceId = req.body && req.body.deviceId;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  touchDevice(deviceId, "heartbeat");
+  return res.json({ ok: true });
+});
+
 router.get("/devices", (req, res) => {
   const nowMs = Date.now();
   const settings = loadSettings();
@@ -164,19 +172,76 @@ router.get("/devices", (req, res) => {
   const todayKey = toDateKey(nowMs);
   const todayStart = startOfDay(nowMs);
   const inputEvents = loadInputEvents();
-  const list = Array.from(devices.values()).map((device) => {
-    const baseMs = getOnlineDuration(device.id, todayKey);
-    const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
-    const onlineMsToday = baseMs + currentMs;
-    return {
-      ...device,
-      laze: computeDeviceLaze(device.id, inputEvents, nowMs),
-      onlineMsToday,
-      workHoursPerDay: requiredHours,
-      lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
-    };
-  });
+  const deviceMeta = loadDeviceMeta();
+  const deviceIds = new Set([
+    ...Array.from(devices.keys()),
+    ...Object.keys(deviceMeta || {})
+  ]);
+
+  const list = Array.from(deviceIds)
+    .map((id) => {
+      const meta = deviceMeta[id] || {};
+      if (meta.deleted) return null;
+      const device = devices.get(id) || { id, status: "offline", lastSeen: null };
+      const baseMs = getOnlineDuration(id, todayKey);
+      const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
+      const onlineMsToday = baseMs + currentMs;
+      return {
+        ...device,
+        name: meta.name || device.name || null,
+        note: meta.note || device.note || null,
+        laze: computeDeviceLaze(id, inputEvents, nowMs),
+        onlineMsToday,
+        workHoursPerDay: requiredHours,
+        lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
+      };
+    })
+    .filter(Boolean);
   res.json({ devices: list });
+});
+
+router.get("/device/:id", (req, res) => {
+  const deviceId = req.params.id;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const meta = getDeviceMeta(deviceId) || {};
+  if (meta.deleted) return res.status(404).json({ error: "not found" });
+  const device = devices.get(deviceId) || { id: deviceId, status: "offline" };
+  res.json({
+    device: {
+      ...device,
+      name: meta.name || device.name || null,
+      note: meta.note || device.note || null
+    }
+  });
+});
+
+router.put("/device/:id", (req, res) => {
+  const deviceId = req.params.id;
+  const body = req.body || {};
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const name = typeof body.name === "string" ? body.name.trim() : "";
+  const note = typeof body.note === "string" ? body.note.trim() : "";
+  const meta = updateDeviceMeta(deviceId, { name, note, deleted: false });
+  const device = devices.get(deviceId) || { id: deviceId };
+  res.json({
+    ok: true,
+    device: {
+      ...device,
+      name: meta.name || null,
+      note: meta.note || null
+    }
+  });
+});
+
+router.delete("/device/:id", (req, res) => {
+  const deviceId = req.params.id;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  deleteDeviceMeta(deviceId);
+  devices.delete(deviceId);
+  screenFrames.delete(deviceId);
+  cameraFrames.delete(deviceId);
+  pipeline.clearFrames(deviceId);
+  res.json({ ok: true });
 });
 
 router.post("/device/offline", verifyDevice, async (req, res) => {
@@ -342,6 +407,14 @@ router.post("/audio/segment", verifyDevice, (req, res) => {
 router.get("/audio/list", (req, res) => {
   const deviceId = req.query.deviceId || null;
   res.json({ segments: filterAudioEvents({ deviceId }) });
+});
+
+router.get("/audio/play", (req, res) => {
+  const filePath = req.query.file;
+  if (!filePath) return res.status(400).json({ error: "missing file" });
+  if (!fs.existsSync(filePath)) return res.status(404).json({ error: "not found" });
+  res.setHeader("Cache-Control", "no-store");
+  res.sendFile(filePath);
 });
 
 router.get("/settings/work-hours", (req, res) => {

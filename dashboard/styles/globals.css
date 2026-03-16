@@ -449,6 +449,69 @@ nav a:hover {
   padding: 12px 16px;
 }
 
+.device-actions {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: end;
+}
+
+.device-field {
+  display: grid;
+  gap: 6px;
+}
+
+.device-field label {
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.device-input {
+  border: 1px solid #1c262b33;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.device-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ghost-button {
+  background: transparent;
+  border: 1px solid #1c262b33;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.danger-button {
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.device-detail {
+  border: 1px dashed #1c262b33;
+  border-radius: 16px;
+  padding: 12px 16px;
+  background: #ffffffb3;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+
 .chart {
   grid-auto-flow: column;
   align-items: end;

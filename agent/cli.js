@@ -35,6 +35,16 @@ async function registerDevice(serverUrl, deviceId, token) {
   return res.json().catch(() => ({}));
 }
 
+async function sendHeartbeat(serverUrl, deviceId, token) {
+  const headers = { "Content-Type": "application/json" };
+  if (token) headers["x-device-token"] = token;
+  await fetch(`${serverUrl}/device/heartbeat`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ deviceId })
+  });
+}
+
 async function notifyOffline(serverUrl, deviceId, token, reason) {
   const headers = { "Content-Type": "application/json" };
   if (token) headers["x-device-token"] = token;
@@ -177,6 +187,12 @@ async function main() {
   await registerDevice(config.serverUrl, config.deviceId, token);
   console.log("Device registered:", config.deviceId);
 
+  const heartbeatTimer = setInterval(() => {
+    sendHeartbeat(config.serverUrl, config.deviceId, token).catch(() => {
+      // Best-effort heartbeat only.
+    });
+  }, 5000);
+
   let cameraProc = null;
   if (!noCamera) {
     cameraProc = startCamera(config);
@@ -224,6 +240,7 @@ async function main() {
     shuttingDown = true;
 
     try {
+      clearInterval(heartbeatTimer);
       inputMonitor && inputMonitor.stop && inputMonitor.stop();
       screenMonitor && screenMonitor.stop && screenMonitor.stop();
       micRecorder && micRecorder.stop && micRecorder.stop();

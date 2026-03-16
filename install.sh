@@ -36,10 +36,7 @@ if [[ -z "$SERVER_HOST" ]]; then
   echo "Server host is required."; exit 1
 fi
 
-read -r -p "Device ID (e.g. cam-002): " DEVICE_ID
-if [[ -z "$DEVICE_ID" ]]; then
-  echo "Device ID is required."; exit 1
-fi
+read -r -p "Device ID (e.g. cam-002, blank = auto-bind to this machine): " DEVICE_ID
 
 read -r -p "Enable keyboard/mouse input monitoring? (y/N): " EN_INPUT
 read -r -p "Enable screen capture? (y/N): " EN_SCREEN
@@ -79,4 +76,10 @@ npm install
 
 SERVER_URL="http://$SERVER_HOST:3000"
 
-node agent/cli.js start --device "$DEVICE_ID" --server "$SERVER_URL" "${FLAGS[@]}"
+CMD=(node agent/cli.js start --server "$SERVER_URL")
+if [[ -n "$DEVICE_ID" ]]; then
+  CMD+=(--device "$DEVICE_ID")
+fi
+CMD+=("${FLAGS[@]}")
+
+"${CMD[@]}"
