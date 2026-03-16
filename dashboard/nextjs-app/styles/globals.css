@@ -229,10 +229,16 @@ nav a:hover {
   height: 120px;
 }
 
+.chart-canvas {
+  height: 140px;
+  width: 100%;
+}
+
 .bar {
   width: 12px;
   display: flex;
   align-items: flex-end;
+  height: 100%;
 }
 
 .bar span {

@@ -1,8 +1,9 @@
-ï»¿"use client";
+"use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLang, t } from "../../lib/i18n";
+import MiniLineChart from "./MiniLineChart";
 
 const SERVER_URL = "http://localhost:3000";
 
@@ -11,7 +12,6 @@ export default function Live() {
   const [devices, setDevices] = useState([]);
   const [inputEvents, setInputEvents] = useState([]);
   const [audioSegments, setAudioSegments] = useState([]);
-  const [expanded, setExpanded] = useState({});
   const [cameraOk, setCameraOk] = useState({});
   const [screenOk, setScreenOk] = useState({});
   const [tick, setTick] = useState(0);
@@ -74,10 +74,10 @@ export default function Live() {
     const last = events[events.length - 1];
     const time = last.timestamp ? new Date(last.timestamp).toLocaleString() : "unknown";
     const count = events.length;
-    return `${count} events Â· last ${time}`;
+    return `${count} events ¡¤ last ${time}`;
   }
 
-  function buildBuckets(events, bucketMs = 10 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
+  function buildSeries(events, bucketMs = 10 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
     const now = Date.now();
     const start = now - windowMs;
     const buckets = new Map();
@@ -87,31 +87,20 @@ export default function Live() {
       const bucket = Math.floor(ts / bucketMs) * bucketMs;
       buckets.set(bucket, (buckets.get(bucket) || 0) + 1);
     }
-    return Array.from(buckets.entries())
-      .sort((a, b) => a[0] - b[0])
-      .slice(-36);
-  }
 
-  function MiniChart({ events }) {
-    const buckets = buildBuckets(events);
-    if (buckets.length === 0) return <div className="chart-empty">No chart data</div>;
-    const max = Math.max(...buckets.map((b) => b[1]), 1);
-    return (
-      <div className="chart">
-        {buckets.map(([ts, value]) => (
-          <div key={ts} className="bar">
-            <span style={{ height: `${Math.max(10, (value / max) * 100)}%` }} />
-          </div>
-        ))}
-      </div>
-    );
-  }
+    const totalBuckets = Math.floor(windowMs / bucketMs);
+    const labels = [];
+    const values = [];
+    for (let i = 0; i < totalBuckets; i += 1) {
+      const ts = start + i * bucketMs;
+      labels.push(new Date(ts).toLocaleTimeString());
+      values.push(buckets.get(ts) || 0);
+    }
 
-  function toggleExpanded(deviceId, type) {
-    setExpanded((prev) => ({
-      ...prev,
-      [deviceId]: prev[deviceId] === type ? null : type
-    }));
+    return {
+      labels: labels.slice(-36),
+      values: values.slice(-36)
+    };
   }
 
   const deviceCards = devices.length > 0 ? devices : [{ id: "cam-001", lastSeen: null }];
@@ -119,14 +108,14 @@ export default function Live() {
   return (
     <main>
       <header>
-        <h1>{t(lang, "å®æ—¶ç›‘æ§", "Live View")}</h1>
+        <h1>{t(lang, "ÊµÊ±¼à¿Ø", "Live View")}</h1>
         <nav>
-          <Link href="/">{t(lang, "é¦–é¡µ", "Home")}</Link>
-          <Link href="/events">{t(lang, "äº‹ä»¶", "Events")}</Link>
-          <Link href="/docs">{t(lang, "è¯´æ˜", "Docs")}</Link>
+          <Link href="/">{t(lang, "Ê×Ò³", "Home")}</Link>
+          <Link href="/events">{t(lang, "ÊÂ¼ş", "Events")}</Link>
+          <Link href="/docs">{t(lang, "ËµÃ÷", "Docs")}</Link>
         </nav>
         <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "ä¸­æ–‡"}
+          {lang === "zh" ? "EN" : "ÖĞÎÄ"}
         </button>
       </header>
 
@@ -138,35 +127,38 @@ export default function Live() {
           (evt) => evt.type === "mouse" && evt.deviceId === device.id
         );
         const audioForDevice = audioSegments.filter((seg) => seg.deviceId === device.id);
+        const keyboardSeries = buildSeries(keyboardEvents);
+        const mouseSeries = buildSeries(mouseEvents);
+        const audioSeries = buildSeries(audioForDevice);
         const cameraKey = device.id;
 
         return (
           <section key={device.id} className="device-card">
             <div className="device-header">
               <div>
-                <h2>{userNames[device.id] || t(lang, "è¢«ç›‘æ§ç”¨æˆ·", "Monitored User")}</h2>
+                <h2>{userNames[device.id] || t(lang, "±»¼à¿ØÓÃ»§", "Monitored User")}</h2>
                 <div className="mono">
-                  {t(lang, "è®¾å¤‡ IDï¼š", "Device ID: ")}
+                  {t(lang, "Éè±¸ ID£º", "Device ID: ")}
                   {device.id}
                 </div>
               </div>
-              <div className="status-pill">{device.lastSeen ? t(lang, "åœ¨çº¿", "Online") : t(lang, "ç¦»çº¿", "Offline")}</div>
+              <div className="status-pill">{device.lastSeen ? t(lang, "ÔÚÏß", "Online") : t(lang, "ÀëÏß", "Offline")}</div>
             </div>
 
             <div className="grid-2">
               <div className="card">
                 <div className="card-title">
-                  <h3>{t(lang, "å±å¹•", "Screen")}</h3>
+                  <h3>{t(lang, "ÆÁÄ»", "Screen")}</h3>
                   <span className="mono">/screen/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
                   {screenOk[device.id] === false && (
                     <div style={{ padding: 16, textAlign: "center" }}>
-                      {t(lang, "æ— å±å¹•ç”»é¢", "No screen feed")}
+                      {t(lang, "ÎŞÆÁÄ»»­Ãæ", "No screen feed")}
                       <div className="mono" style={{ marginTop: 6 }}>
                         {t(
                           lang,
-                          "è®¾å¤‡æœªæˆæƒå±å¹•å½•åˆ¶æˆ–æœªå¯ç”¨ --screenã€‚",
+                          "Éè±¸Î´ÊÚÈ¨ÆÁÄ»Â¼ÖÆ»òÎ´ÆôÓÃ --screen¡£",
                           "Device may not allow screen capture or agent not started with --screen."
                         )}
                       </div>
@@ -200,17 +192,17 @@ export default function Live() {
 
               <div className="card">
                 <div className="card-title">
-                  <h3>{t(lang, "æ‘„åƒå¤´", "Camera")}</h3>
+                  <h3>{t(lang, "ÉãÏñÍ·", "Camera")}</h3>
                   <span className="mono">/camera/latest</span>
                 </div>
                 <div className="video-frame" style={{ padding: 0 }}>
                   {cameraOk[cameraKey] === false && (
                     <div style={{ padding: 16, textAlign: "center" }}>
-                      {t(lang, "æ— æ‘„åƒå¤´ç”»é¢", "No camera feed")}
+                      {t(lang, "ÎŞÉãÏñÍ·»­Ãæ", "No camera feed")}
                       <div className="mono" style={{ marginTop: 6 }}>
                         {t(
                           lang,
-                          "è®¾å¤‡æ— æ‘„åƒå¤´æˆ–æœªå¯ç”¨ --camera-framesã€‚",
+                          "Éè±¸ÎŞÉãÏñÍ·»òÎ´ÆôÓÃ --camera-frames¡£",
                           "Device may not have a camera or agent not started with --camera-frames."
                         )}
                       </div>
@@ -244,69 +236,51 @@ export default function Live() {
             </div>
 
             <div className="input-grid">
-              <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "keyboard")}>
+              <div className="input-row">
                 <div>
-                  <strong>{t(lang, "é”®ç›˜", "Keyboard")}</strong>
+                  <strong>{t(lang, "¼üÅÌ", "Keyboard")}</strong>
                   <div className="mono">
-                    {keyboardEvents.length === 0 ? t(lang, "æ— æ•°æ®", "No data") : summarize(keyboardEvents)}
+                    {keyboardEvents.length === 0 ? t(lang, "ÎŞÊı¾İ", "No data") : summarize(keyboardEvents)}
                   </div>
                 </div>
-                <span className="mono">
-                  {expanded[device.id] === "keyboard" ? t(lang, "æ”¶èµ·", "Hide") : t(lang, "è¯¦æƒ…", "Details")}
-                </span>
-              </button>
+              </div>
+              <div className="input-detail">
+                <MiniLineChart labels={keyboardSeries.labels} values={keyboardSeries.values} />
+              </div>
 
-              {expanded[device.id] === "keyboard" && (
-                <div className="input-detail">
-                  <MiniChart events={keyboardEvents} />
-                </div>
-              )}
-
-              <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "mouse")}>
+              <div className="input-row">
                 <div>
-                  <strong>{t(lang, "é¼ æ ‡", "Mouse")}</strong>
+                  <strong>{t(lang, "Êó±ê", "Mouse")}</strong>
                   <div className="mono">
-                    {mouseEvents.length === 0 ? t(lang, "æ— æ•°æ®", "No data") : summarize(mouseEvents)}
+                    {mouseEvents.length === 0 ? t(lang, "ÎŞÊı¾İ", "No data") : summarize(mouseEvents)}
                   </div>
                 </div>
-                <span className="mono">
-                  {expanded[device.id] === "mouse" ? t(lang, "æ”¶èµ·", "Hide") : t(lang, "è¯¦æƒ…", "Details")}
-                </span>
-              </button>
+              </div>
+              <div className="input-detail">
+                <MiniLineChart labels={mouseSeries.labels} values={mouseSeries.values} />
+              </div>
 
-              {expanded[device.id] === "mouse" && (
-                <div className="input-detail">
-                  <MiniChart events={mouseEvents} />
-                </div>
-              )}
-
-              <button className="input-row" type="button" onClick={() => toggleExpanded(device.id, "audio")}>
+              <div className="input-row">
                 <div>
-                  <strong>{t(lang, "è¯­éŸ³", "Audio")}</strong>
+                  <strong>{t(lang, "ÓïÒô", "Audio")}</strong>
                   <div className="mono">
                     {audioForDevice.length > 0
                       ? t(
                           lang,
-                          `${audioForDevice.length} æ®µ Â· æœ€è¿‘ ${new Date(
+                          `${audioForDevice.length} ¶Î ¡¤ ×î½ü ${new Date(
                             audioForDevice[audioForDevice.length - 1].timestamp
                           ).toLocaleString()}`,
-                          `${audioForDevice.length} segments Â· last ${new Date(
+                          `${audioForDevice.length} segments ¡¤ last ${new Date(
                             audioForDevice[audioForDevice.length - 1].timestamp
                           ).toLocaleString()}`
                         )
-                      : t(lang, "æ— æ•°æ®", "No data")}
+                      : t(lang, "ÎŞÊı¾İ", "No data")}
                   </div>
                 </div>
-                <span className="mono">
-                  {expanded[device.id] === "audio" ? t(lang, "æ”¶èµ·", "Hide") : t(lang, "è¯¦æƒ…", "Details")}
-                </span>
-              </button>
-
-              {expanded[device.id] === "audio" && (
-                <div className="input-detail">
-                  <MiniChart events={audioForDevice} />
-                </div>
-              )}
+              </div>
+              <div className="input-detail">
+                <MiniLineChart labels={audioSeries.labels} values={audioSeries.values} />
+              </div>
             </div>
           </section>
         );
