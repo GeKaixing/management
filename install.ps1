@@ -1,4 +1,4 @@
-param(
+﻿param(
   [string]$InstallMethod = "zip",
   [string]$InstallDir = "$env:USERPROFILE\rcs",
   [string]$Branch = "main"
@@ -11,9 +11,6 @@ if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
 }
 if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
   Write-Error "npm is required."; exit 1
-}
-if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
-  Write-Warning "ffmpeg not found. Camera capture may not work."
 }
 
 $serverHost = Read-Host "Server host (e.g. 192.168.1.23 or server.local)"
@@ -49,11 +46,24 @@ if ($InstallMethod -eq "git" -and (Get-Command git -ErrorAction SilentlyContinue
 Set-Location $InstallDir
 
 & "C:\Program Files\nodejs\npm.cmd" install
+& "C:\Program Files\nodejs\npm.cmd" install ffmpeg-static
 
 $serverUrl = "http://$serverHost:3000"
 
 $args = @("agent/cli.js", "start", "--server", $serverUrl)
 if ($deviceId) { $args += @("--device", $deviceId) }
 $args += $flags
+
+try {
+  $ffmpegPath = & node -e "process.stdout.write(require('ffmpeg-static') || '')" 2>$null
+} catch {
+  $ffmpegPath = ""
+}
+
+if ($ffmpegPath) {
+  Write-Host "Install complete. FFmpeg-static is available: $ffmpegPath"
+} else {
+  Write-Warning "Install complete, but ffmpeg-static is not available."
+}
 
 node @args

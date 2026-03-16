@@ -8,6 +8,7 @@ const { createPipeline } = require("../stream/pipeline");
 const { loadEvents, getEvent } = require("../storage/db");
 const { loadInputEvents, appendInputEvent, filterInputEvents } = require("../storage/inputDb");
 const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
+const { appendProcessSnapshot, getLatestProcessSnapshot, getLatestProcessSnapshots } = require("../storage/processDb");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
 const { loadSettings, updateSettings } = require("../storage/settingsDb");
 const { loadDeviceMeta, getDeviceMeta, updateDeviceMeta, deleteDeviceMeta } = require("../storage/deviceDb");
@@ -95,11 +96,18 @@ function buildDeviceList(nowMs) {
       const meta = deviceMeta[id] || {};
       if (meta.deleted) return null;
       const device = devices.get(id) || { id, status: "offline", lastSeen: null };
+      const lastSeen = device.lastSeen || null;
+      const isOnlineNow = lastSeen ? nowMs - lastSeen <= OFFLINE_TIMEOUT_MS : false;
+      const status = isOnlineNow ? "online" : "offline";
+      if (isOnlineNow && !device.onlineSince) {
+        device.onlineSince = nowMs;
+      }
       const baseMs = getOnlineDuration(id, todayKey);
       const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
       const onlineMsToday = baseMs + currentMs;
       return {
         ...device,
+        status,
         name: meta.name || device.name || null,
         note: meta.note || device.note || null,
         laze: computeDeviceLaze(id, inputEvents, nowMs),
@@ -200,6 +208,7 @@ router.post("/device/register", verifyDevice, (req, res) => {
   if (!id) return res.status(400).json({ error: "missing device id" });
 
   touchDevice(id, "register");
+  updateDeviceMeta(id, { deleted: false });
   return res.json({ ok: true, id });
 });
 
@@ -345,6 +354,11 @@ router.post("/screen/frame", verifyDevice, (req, res) => {
   if (!body.frameBase64) return res.status(400).json({ error: "missing frameBase64" });
 
   const buffer = Buffer.from(body.frameBase64, "base64");
+  const intervalMs = Number(body.intervalMs);
+  const fps = Number.isFinite(intervalMs) && intervalMs > 0 ? Math.max(1, Math.round(1000 / intervalMs)) : 2;
+  pipeline.ingestFrame({ deviceId: body.deviceId, frameBuffer: buffer, meta: { fps, source: "screen" } }).catch(() => {
+    // Best-effort, ignore pipeline errors.
+  });
   const timestampMs = body.timestamp ? new Date(body.timestamp).getTime() : Date.now();
   const timestamp = new Date(timestampMs).toISOString();
   const hash = hashBuffer(buffer);
@@ -422,6 +436,31 @@ router.post("/audio/segment", verifyDevice, (req, res) => {
 router.get("/audio/list", (req, res) => {
   const deviceId = req.query.deviceId || null;
   res.json({ segments: filterAudioEvents({ deviceId }) });
+});
+
+router.post("/process/snapshot", verifyDevice, (req, res) => {
+  const body = req.body || {};
+  if (!body.deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const snapshot = {
+    deviceId: body.deviceId,
+    total: Number(body.total || 0),
+    top: Array.isArray(body.top) ? body.top : [],
+    timestamp: body.timestamp || new Date().toISOString()
+  };
+  appendProcessSnapshot(snapshot);
+  touchDevice(body.deviceId, "process");
+  res.json({ ok: true });
+});
+
+router.get("/process/latest", (req, res) => {
+  const deviceId = req.query.deviceId || null;
+  if (deviceId) {
+    const snapshot = getLatestProcessSnapshot(deviceId);
+    if (!snapshot) return res.status(404).json({ error: "not found" });
+    return res.json({ snapshot });
+  }
+  const snapshots = getLatestProcessSnapshots();
+  return res.json({ snapshots });
 });
 
 router.get("/audio/play", (req, res) => {

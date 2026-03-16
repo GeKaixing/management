@@ -1,5 +1,6 @@
 const { spawn } = require("child_process");
 const { getDefaultCameraConfig } = require("./cameraDefaults");
+const { resolveFfmpegBin } = require("../utils/ffmpeg");
 
 function buildFfmpegArgs(config) {
   const camera = config.camera || {};
@@ -34,7 +35,8 @@ function buildFfmpegArgs(config) {
 
 function startStream(config) {
   const args = buildFfmpegArgs(config);
-  const ffmpeg = spawn("ffmpeg", args, { stdio: "inherit" });
+  const ffmpegBin = (config && config.ffmpegPath) || resolveFfmpegBin();
+  const ffmpeg = spawn(ffmpegBin, args, { stdio: "inherit" });
 
   ffmpeg.on("exit", (code) => {
     if (code !== 0) {

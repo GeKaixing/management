@@ -19,18 +19,21 @@ type Props = {
 };
 
 export default function MiniLineChart({ labels, values }: Props) {
+  const hasData = values.some((v) => Number(v) > 0);
+
   const data = {
     labels,
     datasets: [
       {
         label: "",
         data: values,
-        borderColor: "rgba(31, 111, 120, 0.9)",
-        backgroundColor: "rgba(31, 111, 120, 0.15)",
-        pointRadius: 0,
-        borderWidth: 2,
+        borderColor: hasData ? "rgba(31, 111, 120, 0.9)" : "rgba(31, 111, 120, 0.2)",
+        backgroundColor: hasData ? "rgba(31, 111, 120, 0.2)" : "rgba(31, 111, 120, 0.05)",
+        pointRadius: hasData ? 2 : 0,
+        pointHoverRadius: 3,
+        borderWidth: 3,
         fill: true,
-        tension: 0.3
+        tension: 0.35
       }
     ]
   };
@@ -47,15 +50,21 @@ export default function MiniLineChart({ labels, values }: Props) {
         display: false
       },
       y: {
-        display: false,
-        beginAtZero: true
+        display: true,
+        beginAtZero: true,
+        ticks: {
+          maxTicksLimit: 3
+        },
+        grid: {
+          color: "rgba(28, 38, 43, 0.08)"
+        }
       }
     }
   };
 
   return (
-    <div className="chart-canvas">
-      <Line data={data} options={options} />
+    <div className="chart-canvas" style={{ minHeight: 140 }}>
+      {hasData ? <Line data={data} options={options} /> : <div className="chart-empty">暂无数据</div>}
     </div>
   );
 }

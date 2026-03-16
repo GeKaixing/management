@@ -1,7 +1,8 @@
 const { spawn } = require("child_process");
 const { getDefaultCameraConfig } = require("./cameraDefaults");
+const { resolveFfmpegBin } = require("../utils/ffmpeg");
 
-function captureFrame({ format, input, resolution }) {
+function captureFrame({ format, input, resolution, ffmpegPath }) {
   return new Promise((resolve, reject) => {
     const args = [
       "-f",
@@ -21,7 +22,8 @@ function captureFrame({ format, input, resolution }) {
       "-"
     ];
 
-    const ffmpeg = spawn("ffmpeg", args, { stdio: ["ignore", "pipe", "ignore"] });
+    const ffmpegBin = ffmpegPath || resolveFfmpegBin();
+    const ffmpeg = spawn(ffmpegBin, args, { stdio: ["ignore", "pipe", "ignore"] });
     const chunks = [];
 
     ffmpeg.stdout.on("data", (chunk) => chunks.push(chunk));
@@ -41,7 +43,8 @@ function startCameraFrameMonitor({
   intervalMs = 1000,
   format,
   input,
-  resolution
+  resolution,
+  ffmpegPath
 }) {
   if (!enabled) return { stop: () => {} };
 
@@ -56,7 +59,7 @@ function startCameraFrameMonitor({
     if (inFlight) return;
     inFlight = true;
     try {
-      const buffer = await captureFrame({ format: camFormat, input: camInput, resolution });
+      const buffer = await captureFrame({ format: camFormat, input: camInput, resolution, ffmpegPath });
       const headers = { "Content-Type": "application/json" };
       if (token) headers["x-device-token"] = token;
 

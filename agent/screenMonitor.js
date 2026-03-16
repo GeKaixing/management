@@ -20,7 +20,8 @@ function startScreenMonitor({ deviceId, serverUrl, token, enabled, intervalMs = 
         body: JSON.stringify({
           deviceId,
           frameBase64: buffer.toString("base64"),
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          intervalMs
         })
       });
     } catch (err) {

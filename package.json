@@ -10,8 +10,16 @@
     "dashboard": "npm --prefix dashboard run dev",
     "test": "node tests/run.js"
   },
+  "scriptsInfo": {
+    "server": "启动服务端（REST API + 事件引擎）",
+    "agent": "启动 CLI Agent，显示用法说明 不带 start = 只看用法",
+    "agent:start": "启动 CLI Agent（默认 start 命令）带 start = 真正开始监控",
+    "dashboard": "启动前端 Dashboard（Next.js）",
+    "test": "运行测试用例"
+  },
   "dependencies": {
     "express": "^4.19.2",
+    "ffmpeg-static": "^5.3.0",
     "screenshot-desktop": "^1.15.0",
     "uiohook-napi": "^1.5.0",
     "ws": "^8.17.0"

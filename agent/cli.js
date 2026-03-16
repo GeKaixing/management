@@ -6,6 +6,8 @@ const { startInputMonitor } = require("./inputMonitor");
 const { startScreenMonitor } = require("./screenMonitor");
 const { startMicRecorder } = require("./micRecorder");
 const { startCameraFrameMonitor } = require("./cameraFrameMonitor");
+const { startProcessMonitor } = require("./processMonitor");
+const { resolveFfmpegBin } = require("../utils/ffmpeg");
 
 function getArgValue(args, name) {
   const idx = args.indexOf(name);
@@ -15,6 +17,10 @@ function getArgValue(args, name) {
 
 function hasFlag(args, name) {
   return args.includes(name);
+}
+
+function resolveFfmpegPath(config) {
+  return (config && config.ffmpegPath) || resolveFfmpegBin();
 }
 
 async function registerDevice(serverUrl, deviceId, token) {
@@ -94,11 +100,23 @@ function printUsage() {
   console.log("  --mic-bitrate <rate>");
   console.log("  --camera-frames");
   console.log("  --camera-frames-interval <ms>");
+  console.log("  --process");
+  console.log("  --process-interval <ms>");
   console.log("  --no-camera");
 }
 
 async function main() {
-  const args = process.argv.slice(2);
+  let args = process.argv.slice(2);
+  if (args.length <= 1 && process.env.npm_config_argv) {
+    try {
+      const parsed = JSON.parse(process.env.npm_config_argv);
+      if (parsed && Array.isArray(parsed.remain) && parsed.remain.length > 0) {
+        args = [args[0], ...parsed.remain];
+      }
+    } catch {
+      // Ignore npm_config_argv parsing errors.
+    }
+  }
   const cmd = args[0];
 
   if (!cmd || cmd === "-h" || cmd === "--help") {
@@ -140,11 +158,18 @@ async function main() {
     if (streamUrl) overrides.stream.url = streamUrl;
   }
 
-  if (hasFlag(args, "--input")) {
+  const flagInput = hasFlag(args, "--input");
+  const flagScreen = hasFlag(args, "--screen");
+  const flagMic = hasFlag(args, "--mic");
+  const flagCameraFrames = hasFlag(args, "--camera-frames");
+  const flagProcess = hasFlag(args, "--process");
+  const anyExplicitMonitors = flagInput || flagScreen || flagMic || flagCameraFrames || flagProcess;
+
+  if (flagInput) {
     overrides.inputMonitoring = { enabled: true };
   }
 
-  if (hasFlag(args, "--screen")) {
+  if (flagScreen) {
     overrides.screenMonitoring = { enabled: true };
   }
 
@@ -154,7 +179,7 @@ async function main() {
     overrides.screenMonitoring.intervalMs = Number(screenInterval);
   }
 
-  if (hasFlag(args, "--mic")) {
+  if (flagMic) {
     overrides.micMonitoring = { enabled: true };
   }
 
@@ -170,8 +195,19 @@ async function main() {
     if (micBitrate) overrides.micMonitoring.bitrate = micBitrate;
   }
 
-  if (hasFlag(args, "--camera-frames")) {
+  if (flagCameraFrames) {
     overrides.cameraFrameMonitoring = { enabled: true };
+  }
+
+  if (flagProcess) {
+    overrides.processMonitoring = { enabled: true };
+  }
+
+  if (!anyExplicitMonitors) {
+    overrides.inputMonitoring = { enabled: true };
+    overrides.screenMonitoring = { enabled: true };
+    overrides.micMonitoring = { enabled: true };
+    overrides.processMonitoring = { enabled: true };
   }
 
   const camFrameInterval = getArgValue(args, "--camera-frames-interval");
@@ -180,9 +216,16 @@ async function main() {
     overrides.cameraFrameMonitoring.intervalMs = Number(camFrameInterval);
   }
 
+  const processInterval = getArgValue(args, "--process-interval");
+  if (processInterval) {
+    overrides.processMonitoring = overrides.processMonitoring || {};
+    overrides.processMonitoring.intervalMs = Number(processInterval);
+  }
+
   const noCamera = hasFlag(args, "--no-camera");
 
   const config = resolveConfig(overrides);
+  const ffmpegPath = resolveFfmpegPath(config);
 
   await registerDevice(config.serverUrl, config.deviceId, token);
   console.log("Device registered:", config.deviceId);
@@ -199,6 +242,13 @@ async function main() {
   } else {
     console.log("Camera capture disabled (--no-camera).");
   }
+
+  let micEnabled = Boolean(config.micMonitoring && config.micMonitoring.enabled);
+  if (micEnabled && !ffmpegPath) {
+    micEnabled = false;
+    console.warn("FFmpeg not found. Microphone recording disabled.");
+  }
+
   const inputMonitor = startInputMonitor({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
@@ -216,11 +266,12 @@ async function main() {
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
-    enabled: config.micMonitoring && config.micMonitoring.enabled,
+    enabled: micEnabled,
     segmentSeconds: config.micMonitoring && config.micMonitoring.segmentSeconds,
     format: config.micMonitoring && config.micMonitoring.format,
     input: config.micMonitoring && config.micMonitoring.input,
-    bitrate: config.micMonitoring && config.micMonitoring.bitrate
+    bitrate: config.micMonitoring && config.micMonitoring.bitrate,
+    ffmpegPath: config.ffmpegPath
   });
   const cameraFrameMonitor = startCameraFrameMonitor({
     deviceId: config.deviceId,
@@ -230,9 +281,28 @@ async function main() {
     intervalMs: config.cameraFrameMonitoring && config.cameraFrameMonitoring.intervalMs,
     format: config.camera && config.camera.format,
     input: config.camera && config.camera.input,
-    resolution: config.camera && config.camera.resolution
+    resolution: config.camera && config.camera.resolution,
+    ffmpegPath: config.ffmpegPath
   });
-  console.log("Camera streaming started.");
+  const processMonitor = startProcessMonitor({
+    deviceId: config.deviceId,
+    serverUrl: config.serverUrl,
+    token,
+    enabled: config.processMonitoring && config.processMonitoring.enabled,
+    intervalMs: config.processMonitoring && config.processMonitoring.intervalMs
+  });
+  const enabledFlags = {
+    input: Boolean(config.inputMonitoring && config.inputMonitoring.enabled),
+    screen: Boolean(config.screenMonitoring && config.screenMonitoring.enabled),
+    mic: micEnabled,
+    cameraFrames: Boolean(config.cameraFrameMonitoring && config.cameraFrameMonitoring.enabled),
+    process: Boolean(config.processMonitoring && config.processMonitoring.enabled),
+    cameraStream: !noCamera
+  };
+  console.log("Agent started with monitors:", enabledFlags);
+  if (!enabledFlags.input && !enabledFlags.screen && !enabledFlags.mic && !enabledFlags.cameraFrames && !enabledFlags.cameraStream) {
+    console.log("Warning: no monitors enabled. Use --screen/--input/--mic/--camera-frames or --no-camera.");
+  }
 
   let shuttingDown = false;
   async function gracefulShutdown(reason) {
@@ -245,6 +315,7 @@ async function main() {
       screenMonitor && screenMonitor.stop && screenMonitor.stop();
       micRecorder && micRecorder.stop && micRecorder.stop();
       cameraFrameMonitor && cameraFrameMonitor.stop && cameraFrameMonitor.stop();
+      processMonitor && processMonitor.stop && processMonitor.stop();
       if (cameraProc && cameraProc.kill) cameraProc.kill();
     } catch (err) {
       // Ignore shutdown errors.

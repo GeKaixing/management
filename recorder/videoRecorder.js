@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
+const { resolveFfmpegBin } = require("../utils/ffmpeg");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
 
 function saveVideoClip(frames, opts = {}) {
@@ -34,8 +35,9 @@ function saveVideoClip(frames, opts = {}) {
   const fps = Number(opts.fps || 30);
   const inputPattern = path.join(tmpDir, "frame%06d.jpg");
 
+  const ffmpegBin = resolveFfmpegBin();
   const result = spawnSync(
-    "ffmpeg",
+    ffmpegBin,
     [
       "-y",
       "-framerate",

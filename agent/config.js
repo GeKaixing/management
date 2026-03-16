@@ -12,6 +12,7 @@ const defaultConfig = {
     fps: 30,
     resolution: "1280x720"
   },
+  ffmpegPath: "",
   inputMonitoring: {
     enabled: false
   },
@@ -27,6 +28,10 @@ const defaultConfig = {
   cameraFrameMonitoring: {
     enabled: false,
     intervalMs: 1000
+  },
+  processMonitoring: {
+    enabled: false,
+    intervalMs: 60000
   }
 };
 
@@ -49,11 +54,16 @@ function resolveConfig(overrides = {}) {
     screenMonitoring: {
       ...defaultConfig.screenMonitoring,
       ...(overrides.screenMonitoring || {})
+    },
+    processMonitoring: {
+      ...defaultConfig.processMonitoring,
+      ...(overrides.processMonitoring || {})
     }
   };
 
   if (process.env.DEVICE_ID) config.deviceId = process.env.DEVICE_ID;
   if (process.env.SERVER_URL) config.serverUrl = process.env.SERVER_URL;
+  if (process.env.FFMPEG_PATH) config.ffmpegPath = process.env.FFMPEG_PATH;
 
   config.deviceId = getOrCreateDeviceId(config.deviceId);
 

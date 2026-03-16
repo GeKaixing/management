@@ -1,11 +1,11 @@
-ï»¿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
 import { safeDateString } from "../../lib/time";
+import { getServerUrl } from "../../lib/serverUrl";
 
-const SERVER_URL = "http://localhost:3000";
 const LONG_OFFLINE_MS = 30 * 60 * 1000;
 
 type Device = {
@@ -41,7 +41,7 @@ export default function ReportPage() {
 
     async function loadDevices() {
       try {
-        const res = await fetch(`${SERVER_URL}/devices`);
+        const res = await fetch(`${getServerUrl()}/devices`);
         const data = await res.json();
         if (active) setDevices(Array.isArray(data.devices) ? data.devices : []);
       } catch {
@@ -61,19 +61,19 @@ export default function ReportPage() {
     setAiLoading(true);
     setAiStatus(null);
     try {
-      const res = await fetch(`${SERVER_URL}/report/ai-summary`, { method: "POST" });
+      const res = await fetch(`${getServerUrl()}/report/ai-summary`, { method: "POST" });
       const data = await res.json();
       if (!res.ok) {
         if (data?.error === "ai_key_not_configured") {
-          setAiStatus(t(lang, "è¯·å…ˆåœ¨è®¾ç½®ä¸­é…ç½®AI Key", "Please configure the AI key in Settings"));
+          setAiStatus(t(lang, "ÇëÏÈÔÚÉèÖÃÖĞÅäÖÃAI Key", "Please configure the AI key in Settings"));
         } else {
           const message = data?.message ? String(data.message) : "";
-          const base = t(lang, "AIç”Ÿæˆå¤±è´¥", "AI generation failed");
+          const base = t(lang, "AIÉú³ÉÊ§°Ü", "AI generation failed");
           const friendly =
             message === "timeout"
-              ? t(lang, "AIè¯·æ±‚è¶…æ—¶ï¼Œè¯·æ£€æŸ¥ç½‘ç»œ/ä»£ç†", "AI request timed out. Check network/proxy.")
+              ? t(lang, "AIÇëÇó³¬Ê±£¬Çë¼ì²éÍøÂç/´úÀí", "AI request timed out. Check network/proxy.")
               : message === "network_error"
-                ? t(lang, "æ— æ³•è¿æ¥åˆ°Geminiï¼Œè¯·æ£€æŸ¥ç½‘ç»œ/ä»£ç†", "Unable to reach Gemini. Check network/proxy.")
+                ? t(lang, "ÎŞ·¨Á¬½Óµ½Gemini£¬Çë¼ì²éÍøÂç/´úÀí", "Unable to reach Gemini. Check network/proxy.")
                 : message;
           setAiStatus(friendly ? `${base}: ${friendly}` : base);
         }
@@ -82,7 +82,7 @@ export default function ReportPage() {
         setAiSummary(String(data.summary || ""));
       }
     } catch {
-      setAiStatus(t(lang, "AIç”Ÿæˆå¤±è´¥", "AI generation failed"));
+      setAiStatus(t(lang, "AIÉú³ÉÊ§°Ü", "AI generation failed"));
       setAiSummary(null);
     } finally {
       setAiLoading(false);
@@ -104,40 +104,40 @@ export default function ReportPage() {
   }, [devices]);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ä»Šæ—¥æ±‡æŠ¥", "Daily Report")}>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "½ñÈÕ»ã±¨", "Daily Report")}>
       <section className="grid" style={{ marginBottom: 24 }}>
         <div className="card">
-          <div className="badge">{t(lang, "æ€»è®¾å¤‡", "Total")}</div>
+          <div className="badge">{t(lang, "×ÜÉè±¸", "Total")}</div>
           <h3>{summary.total}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "åœ¨çº¿", "Online")}</div>
+          <div className="badge">{t(lang, "ÔÚÏß", "Online")}</div>
           <h3>{summary.online}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "ç–‘ä¼¼å·æ‡’", "Lazy")}</div>
+          <div className="badge">{t(lang, "ÒÉËÆÍµÀÁ", "Lazy")}</div>
           <h3>{summary.lazy}</h3>
         </div>
         <div className="card">
-          <div className="badge">{t(lang, "é•¿æ—¶é—´ç¦»çº¿", "Long Offline")}</div>
+          <div className="badge">{t(lang, "³¤Ê±¼äÀëÏß", "Long Offline")}</div>
           <h3>{summary.longOffline}</h3>
         </div>
       </section>
 
       <section className="card">
         <div className="card-title">
-          <h3>{t(lang, "å‘˜å·¥ä»Šæ—¥çŠ¶æ€", "Employee Status Today")}</h3>
+          <h3>{t(lang, "Ô±¹¤½ñÈÕ×´Ì¬", "Employee Status Today")}</h3>
         </div>
         <table className="table">
           <thead>
             <tr>
-              <th>{t(lang, "å§“å", "Name")}</th>
-              <th>{t(lang, "è®¾å¤‡ID", "Device ID")}</th>
-              <th>{t(lang, "çŠ¶æ€", "Status")}</th>
-              <th>{t(lang, "ä»Šæ—¥åœ¨çº¿(h)", "Online Today (h)")}</th>
-              <th>{t(lang, "å·æ‡’", "Lazy")}</th>
-              <th>{t(lang, "é•¿ç¦»çº¿", "Long Offline")}</th>
-              <th>{t(lang, "æœ€è¿‘åœ¨çº¿", "Last Seen")}</th>
+              <th>{t(lang, "ĞÕÃû", "Name")}</th>
+              <th>{t(lang, "Éè±¸ID", "Device ID")}</th>
+              <th>{t(lang, "×´Ì¬", "Status")}</th>
+              <th>{t(lang, "½ñÈÕÔÚÏß(h)", "Online Today (h)")}</th>
+              <th>{t(lang, "ÍµÀÁ", "Lazy")}</th>
+              <th>{t(lang, "³¤ÀëÏß", "Long Offline")}</th>
+              <th>{t(lang, "×î½üÔÚÏß", "Last Seen")}</th>
             </tr>
           </thead>
           <tbody>
@@ -147,7 +147,7 @@ export default function ReportPage() {
                 ? safeDateString(new Date(device.lastSeen).toISOString())
                 : device.offlineAt
                   ? safeDateString(device.offlineAt)
-                  : t(lang, "æœªçŸ¥", "unknown");
+                  : t(lang, "Î´Öª", "unknown");
               const lastTs = device.lastSeen
                 ? device.lastSeen
                 : device.offlineAt
@@ -158,12 +158,12 @@ export default function ReportPage() {
 
               return (
                 <tr key={device.id}>
-                  <td>{device.name || t(lang, "æœªå‘½å", "Unnamed")}</td>
+                  <td>{device.name || t(lang, "Î´ÃüÃû", "Unnamed")}</td>
                   <td className="mono">{device.id}</td>
-                  <td>{device.status === "online" ? t(lang, "åœ¨çº¿", "Online") : t(lang, "ç¦»çº¿", "Offline")}</td>
+                  <td>{device.status === "online" ? t(lang, "ÔÚÏß", "Online") : t(lang, "ÀëÏß", "Offline")}</td>
                   <td>{formatHours(device.onlineMsToday)}</td>
-                  <td>{isLazy ? t(lang, "æ˜¯", "Yes") : t(lang, "å¦", "No")}</td>
-                  <td>{longOffline ? t(lang, "æ˜¯", "Yes") : t(lang, "å¦", "No")}</td>
+                  <td>{isLazy ? t(lang, "ÊÇ", "Yes") : t(lang, "·ñ", "No")}</td>
+                  <td>{longOffline ? t(lang, "ÊÇ", "Yes") : t(lang, "·ñ", "No")}</td>
                   <td>{lastSeen}</td>
                 </tr>
               );
@@ -174,15 +174,15 @@ export default function ReportPage() {
 
       <section className="card" style={{ marginTop: 24 }}>
         <div className="card-title">
-          <h3>{t(lang, "AI æ±‡æ€»", "AI Summary")}</h3>
+          <h3>{t(lang, "AI »ã×Ü", "AI Summary")}</h3>
           <button className="button" type="button" onClick={loadAiSummary} disabled={aiLoading}>
-            {aiLoading ? t(lang, "ç”Ÿæˆä¸­...", "Generating...") : t(lang, "ç”Ÿæˆæ±‡æŠ¥", "Generate")}
+            {aiLoading ? t(lang, "Éú³ÉÖĞ...", "Generating...") : t(lang, "Éú³É»ã±¨", "Generate")}
           </button>
         </div>
         <p className="mono" style={{ marginTop: 0 }}>
           {t(
             lang,
-            "AI ä»…åšäº‹å®æ±‡æ€»ä¸é£é™©æç¤ºï¼Œä¸åšç”¨å·¥å†³ç­–ã€‚",
+            "AI ½ö×öÊÂÊµ»ã×ÜÓë·çÏÕÌáÊ¾£¬²»×öÓÃ¹¤¾ö²ß¡£",
             "AI provides factual summaries and risk signals only, not HR decisions."
           )}
         </p>

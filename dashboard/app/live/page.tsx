@@ -6,8 +6,9 @@ import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
 import { safeDateString } from "../../lib/time";
 import MiniLineChart from "./MiniLineChart";
+import { getServerUrl } from "../../lib/serverUrl";
 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = getServerUrl();
 
 type Device = {
   id: string;
@@ -38,11 +39,19 @@ type AudioSegment = {
   file?: string;
 };
 
+type ProcessSnapshot = {
+  deviceId: string;
+  total?: number;
+  top?: { name: string; count: number }[];
+  timestamp?: string;
+};
+
 export default function Live() {
   const { lang, setLang } = useLang();
   const [devices, setDevices] = useState<Device[]>([]);
   const [inputEvents, setInputEvents] = useState<InputEvent[]>([]);
   const [audioSegments, setAudioSegments] = useState<AudioSegment[]>([]);
+  const [processSnapshots, setProcessSnapshots] = useState<ProcessSnapshot[]>([]);
   const [cameraOk, setCameraOk] = useState<Record<string, boolean>>({});
   const [screenOk, setScreenOk] = useState<Record<string, boolean>>({});
   const [tick, setTick] = useState(0);
@@ -96,12 +105,24 @@ export default function Live() {
       }
     }
 
+    async function loadProcesses() {
+      try {
+        const res = await fetch(`${SERVER_URL}/process/latest`);
+        const data = await res.json();
+        setProcessSnapshots(Array.isArray(data.snapshots) ? data.snapshots : []);
+      } catch {
+        setProcessSnapshots([]);
+      }
+    }
+
     loadInputs();
     loadAudio();
+    loadProcesses();
 
     const timer = setInterval(() => {
       loadInputs();
       loadAudio();
+      loadProcesses();
     }, 3000);
 
     return () => clearInterval(timer);
@@ -245,9 +266,11 @@ export default function Live() {
         );
 
         const audioForDevice = audioSegments.filter((e) => e.deviceId === device.id);
+        const processInfo = processSnapshots.find((p) => p.deviceId === device.id) || null;
+        const processKey = `${device.id}-process`;
 
-        const keyboardSeries = buildSeries(keyboardEvents);
-        const mouseSeries = buildSeries(mouseEvents);
+        const keyboardSeries = buildSeries(keyboardEvents, 5 * 60 * 1000, 60 * 60 * 1000);
+        const mouseSeries = buildSeries(mouseEvents, 5 * 60 * 1000, 60 * 60 * 1000);
 
         const onlineHours = formatHours(device.onlineMsToday);
         const requiredHours = device.workHoursPerDay ?? 8;
@@ -479,6 +502,39 @@ export default function Live() {
                   </div>
                 )}
               </div>
+
+              <div
+                className="input-row"
+                onClick={() =>
+                  setDetailOpen((prev) => ({
+                    ...prev,
+                    [processKey]: !prev[processKey]
+                  }))
+                }
+              >
+                <div>
+                  <strong>{t(lang, "进程", "Processes")}</strong>
+                  <div className="mono">
+                    {processInfo
+                      ? t(
+                          lang,
+                          `总数 ${processInfo.total ?? 0} · 最近 ${safeDateString(processInfo.timestamp)}`,
+                          `Total ${processInfo.total ?? 0} · last ${safeDateString(processInfo.timestamp)}`
+                        )
+                      : t(lang, "无数据", "No data")}
+                  </div>
+                </div>
+                <div className="mono">{detailOpen[processKey] ? t(lang, "收起", "Hide") : t(lang, "展开", "Show")}</div>
+              </div>
+              {detailOpen[processKey] && processInfo?.top?.length ? (
+                <div className="input-detail">
+                  <div className="mono" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    {processInfo.top.map((item) => (
+                      <span key={item.name}>{item.name}×{item.count}</span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           </section>
         );

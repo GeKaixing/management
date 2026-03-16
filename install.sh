@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 set -euo pipefail
 
 INSTALL_METHOD="zip"
@@ -25,10 +25,6 @@ fi
 
 if ! command -v npm >/dev/null 2>&1; then
   echo "npm is required."; exit 1
-fi
-
-if ! command -v ffmpeg >/dev/null 2>&1; then
-  echo "Warning: ffmpeg not found. Camera capture may not work."
 fi
 
 read -r -p "Server host (e.g. 192.168.1.23 or server.local): " SERVER_HOST
@@ -73,6 +69,7 @@ fi
 cd "$INSTALL_DIR"
 
 npm install
+npm install ffmpeg-static
 
 SERVER_URL="http://$SERVER_HOST:3000"
 
@@ -81,5 +78,16 @@ if [[ -n "$DEVICE_ID" ]]; then
   CMD+=(--device "$DEVICE_ID")
 fi
 CMD+=("${FLAGS[@]}")
+
+FFMPEG_STATIC_PATH=""
+if node -e "require('ffmpeg-static')" >/dev/null 2>&1; then
+  FFMPEG_STATIC_PATH=$(node -e "process.stdout.write(require('ffmpeg-static') || '')")
+fi
+
+if [[ -n "$FFMPEG_STATIC_PATH" ]]; then
+  echo "Install complete. ffmpeg-static is available: $FFMPEG_STATIC_PATH"
+else
+  echo "Install complete, but ffmpeg-static is not available."
+fi
 
 "${CMD[@]}"

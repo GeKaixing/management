@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { spawn } = require("child_process");
+const { resolveFfmpegBin } = require("../utils/ffmpeg");
 
 function getDefaultMicConfig() {
   const platform = process.platform;
@@ -25,7 +26,8 @@ function startMicRecorder({
   segmentSeconds = 10,
   format,
   input,
-  bitrate = "64k"
+  bitrate = "64k",
+  ffmpegPath
 }) {
   if (!enabled) return { stop: () => {} };
 
@@ -56,7 +58,8 @@ function startMicRecorder({
     outputPattern
   ];
 
-  const ffmpeg = spawn("ffmpeg", args, { stdio: "ignore" });
+  const ffmpegBin = ffmpegPath || resolveFfmpegBin();
+  const ffmpeg = spawn(ffmpegBin, args, { stdio: "ignore" });
 
   const uploaded = new Set();
   let pollTimer = null;

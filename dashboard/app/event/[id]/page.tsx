@@ -1,27 +1,31 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import DashboardShell from "../../components/DashboardShell";
 import { useLang, t } from "../../../lib/i18n";
+import { safeDateString } from "../../../lib/time";
+import { getServerUrl } from "../../../lib/serverUrl";
 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = getServerUrl();
 
-type EventItem = {
+type EventRecord = {
   id: string;
   deviceId: string;
-  type: string;
   timestamp: string;
-  snapshot?: string;
-  video?: string;
+  type: string;
+  snapshot?: string | null;
+  screenSnapshot?: string | null;
+  cameraSnapshot?: string | null;
+  video?: string | null;
+  meta?: Record<string, unknown>;
 };
 
 export default function EventDetail() {
+  const { id } = useParams();
   const { lang, setLang } = useLang();
-  const params = useParams();
-  const id = typeof params?.id === "string" ? params.id : Array.isArray(params?.id) ? params?.id[0] : "";
-  const [event, setEvent] = useState<EventItem | null>(null);
+  const [event, setEvent] = useState<EventRecord | null>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -32,40 +36,49 @@ export default function EventDetail() {
   }, [id]);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "事件详情", "Event Detail")}>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "�¼�����", "Event Detail")}>
       <div className="page-links">
-        <Link href="/events">{t(lang, "返回事件列表", "Back to Events")}</Link>
-        <Link href="/live">{t(lang, "查看监控", "Go to Monitor")}</Link>
+        <Link className="ghost-button" href="/events">
+          {t(lang, "�����¼�", "Back to Events")}
+        </Link>
       </div>
 
-      {!event ? (
-        <div className="card">{t(lang, "正在加载事件...", "Loading event...")}</div>
-      ) : (
-        <div className="grid">
-          <div className="card">
-            <h3>{t(lang, "元数据", "Metadata")}</h3>
-            <p>
-              <strong>{t(lang, "ID：", "ID:")}</strong> {event.id}
-            </p>
-            <p>
-              <strong>{t(lang, "设备：", "Device:")}</strong> {event.deviceId}
-            </p>
-            <p>
-              <strong>{t(lang, "类型：", "Type:")}</strong> {event.type}
-            </p>
-            <p>
-              <strong>{t(lang, "时间：", "Timestamp:")}</strong> {new Date(event.timestamp).toLocaleString()}
-            </p>
+      {!event && <div className="card">{t(lang, "δ�ҵ��¼�", "Event not found")}</div>}
+      {event && (
+        <div className="card">
+          <div className="card-title">
+            <h3>{event.type}</h3>
+            <span className="mono">{safeDateString(event.timestamp)}</span>
           </div>
-          <div className="card">
-            <h3>{t(lang, "文件", "Files")}</h3>
-            <p className="mono">
-              {t(lang, "快照：", "Snapshot:")} {event.snapshot}
-            </p>
-            <p className="mono">
-              {t(lang, "视频：", "Video:")} {event.video}
-            </p>
+          <p className="mono">
+            {t(lang, "�豸", "Device")}: {event.deviceId}
+          </p>
+          <div className="grid-2" style={{ marginTop: 16 }}>
+            {event.snapshot && (
+              <div>
+                <div className="badge">Snapshot</div>
+                <img src={event.snapshot} alt="snapshot" style={{ width: "100%", borderRadius: 16 }} />
+              </div>
+            )}
+            {event.screenSnapshot && (
+              <div>
+                <div className="badge">Screen</div>
+                <img src={event.screenSnapshot} alt="screen" style={{ width: "100%", borderRadius: 16 }} />
+              </div>
+            )}
+            {event.cameraSnapshot && (
+              <div>
+                <div className="badge">Camera</div>
+                <img src={event.cameraSnapshot} alt="camera" style={{ width: "100%", borderRadius: 16 }} />
+              </div>
+            )}
           </div>
+          {event.video && (
+            <div style={{ marginTop: 16 }}>
+              <div className="badge">Video</div>
+              <video controls style={{ width: "100%", borderRadius: 16 }} src={event.video} />
+            </div>
+          )}
         </div>
       )}
     </DashboardShell>

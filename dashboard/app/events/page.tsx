@@ -1,22 +1,28 @@
-ï»¿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
+import { safeDateString } from "../../lib/time";
+import { getServerUrl } from "../../lib/serverUrl";
 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = getServerUrl();
 
-type EventItem = {
+type EventRecord = {
   id: string;
   deviceId: string;
-  type: string;
   timestamp: string;
+  type: string;
+  snapshot?: string | null;
+  screenSnapshot?: string | null;
+  cameraSnapshot?: string | null;
+  video?: string | null;
 };
 
-export default function Events() {
+export default function EventsPage() {
   const { lang, setLang } = useLang();
-  const [events, setEvents] = useState<EventItem[]>([]);
+  const [events, setEvents] = useState<EventRecord[]>([]);
 
   useEffect(() => {
     fetch(`${SERVER_URL}/events`)
@@ -26,40 +32,34 @@ export default function Events() {
   }, []);
 
   return (
-    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "äº‹ä»¶è®°å½•", "Event History")}>
-      <div className="page-links">
-        <Link href="/live">{t(lang, "æŸ¥çœ‹å®žæ—¶ç›‘æŽ§", "Go to Live Monitor")}</Link>
-        <Link href="/docs">{t(lang, "é˜…è¯»è¯´æ˜Ž", "Read Docs")}</Link>
-      </div>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "ÊÂ¼þ", "Events")}
+    >
       <div className="card">
         <table className="table">
           <thead>
             <tr>
-              <th>{t(lang, "ID", "ID")}</th>
-              <th>{t(lang, "è®¾å¤‡", "Device")}</th>
-              <th>{t(lang, "ç±»åž‹", "Type")}</th>
-              <th>{t(lang, "æ—¶é—´", "Timestamp")}</th>
+              <th>{t(lang, "Ê±¼ä", "Time")}</th>
+              <th>{t(lang, "Éè±¸", "Device")}</th>
+              <th>{t(lang, "ÀàÐÍ", "Type")}</th>
+              <th>{t(lang, "²é¿´", "View")}</th>
             </tr>
           </thead>
           <tbody>
-            {events.length === 0 ? (
-              <tr>
-                <td colSpan={4}>{t(lang, "æš‚æ— äº‹ä»¶ã€‚", "No events found.")}</td>
+            {events.map((event) => (
+              <tr key={event.id}>
+                <td>{safeDateString(event.timestamp)}</td>
+                <td className="mono">{event.deviceId}</td>
+                <td>{event.type}</td>
+                <td>
+                  <Link className="button" href={`/event/${event.id}`}>
+                    {t(lang, "´ò¿ª", "Open")}
+                  </Link>
+                </td>
               </tr>
-            ) : (
-              events.map((event) => (
-                <tr key={event.id}>
-                  <td>
-                    <Link href={`/event/${event.id}`}>{event.id.slice(0, 8)}</Link>
-                  </td>
-                  <td>{event.deviceId}</td>
-                  <td>{event.type}</td>
-                  <td>{new Date(event.timestamp).toLocaleString()}</td>
-                </tr>
-              ))
-            )}
+            ))}
           </tbody>
         </table>
+        {events.length === 0 && <div className="mono">{t(lang, "ÔÝÎÞÊÂ¼þ", "No events")}</div>}
       </div>
     </DashboardShell>
   );
