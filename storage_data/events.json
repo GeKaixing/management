@@ -1,0 +1,14 @@
+[
+  {
+    "id": "2c9d6ee6-11b9-4f2e-bd80-50910511a1a8",
+    "timestamp": "2026-03-16T06:49:43.825Z",
+    "deviceId": "test-device",
+    "type": "fall",
+    "snapshot": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\snapshots\\2c9d6ee6-11b9-4f2e-bd80-50910511a1a8.jpg",
+    "video": "C:\\Users\\KaiXing\\Desktop\\管理学\\remote-camera-system\\storage_data\\recordings\\2c9d6ee6-11b9-4f2e-bd80-50910511a1a8.mp4",
+    "meta": {
+      "debugFall": true,
+      "fps": 30
+    }
+  }
+]
