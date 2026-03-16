@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { useLang, t } from "../lib/i18n";
+import { useLang, t } from "../../lib/i18n";
 
 export default function Docs() {
   const { lang, setLang } = useLang();
@@ -13,7 +15,7 @@ export default function Docs() {
           <Link href="/live">{t(lang, "实时", "Live")}</Link>
           <Link href="/events">{t(lang, "事件", "Events")}</Link>
         </nav>
-        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}> 
+        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
           {lang === "zh" ? "EN" : "中文"}
         </button>
       </header>
@@ -51,13 +53,7 @@ export default function Docs() {
             "The system is designed to send data only to the server you control. We recommend minimizing collection, enforcing access control, and rotating/deleting data regularly."
           )}
         </p>
-        <p>
-          {t(
-            lang,
-            "不应在未授权的情况下启用监控。",
-            "Do not enable monitoring without authorization."
-          )}
-        </p>
+        <p>{t(lang, "不应在未授权的情况下启用监控。", "Do not enable monitoring without authorization.")}</p>
       </section>
 
       <section className="card">
