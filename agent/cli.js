@@ -3,6 +3,8 @@
 const { resolveConfig } = require("./config");
 const { startCamera } = require("./camera");
 const { startInputMonitor } = require("./inputMonitor");
+const { startScreenMonitor } = require("./screenMonitor");
+const { startMicRecorder } = require("./micRecorder");
 
 function getArgValue(args, name) {
   const idx = args.indexOf(name);
@@ -46,6 +48,13 @@ function printUsage() {
   console.log("  --protocol <rtsp>");
   console.log("  --stream-url <url>");
   console.log("  --input");
+  console.log("  --screen");
+  console.log("  --screen-interval <ms>");
+  console.log("  --mic");
+  console.log("  --mic-input <input>");
+  console.log("  --mic-format <format>");
+  console.log("  --mic-segment <seconds>");
+  console.log("  --mic-bitrate <rate>");
 }
 
 async function main() {
@@ -95,6 +104,32 @@ async function main() {
     overrides.inputMonitoring = { enabled: true };
   }
 
+  if (hasFlag(args, "--screen")) {
+    overrides.screenMonitoring = { enabled: true };
+  }
+
+  const screenInterval = getArgValue(args, "--screen-interval");
+  if (screenInterval) {
+    overrides.screenMonitoring = overrides.screenMonitoring || {};
+    overrides.screenMonitoring.intervalMs = Number(screenInterval);
+  }
+
+  if (hasFlag(args, "--mic")) {
+    overrides.micMonitoring = { enabled: true };
+  }
+
+  const micInput = getArgValue(args, "--mic-input");
+  const micFormat = getArgValue(args, "--mic-format");
+  const micSegment = getArgValue(args, "--mic-segment");
+  const micBitrate = getArgValue(args, "--mic-bitrate");
+  if (micInput || micFormat || micSegment || micBitrate) {
+    overrides.micMonitoring = overrides.micMonitoring || {};
+    if (micInput) overrides.micMonitoring.input = micInput;
+    if (micFormat) overrides.micMonitoring.format = micFormat;
+    if (micSegment) overrides.micMonitoring.segmentSeconds = Number(micSegment);
+    if (micBitrate) overrides.micMonitoring.bitrate = micBitrate;
+  }
+
   const config = resolveConfig(overrides);
 
   await registerDevice(config.serverUrl, config.deviceId, token);
@@ -106,6 +141,23 @@ async function main() {
     serverUrl: config.serverUrl,
     token,
     enabled: config.inputMonitoring && config.inputMonitoring.enabled
+  });
+  startScreenMonitor({
+    deviceId: config.deviceId,
+    serverUrl: config.serverUrl,
+    token,
+    enabled: config.screenMonitoring && config.screenMonitoring.enabled,
+    intervalMs: config.screenMonitoring && config.screenMonitoring.intervalMs
+  });
+  startMicRecorder({
+    deviceId: config.deviceId,
+    serverUrl: config.serverUrl,
+    token,
+    enabled: config.micMonitoring && config.micMonitoring.enabled,
+    segmentSeconds: config.micMonitoring && config.micMonitoring.segmentSeconds,
+    format: config.micMonitoring && config.micMonitoring.format,
+    input: config.micMonitoring && config.micMonitoring.input,
+    bitrate: config.micMonitoring && config.micMonitoring.bitrate
   });
   console.log("Camera streaming started.");
 }

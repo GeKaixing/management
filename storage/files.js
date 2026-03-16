@@ -6,7 +6,9 @@ const paths = {
   base,
   snapshots: path.join(base, "snapshots"),
   recordings: path.join(base, "recordings"),
-  tmp: path.join(base, "tmp")
+  tmp: path.join(base, "tmp"),
+  audio: path.join(base, "audio"),
+  audioTmp: path.join(base, "audio_tmp")
 };
 
 function ensureStorage() {

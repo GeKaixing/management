@@ -1,10 +1,15 @@
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
 const { verifyDevice } = require("./auth");
 const { createEventEngine } = require("../events/eventEngine");
 const { createPipeline } = require("../stream/pipeline");
 const { loadEvents, getEvent } = require("../storage/db");
 const { appendInputEvent, filterInputEvents } = require("../storage/inputDb");
+const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
+const { ensureStorage, getStoragePaths } = require("../storage/files");
 
+const screenFrames = new Map();
 const router = express.Router();
 const devices = new Map();
 
@@ -86,6 +91,53 @@ router.post("/input/event", verifyDevice, (req, res) => {
 router.get("/input/events", (req, res) => {
   const deviceId = req.query.deviceId || null;
   res.json({ events: filterInputEvents({ deviceId }) });
+});
+
+router.post("/screen/frame", verifyDevice, (req, res) => {
+  const body = req.body || {};
+  if (!body.deviceId) return res.status(400).json({ error: "missing deviceId" });
+  if (!body.frameBase64) return res.status(400).json({ error: "missing frameBase64" });
+
+  const buffer = Buffer.from(body.frameBase64, "base64");
+  screenFrames.set(body.deviceId, { buffer, timestamp: body.timestamp || new Date().toISOString() });
+  res.json({ ok: true });
+});
+
+router.get("/screen/latest", (req, res) => {
+  const deviceId = req.query.deviceId;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const record = screenFrames.get(deviceId);
+  if (!record) return res.status(404).json({ error: "not found" });
+
+  res.setHeader("Content-Type", "image/jpeg");
+  res.setHeader("Cache-Control", "no-store");
+  res.end(record.buffer);
+});
+
+router.post("/audio/segment", verifyDevice, (req, res) => {
+  const body = req.body || {};
+  if (!body.deviceId) return res.status(400).json({ error: "missing deviceId" });
+  if (!body.dataBase64) return res.status(400).json({ error: "missing dataBase64" });
+
+  ensureStorage();
+  const paths = getStoragePaths();
+  const filename = body.filename || `${Date.now()}.ogg`;
+  const filePath = path.join(paths.audio, filename);
+  const buffer = Buffer.from(body.dataBase64, "base64");
+  fs.writeFileSync(filePath, buffer);
+
+  const event = {
+    deviceId: body.deviceId,
+    file: filePath,
+    timestamp: body.timestamp || new Date().toISOString()
+  };
+  appendAudioEvent(event);
+  res.json({ ok: true });
+});
+
+router.get("/audio/list", (req, res) => {
+  const deviceId = req.query.deviceId || null;
+  res.json({ segments: filterAudioEvents({ deviceId }) });
 });
 
 module.exports = router;

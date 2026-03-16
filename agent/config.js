@@ -17,6 +17,11 @@ const defaultConfig = {
   screenMonitoring: {
     enabled: false,
     intervalMs: 500
+  },
+  micMonitoring: {
+    enabled: false,
+    segmentSeconds: 10,
+    bitrate: "64k"
   }
 };
 
