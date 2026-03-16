@@ -1,25 +1,18 @@
 ﻿"use client";
 
 import Link from "next/link";
+import DashboardShell from "./components/DashboardShell";
 import { useLang, t } from "../lib/i18n";
 
 export default function Home() {
   const { lang, setLang } = useLang();
 
   return (
-    <main>
-      <header>
-        <h1>{t(lang, "远程监控仪表盘", "Remote Camera Dashboard")}</h1>
-        <nav>
-          <Link href="/live">{t(lang, "实时", "Live")}</Link>
-          <Link href="/events">{t(lang, "事件", "Events")}</Link>
-          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
-        </nav>
-        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "中文"}
-        </button>
-      </header>
-
+    <DashboardShell
+      lang={lang}
+      setLang={setLang}
+      title={t(lang, "远程监控仪表盘", "Remote Camera Dashboard")}
+    >
       <section className="hero">
         <div className="card">
           <span className="badge">{t(lang, "系统状态", "System Status")}</span>
@@ -55,6 +48,6 @@ export default function Home() {
           <p>{t(lang, "触发测试事件用于验证。", "Create a test event to verify snapshot + video storage.")}</p>
         </div>
       </section>
-    </main>
+    </DashboardShell>
   );
 }

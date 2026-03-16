@@ -9,6 +9,8 @@ const { loadEvents, getEvent } = require("../storage/db");
 const { loadInputEvents, appendInputEvent, filterInputEvents } = require("../storage/inputDb");
 const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
+const { loadSettings, updateSettings } = require("../storage/settingsDb");
+const { addOnlineDuration, getOnlineDuration, toDateKey, startOfDay } = require("../storage/onlineDb");
 
 const screenFrames = new Map();
 const cameraFrames = new Map();
@@ -74,7 +76,13 @@ function computeDeviceLaze(deviceId, events, nowMs) {
 
 function touchDevice(id, source) {
   const device = devices.get(id) || { id };
-  device.lastSeen = Date.now();
+  const now = Date.now();
+  if (device.status !== "online") {
+    device.onlineSince = now;
+  } else if (!device.onlineSince) {
+    device.onlineSince = now;
+  }
+  device.lastSeen = now;
   device.status = "online";
   if (source) device.source = source;
   device.offlineAt = null;
@@ -86,6 +94,11 @@ function touchDevice(id, source) {
 function markDeviceOffline(id, reason) {
   const device = devices.get(id) || { id };
   if (device.status === "offline") return { device, changed: false };
+  const now = Date.now();
+  if (device.onlineSince) {
+    addOnlineDuration(id, device.onlineSince, now);
+  }
+  device.onlineSince = null;
   device.status = "offline";
   device.offlineAt = new Date().toISOString();
   device.offlineReason = reason || "unknown";
@@ -145,11 +158,24 @@ router.post("/device/register", verifyDevice, (req, res) => {
 
 router.get("/devices", (req, res) => {
   const nowMs = Date.now();
+  const settings = loadSettings();
+  const requiredHours = Number(settings.workHoursPerDay || 8);
+  const requiredMs = Math.max(requiredHours, 0) * 60 * 60 * 1000;
+  const todayKey = toDateKey(nowMs);
+  const todayStart = startOfDay(nowMs);
   const inputEvents = loadInputEvents();
-  const list = Array.from(devices.values()).map((device) => ({
-    ...device,
-    laze: computeDeviceLaze(device.id, inputEvents, nowMs)
-  }));
+  const list = Array.from(devices.values()).map((device) => {
+    const baseMs = getOnlineDuration(device.id, todayKey);
+    const currentMs = device.onlineSince ? Math.max(0, nowMs - Math.max(device.onlineSince, todayStart)) : 0;
+    const onlineMsToday = baseMs + currentMs;
+    return {
+      ...device,
+      laze: computeDeviceLaze(device.id, inputEvents, nowMs),
+      onlineMsToday,
+      workHoursPerDay: requiredHours,
+      lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
+    };
+  });
   res.json({ devices: list });
 });
 
@@ -316,6 +342,21 @@ router.post("/audio/segment", verifyDevice, (req, res) => {
 router.get("/audio/list", (req, res) => {
   const deviceId = req.query.deviceId || null;
   res.json({ segments: filterAudioEvents({ deviceId }) });
+});
+
+router.get("/settings/work-hours", (req, res) => {
+  const settings = loadSettings();
+  res.json({ workHoursPerDay: Number(settings.workHoursPerDay || 8) });
+});
+
+router.post("/settings/work-hours", (req, res) => {
+  const body = req.body || {};
+  const hours = Number(body.workHoursPerDay);
+  if (!Number.isFinite(hours) || hours <= 0 || hours > 24) {
+    return res.status(400).json({ error: "invalid workHoursPerDay" });
+  }
+  const next = updateSettings({ workHoursPerDay: hours });
+  return res.json({ ok: true, workHoursPerDay: next.workHoursPerDay });
 });
 
 module.exports = router;

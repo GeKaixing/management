@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
@@ -25,19 +26,11 @@ export default function Events() {
   }, []);
 
   return (
-    <main>
-      <header>
-        <h1>{t(lang, "事件记录", "Event History")}</h1>
-        <nav>
-          <Link href="/">{t(lang, "首页", "Home")}</Link>
-          <Link href="/live">{t(lang, "实时", "Live")}</Link>
-          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
-        </nav>
-        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "中文"}
-        </button>
-      </header>
-
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "事件记录", "Event History")}>
+      <div className="page-links">
+        <Link href="/live">{t(lang, "查看实时监控", "Go to Live Monitor")}</Link>
+        <Link href="/docs">{t(lang, "阅读说明", "Read Docs")}</Link>
+      </div>
       <div className="card">
         <table className="table">
           <thead>
@@ -68,6 +61,6 @@ export default function Events() {
           </tbody>
         </table>
       </div>
-    </main>
+    </DashboardShell>
   );
 }

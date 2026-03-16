@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
 import { safeDateString } from "../../lib/time";
 import MiniLineChart from "./MiniLineChart";
@@ -11,6 +12,11 @@ const SERVER_URL = "http://localhost:3000";
 type Device = {
   id: string;
   lastSeen?: number | null;
+  status?: string;
+  laze?: boolean;
+  lazyByWorkHours?: boolean;
+  onlineMsToday?: number;
+  workHoursPerDay?: number;
 };
 
 type InputEvent = {
@@ -101,6 +107,12 @@ export default function Live() {
     return `${count} events · last ${time}`;
   }
 
+  function formatHours(ms?: number) {
+    const safeMs = Number(ms || 0);
+    if (!Number.isFinite(safeMs)) return "0.0";
+    return (safeMs / (60 * 60 * 1000)).toFixed(1);
+  }
+
   function buildSeries(events: { timestamp?: string }[], bucketMs = 10 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
     const now = Date.now();
     const start = now - windowMs;
@@ -138,20 +150,14 @@ export default function Live() {
   const deviceCards = devices.length > 0 ? devices : [{ id: "cam-001", lastSeen: null }];
 
   return (
-    <main>
-      <header>
-        <h1>{t(lang, "实时监控", "Live View")}</h1>
-        <nav>
-          <Link href="/">{t(lang, "首页", "Home")}</Link>
-          <Link href="/events">{t(lang, "事件", "Events")}</Link>
-          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
-        </nav>
-        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "中文"}
-        </button>
-      </header>
-
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "实时监控", "Live View")}>
+      <div className="page-links">
+        <Link href="/">{t(lang, "返回概览", "Back to Overview")}</Link>
+        <Link href="/settings">{t(lang, "设置工作时间", "Work Hours Settings")}</Link>
+      </div>
       {deviceCards.map((device) => {
+        const isLazy = Boolean(device.laze || device.lazyByWorkHours);
+        const isOnline = device.status ? device.status === "online" : Boolean(device.lastSeen);
         const keyboardEvents = inputEvents.filter(
           (e) => e.type === "keyboard" && e.deviceId === device.id
         );
@@ -166,8 +172,11 @@ export default function Live() {
         const mouseSeries = buildSeries(mouseEvents);
         const audioSeries = buildSeries(audioForDevice);
 
+        const onlineHours = formatHours(device.onlineMsToday);
+        const requiredHours = device.workHoursPerDay ?? 8;
+
         return (
-          <section key={device.id} className="device-card">
+          <section key={device.id} className={`device-card${isLazy ? " laze" : ""}`}>
             <div className="device-header">
               <div>
                 <h2>{userNames[device.id] || t(lang, "被监控用户", "Monitored User")}</h2>
@@ -175,9 +184,19 @@ export default function Live() {
                   {t(lang, "设备 ID：", "Device ID: ")}
                   {device.id}
                 </div>
+                <div className="mono">
+                  {t(
+                    lang,
+                    `今日在线 ${onlineHours} 小时 / 要求 ${requiredHours} 小时`,
+                    `Online today ${onlineHours}h / Required ${requiredHours}h`
+                  )}
+                </div>
               </div>
-              <div className="status-pill">
-                {device.lastSeen ? t(lang, "在线", "Online") : t(lang, "离线", "Offline")}
+              <div className="status-group">
+                <div className="status-pill">
+                  {isOnline ? t(lang, "在线", "Online") : t(lang, "离线", "Offline")}
+                </div>
+                {isLazy && <div className="laze-pill">LAZY 😴</div>}
               </div>
             </div>
 
@@ -297,6 +316,6 @@ export default function Live() {
           </section>
         );
       })}
-    </main>
+    </DashboardShell>
   );
 }

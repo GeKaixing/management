@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import DashboardShell from "../../components/DashboardShell";
 import { useLang, t } from "../../../lib/i18n";
 
 const SERVER_URL = "http://localhost:3000";
@@ -31,18 +32,11 @@ export default function EventDetail() {
   }, [id]);
 
   return (
-    <main>
-      <header>
-        <h1>{t(lang, "事件详情", "Event Detail")}</h1>
-        <nav>
-          <Link href="/events">{t(lang, "事件", "Events")}</Link>
-          <Link href="/live">{t(lang, "实时", "Live")}</Link>
-          <Link href="/docs">{t(lang, "说明", "Docs")}</Link>
-        </nav>
-        <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "中文"}
-        </button>
-      </header>
+    <DashboardShell lang={lang} setLang={setLang} title={t(lang, "事件详情", "Event Detail")}>
+      <div className="page-links">
+        <Link href="/events">{t(lang, "返回事件列表", "Back to Events")}</Link>
+        <Link href="/live">{t(lang, "查看监控", "Go to Monitor")}</Link>
+      </div>
 
       {!event ? (
         <div className="card">{t(lang, "正在加载事件...", "Loading event...")}</div>
@@ -74,6 +68,6 @@ export default function EventDetail() {
           </div>
         </div>
       )}
-    </main>
+    </DashboardShell>
   );
 }
