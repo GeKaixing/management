@@ -22,6 +22,10 @@ const defaultConfig = {
     enabled: false,
     segmentSeconds: 10,
     bitrate: "64k"
+  },
+  cameraFrameMonitoring: {
+    enabled: false,
+    intervalMs: 1000
   }
 };
 

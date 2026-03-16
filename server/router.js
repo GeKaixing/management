@@ -10,6 +10,7 @@ const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
 
 const screenFrames = new Map();
+const cameraFrames = new Map();
 const router = express.Router();
 const devices = new Map();
 
@@ -107,6 +108,27 @@ router.get("/screen/latest", (req, res) => {
   const deviceId = req.query.deviceId;
   if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
   const record = screenFrames.get(deviceId);
+  if (!record) return res.status(404).json({ error: "not found" });
+
+  res.setHeader("Content-Type", "image/jpeg");
+  res.setHeader("Cache-Control", "no-store");
+  res.end(record.buffer);
+});
+
+router.post("/camera/frame", verifyDevice, (req, res) => {
+  const body = req.body || {};
+  if (!body.deviceId) return res.status(400).json({ error: "missing deviceId" });
+  if (!body.frameBase64) return res.status(400).json({ error: "missing frameBase64" });
+
+  const buffer = Buffer.from(body.frameBase64, "base64");
+  cameraFrames.set(body.deviceId, { buffer, timestamp: body.timestamp || new Date().toISOString() });
+  res.json({ ok: true });
+});
+
+router.get("/camera/latest", (req, res) => {
+  const deviceId = req.query.deviceId;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const record = cameraFrames.get(deviceId);
   if (!record) return res.status(404).json({ error: "not found" });
 
   res.setHeader("Content-Type", "image/jpeg");

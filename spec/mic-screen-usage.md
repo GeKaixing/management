@@ -3,7 +3,7 @@
 ## Windows
 
 ```
-node agent/cli.js start --device cam-001 --server http://<server-host>:3000 --camera "video=Integrated Camera" --input --screen --mic
+node agent/cli.js start --device cam-001 --server http://<server-host>:3000 --camera "video=Integrated Camera" --input --screen --mic --camera-frames
 ```
 
 若麦克风名称不同，先列出设备：
@@ -19,7 +19,7 @@ ffmpeg -list_devices true -f dshow -i dummy
 ## macOS
 
 ```
-node agent/cli.js start --device cam-001 --server http://<server-host>:3000 --camera 0 --format avfoundation --input --screen --mic
+node agent/cli.js start --device cam-001 --server http://<server-host>:3000 --camera 0 --format avfoundation --input --screen --mic --camera-frames
 ```
 
 列出设备：

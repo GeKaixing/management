@@ -5,6 +5,7 @@ const { startCamera } = require("./camera");
 const { startInputMonitor } = require("./inputMonitor");
 const { startScreenMonitor } = require("./screenMonitor");
 const { startMicRecorder } = require("./micRecorder");
+const { startCameraFrameMonitor } = require("./cameraFrameMonitor");
 
 function getArgValue(args, name) {
   const idx = args.indexOf(name);
@@ -55,6 +56,8 @@ function printUsage() {
   console.log("  --mic-format <format>");
   console.log("  --mic-segment <seconds>");
   console.log("  --mic-bitrate <rate>");
+  console.log("  --camera-frames");
+  console.log("  --camera-frames-interval <ms>");
 }
 
 async function main() {
@@ -130,6 +133,16 @@ async function main() {
     if (micBitrate) overrides.micMonitoring.bitrate = micBitrate;
   }
 
+  if (hasFlag(args, "--camera-frames")) {
+    overrides.cameraFrameMonitoring = { enabled: true };
+  }
+
+  const camFrameInterval = getArgValue(args, "--camera-frames-interval");
+  if (camFrameInterval) {
+    overrides.cameraFrameMonitoring = overrides.cameraFrameMonitoring || {};
+    overrides.cameraFrameMonitoring.intervalMs = Number(camFrameInterval);
+  }
+
   const config = resolveConfig(overrides);
 
   await registerDevice(config.serverUrl, config.deviceId, token);
@@ -158,6 +171,16 @@ async function main() {
     format: config.micMonitoring && config.micMonitoring.format,
     input: config.micMonitoring && config.micMonitoring.input,
     bitrate: config.micMonitoring && config.micMonitoring.bitrate
+  });
+  startCameraFrameMonitor({
+    deviceId: config.deviceId,
+    serverUrl: config.serverUrl,
+    token,
+    enabled: config.cameraFrameMonitoring && config.cameraFrameMonitoring.enabled,
+    intervalMs: config.cameraFrameMonitoring && config.cameraFrameMonitoring.intervalMs,
+    format: config.camera && config.camera.format,
+    input: config.camera && config.camera.input,
+    resolution: config.camera && config.camera.resolution
   });
   console.log("Camera streaming started.");
 }

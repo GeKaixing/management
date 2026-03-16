@@ -1,19 +1,5 @@
-const os = require("os");
 const { spawn } = require("child_process");
-
-function getDefaultCameraConfig() {
-  if (os.platform() === "darwin") {
-    return {
-      format: "avfoundation",
-      input: "0"
-    };
-  }
-
-  return {
-    format: "dshow",
-    input: "video=Integrated Camera"
-  };
-}
+const { getDefaultCameraConfig } = require("./cameraDefaults");
 
 function buildFfmpegArgs(config) {
   const camera = config.camera || {};
