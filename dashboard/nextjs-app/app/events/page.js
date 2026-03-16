@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -20,14 +20,14 @@ export default function Events() {
   return (
     <main>
       <header>
-        <h1>{t(lang, "ÊÂ¼þ¼ÇÂ¼", "Event History")}</h1>
+        <h1>{t(lang, "äº‹ä»¶è®°å½•", "Event History")}</h1>
         <nav>
-          <Link href="/">{t(lang, "Ê×Ò³", "Home")}</Link>
-          <Link href="/live">{t(lang, "ÊµÊ±", "Live")}</Link>
-          <Link href="/docs">{t(lang, "ËµÃ÷", "Docs")}</Link>
+          <Link href="/">{t(lang, "é¦–é¡µ", "Home")}</Link>
+          <Link href="/live">{t(lang, "å®žæ—¶", "Live")}</Link>
+          <Link href="/docs">{t(lang, "è¯´æ˜Ž", "Docs")}</Link>
         </nav>
         <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "ÖÐÎÄ"}
+          {lang === "zh" ? "EN" : "ä¸­æ–‡"}
         </button>
       </header>
 
@@ -36,15 +36,15 @@ export default function Events() {
           <thead>
             <tr>
               <th>{t(lang, "ID", "ID")}</th>
-              <th>{t(lang, "Éè±¸", "Device")}</th>
-              <th>{t(lang, "ÀàÐÍ", "Type")}</th>
-              <th>{t(lang, "Ê±¼ä", "Timestamp")}</th>
+              <th>{t(lang, "è®¾å¤‡", "Device")}</th>
+              <th>{t(lang, "ç±»åž‹", "Type")}</th>
+              <th>{t(lang, "æ—¶é—´", "Timestamp")}</th>
             </tr>
           </thead>
           <tbody>
             {events.length === 0 ? (
               <tr>
-                <td colSpan="4">{t(lang, "ÔÝÎÞÊÂ¼þ¡£", "No events found.")}</td>
+                <td colSpan="4">{t(lang, "æš‚æ— äº‹ä»¶ã€‚", "No events found.")}</td>
               </tr>
             ) : (
               events.map((event) => (

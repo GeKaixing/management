@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
@@ -24,43 +24,43 @@ export default function EventDetail() {
   return (
     <main>
       <header>
-        <h1>{t(lang, "ÊÂ¼şÏêÇé", "Event Detail")}</h1>
+        <h1>{t(lang, "äº‹ä»¶è¯¦æƒ…", "Event Detail")}</h1>
         <nav>
-          <Link href="/events">{t(lang, "ÊÂ¼ş", "Events")}</Link>
-          <Link href="/live">{t(lang, "ÊµÊ±", "Live")}</Link>
-          <Link href="/docs">{t(lang, "ËµÃ÷", "Docs")}</Link>
+          <Link href="/events">{t(lang, "äº‹ä»¶", "Events")}</Link>
+          <Link href="/live">{t(lang, "å®æ—¶", "Live")}</Link>
+          <Link href="/docs">{t(lang, "è¯´æ˜", "Docs")}</Link>
         </nav>
         <button className="lang-toggle" type="button" onClick={() => setLang(lang === "zh" ? "en" : "zh")}>
-          {lang === "zh" ? "EN" : "ÖĞÎÄ"}
+          {lang === "zh" ? "EN" : "ä¸­æ–‡"}
         </button>
       </header>
 
       {!event ? (
-        <div className="card">{t(lang, "ÕıÔÚ¼ÓÔØÊÂ¼ş...", "Loading event...")}</div>
+        <div className="card">{t(lang, "æ­£åœ¨åŠ è½½äº‹ä»¶...", "Loading event...")}</div>
       ) : (
         <div className="grid">
           <div className="card">
-            <h3>{t(lang, "ÔªÊı¾İ", "Metadata")}</h3>
+            <h3>{t(lang, "å…ƒæ•°æ®", "Metadata")}</h3>
             <p>
-              <strong>{t(lang, "ID£º", "ID:")}</strong> {event.id}
+              <strong>{t(lang, "IDï¼š", "ID:")}</strong> {event.id}
             </p>
             <p>
-              <strong>{t(lang, "Éè±¸£º", "Device:")}</strong> {event.deviceId}
+              <strong>{t(lang, "è®¾å¤‡ï¼š", "Device:")}</strong> {event.deviceId}
             </p>
             <p>
-              <strong>{t(lang, "ÀàĞÍ£º", "Type:")}</strong> {event.type}
+              <strong>{t(lang, "ç±»å‹ï¼š", "Type:")}</strong> {event.type}
             </p>
             <p>
-              <strong>{t(lang, "Ê±¼ä£º", "Timestamp:")}</strong> {new Date(event.timestamp).toLocaleString()}
+              <strong>{t(lang, "æ—¶é—´ï¼š", "Timestamp:")}</strong> {new Date(event.timestamp).toLocaleString()}
             </p>
           </div>
           <div className="card">
-            <h3>{t(lang, "ÎÄ¼ş", "Files")}</h3>
+            <h3>{t(lang, "æ–‡ä»¶", "Files")}</h3>
             <p className="mono">
-              {t(lang, "¿ìÕÕ£º", "Snapshot:")} {event.snapshot}
+              {t(lang, "å¿«ç…§ï¼š", "Snapshot:")} {event.snapshot}
             </p>
             <p className="mono">
-              {t(lang, "ÊÓÆµ£º", "Video:")} {event.video}
+              {t(lang, "è§†é¢‘ï¼š", "Video:")} {event.video}
             </p>
           </div>
         </div>
