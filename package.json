@@ -1,0 +1,17 @@
+{
+  "name": "remote-camera-system",
+  "private": true,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "server": "node server/index.js",
+    "agent": "node agent/cli.js",
+    "dashboard": "npm --prefix dashboard/nextjs-app run dev",
+    "test": "node tests/run.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "uiohook-napi": "^1.5.0",
+    "ws": "^8.17.0"
+  }
+}
