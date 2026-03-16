@@ -11,6 +11,7 @@ const { appendAudioEvent, filterAudioEvents } = require("../storage/audioDb");
 const { appendProcessSnapshot, getLatestProcessSnapshot, getLatestProcessSnapshots } = require("../storage/processDb");
 const { ensureStorage, getStoragePaths } = require("../storage/files");
 const { loadSettings, updateSettings } = require("../storage/settingsDb");
+const { loadEmployees, updateEmployee } = require("../storage/employeeDb");
 const { loadDeviceMeta, getDeviceMeta, updateDeviceMeta, deleteDeviceMeta } = require("../storage/deviceDb");
 const { addOnlineDuration, getOnlineDuration, toDateKey, startOfDay } = require("../storage/onlineDb");
 
@@ -528,6 +529,57 @@ router.post("/settings/live-view", (req, res) => {
   const hideOfflineMedia = body.hideOfflineMedia !== false;
   const next = updateSettings({ hideOfflineMedia });
   return res.json({ ok: true, hideOfflineMedia: next.hideOfflineMedia !== false });
+});
+
+router.get("/settings/email-templates", (req, res) => {
+  const settings = loadSettings();
+  res.json({
+    emailTemplateLazy: settings.emailTemplateLazy || "",
+    emailTemplateDone: settings.emailTemplateDone || ""
+  });
+});
+
+router.post("/settings/email-templates", (req, res) => {
+  const body = req.body || {};
+  const emailTemplateLazy = typeof body.emailTemplateLazy === "string" ? body.emailTemplateLazy.trim() : "";
+  const emailTemplateDone = typeof body.emailTemplateDone === "string" ? body.emailTemplateDone.trim() : "";
+  const next = updateSettings({ emailTemplateLazy, emailTemplateDone });
+  return res.json({
+    ok: true,
+    emailTemplateLazy: next.emailTemplateLazy || "",
+    emailTemplateDone: next.emailTemplateDone || ""
+  });
+});
+
+router.get("/employees", (req, res) => {
+  const employees = loadEmployees();
+  return res.json({ employees });
+});
+
+router.get("/employees/:id", (req, res) => {
+  const id = req.params.id;
+  if (!id) return res.status(400).json({ error: "missing deviceId" });
+  const employees = loadEmployees();
+  return res.json({ employee: employees[id] || null });
+});
+
+router.put("/employees/:id", (req, res) => {
+  const id = req.params.id;
+  const body = req.body || {};
+  if (!id) return res.status(400).json({ error: "missing deviceId" });
+  const email = typeof body.email === "string" ? body.email.trim() : "";
+  const tasksRemaining =
+    body.tasksRemaining === null || body.tasksRemaining === undefined
+      ? null
+      : Number(body.tasksRemaining);
+  if (tasksRemaining !== null && (!Number.isFinite(tasksRemaining) || tasksRemaining < 0)) {
+    return res.status(400).json({ error: "invalid tasksRemaining" });
+  }
+  const next = updateEmployee(id, {
+    email,
+    tasksRemaining
+  });
+  return res.json({ ok: true, employee: next[id] || null });
 });
 
 router.get("/settings/ai", (req, res) => {

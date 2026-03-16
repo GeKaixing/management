@@ -359,6 +359,35 @@ nav a:hover {
   justify-content: flex-start;
 }
 
+.report-name-edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.report-button-sm {
+  padding: 6px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.report-email-input {
+  width: 100%;
+  max-width: 100%;
+}
+
+.report-tasks-input {
+  width: 100%;
+  max-width: 72px;
+}
+
 .table th,
 .table td {
   text-align: left;

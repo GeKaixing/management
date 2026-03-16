@@ -23,6 +23,11 @@ type Device = {
   source?: string | null;
 };
 
+type EmployeeMeta = {
+  email?: string;
+  tasksRemaining?: number | null;
+};
+
 function formatHours(ms?: number) {
   const safeMs = Number(ms || 0);
   if (!Number.isFinite(safeMs)) return "0.0";
@@ -32,9 +37,15 @@ function formatHours(ms?: number) {
 export default function ReportPage() {
   const { lang, setLang } = useLang();
   const [devices, setDevices] = useState<Device[]>([]);
+  const [employeeMeta, setEmployeeMeta] = useState<Record<string, EmployeeMeta>>({});
   const [nameEdits, setNameEdits] = useState<Record<string, string>>({});
   const [nameSaving, setNameSaving] = useState<Record<string, boolean>>({});
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [emailEdits, setEmailEdits] = useState<Record<string, string>>({});
+  const [tasksEdits, setTasksEdits] = useState<Record<string, string>>({});
+  const [metaSaving, setMetaSaving] = useState<Record<string, boolean>>({});
+  const [emailTemplateLazy, setEmailTemplateLazy] = useState("最近监测到你有些偷懒，请注意按时完成任务。");
+  const [emailTemplateDone, setEmailTemplateDone] = useState("干得真棒了！任务已完成。");
   const [aiSummary, setAiSummary] = useState<string | null>(null);
   const [aiStatus, setAiStatus] = useState<string | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
@@ -44,9 +55,24 @@ export default function ReportPage() {
 
     async function loadDevices() {
       try {
-        const res = await fetch(`${getServerUrl()}/devices`);
-        const data = await res.json();
-        if (active) setDevices(Array.isArray(data.devices) ? data.devices : []);
+        const [deviceRes, employeeRes, templateRes] = await Promise.all([
+          fetch(`${getServerUrl()}/devices`),
+          fetch(`${getServerUrl()}/employees`),
+          fetch(`${getServerUrl()}/settings/email-templates`)
+        ]);
+        const deviceData = await deviceRes.json();
+        const employeeData = await employeeRes.json().catch(() => ({}));
+        const templateData = await templateRes.json().catch(() => ({}));
+        if (active) {
+          setDevices(Array.isArray(deviceData.devices) ? deviceData.devices : []);
+          setEmployeeMeta(employeeData.employees || {});
+          if (templateData.emailTemplateLazy) {
+            setEmailTemplateLazy(String(templateData.emailTemplateLazy));
+          }
+          if (templateData.emailTemplateDone) {
+            setEmailTemplateDone(String(templateData.emailTemplateDone));
+          }
+        }
       } catch {
         if (active) setDevices([]);
       }
@@ -59,6 +85,37 @@ export default function ReportPage() {
       clearInterval(timer);
     };
   }, []);
+
+  async function saveEmployeeMeta(deviceId: string) {
+    const email = (emailEdits[deviceId] ?? "").trim();
+    const rawTasks = tasksEdits[deviceId];
+    const tasksRemaining = rawTasks === undefined || rawTasks === "" ? null : Number(rawTasks);
+    setMetaSaving((prev) => ({ ...prev, [deviceId]: true }));
+    try {
+      const res = await fetch(`${getServerUrl()}/employees/${encodeURIComponent(deviceId)}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, tasksRemaining })
+      });
+      const data = await res.json();
+      if (res.ok && data.employee) {
+        setEmployeeMeta((prev) => ({ ...prev, [deviceId]: data.employee }));
+      }
+    } finally {
+      setMetaSaving((prev) => ({ ...prev, [deviceId]: false }));
+    }
+  }
+
+  function buildMailto(deviceId: string) {
+    const meta = employeeMeta[deviceId] || {};
+    const email = (meta.email || "").trim();
+    if (!email) return "";
+    const tasksRemaining = meta.tasksRemaining;
+    const isDone = tasksRemaining === 0;
+    const subject = isDone ? "工作完成确认" : "工作提醒";
+    const body = isDone ? emailTemplateDone : emailTemplateLazy;
+    return `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 
   async function saveName(deviceId: string) {
     const nextName = (nameEdits[deviceId] ?? "").trim();
@@ -152,12 +209,15 @@ export default function ReportPage() {
           <thead>
             <tr>
               <th>{t(lang, "姓名", "Name")}</th>
+              <th>{t(lang, "电子邮件", "Email")}</th>
+              <th>{t(lang, "任务剩余", "Tasks Remaining")}</th>
               <th>{t(lang, "设备ID", "Device ID")}</th>
               <th>{t(lang, "状态", "Status")}</th>
               <th>{t(lang, "今日在线(h)", "Online Today (h)")}</th>
               <th>{t(lang, "偷懒", "Lazy")}</th>
               <th>{t(lang, "长离线", "Long Offline")}</th>
               <th>{t(lang, "最近在线", "Last Seen")}</th>
+              <th>{t(lang, "操作", "Actions")}</th>
             </tr>
           </thead>
           <tbody>
@@ -179,50 +239,48 @@ export default function ReportPage() {
               return (
                 <tr key={device.id}>
                   <td className="report-name-cell">
-                    {editingId === device.id ? (
-                      <div style={{ display: "grid", gap: 8 }}>
-                        <input
-                          className="settings-input report-name-input"
-                          value={nameEdits[device.id] ?? device.name ?? ""}
-                          onChange={(e) =>
-                            setNameEdits((prev) => ({ ...prev, [device.id]: e.target.value }))
-                          }
-                          placeholder={t(lang, "未命名", "Unnamed")}
-                          autoFocus
-                        />
-                        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                          <button
-                            className="button"
-                            type="button"
-                            onClick={async () => {
-                              await saveName(device.id);
-                              setEditingId(null);
-                            }}
-                            disabled={Boolean(nameSaving[device.id])}
-                          >
-                            {nameSaving[device.id]
-                              ? t(lang, "保存中...", "Saving...")
-                              : t(lang, "保存", "Save")}
-                          </button>
-                          <button
-                            className="ghost-button"
-                            type="button"
-                            onClick={() => {
-                              setEditingId(null);
-                              setNameEdits((prev) => ({
-                                ...prev,
-                                [device.id]: device.name ?? ""
-                              }));
-                            }}
-                          >
-                            {t(lang, "取消", "Cancel")}
-                          </button>
-                        </div>
-                      </div>
-                    ) : (
+                  {editingId === device.id ? (
+                    <div className="report-name-edit">
+                      <input
+                        className="settings-input report-name-input"
+                        value={nameEdits[device.id] ?? device.name ?? ""}
+                        onChange={(e) =>
+                          setNameEdits((prev) => ({ ...prev, [device.id]: e.target.value }))
+                        }
+                        placeholder={t(lang, "未命名", "Unnamed")}
+                        autoFocus
+                      />
                       <button
+                        className="button report-button-sm"
                         type="button"
-                        className="ghost-button report-name-button"
+                        onClick={async () => {
+                          await saveName(device.id);
+                          setEditingId(null);
+                        }}
+                        disabled={Boolean(nameSaving[device.id])}
+                      >
+                        {nameSaving[device.id]
+                          ? t(lang, "保存中...", "Saving...")
+                          : t(lang, "保存", "Save")}
+                      </button>
+                      <button
+                        className="ghost-button report-button-sm"
+                        type="button"
+                        onClick={() => {
+                          setEditingId(null);
+                          setNameEdits((prev) => ({
+                            ...prev,
+                            [device.id]: device.name ?? ""
+                          }));
+                        }}
+                      >
+                        {t(lang, "取消", "Cancel")}
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      className="ghost-button report-name-button"
                         onClick={() => {
                           setNameEdits((prev) => ({ ...prev, [device.id]: device.name ?? "" }));
                           setEditingId(device.id);
@@ -232,12 +290,61 @@ export default function ReportPage() {
                       </button>
                     )}
                   </td>
+                  <td>
+                    <input
+                      className="settings-input report-email-input"
+                      type="email"
+                      value={emailEdits[device.id] ?? employeeMeta[device.id]?.email ?? ""}
+                      onChange={(e) =>
+                        setEmailEdits((prev) => ({ ...prev, [device.id]: e.target.value }))
+                      }
+                      placeholder={t(lang, "未填写", "Not set")}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      className="settings-input report-tasks-input"
+                      type="number"
+                      min={0}
+                      value={
+                        tasksEdits[device.id] ??
+                        (employeeMeta[device.id]?.tasksRemaining ?? "").toString()
+                      }
+                      onChange={(e) =>
+                        setTasksEdits((prev) => ({ ...prev, [device.id]: e.target.value }))
+                      }
+                      placeholder="0"
+                    />
+                  </td>
                   <td className="mono">{device.id}</td>
                   <td>{device.status === "online" ? t(lang, "在线", "Online") : t(lang, "离线", "Offline")}</td>
                   <td>{formatHours(device.onlineMsToday)}</td>
                   <td>{isLazy ? t(lang, "是", "Yes") : t(lang, "否", "No")}</td>
                   <td>{longOffline ? t(lang, "是", "Yes") : t(lang, "否", "No")}</td>
                   <td>{lastSeen}</td>
+                  <td>
+                    <div className="report-actions">
+                      <button
+                        className="button report-button-sm"
+                        type="button"
+                        onClick={() => saveEmployeeMeta(device.id)}
+                        disabled={Boolean(metaSaving[device.id])}
+                      >
+                        {metaSaving[device.id]
+                          ? t(lang, "保存中...", "Saving...")
+                          : t(lang, "保存", "Save")}
+                      </button>
+                      <a
+                        className="ghost-button report-button-sm"
+                        href={buildMailto(device.id)}
+                        onClick={(e) => {
+                          if (!buildMailto(device.id)) e.preventDefault();
+                        }}
+                      >
+                        {t(lang, "邮件", "Email")}
+                      </a>
+                    </div>
+                  </td>
                 </tr>
               );
             })}

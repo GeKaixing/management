@@ -22,6 +22,10 @@ export default function Settings() {
   const [aiHasKey, setAiHasKey] = useState(false);
   const [aiSaving, setAiSaving] = useState(false);
   const [aiStatus, setAiStatus] = useState<string | null>(null);
+  const [emailTemplateLazy, setEmailTemplateLazy] = useState("");
+  const [emailTemplateDone, setEmailTemplateDone] = useState("");
+  const [emailSaving, setEmailSaving] = useState(false);
+  const [emailStatus, setEmailStatus] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`${getServerUrl()}/settings/work-hours`)
@@ -55,6 +59,18 @@ export default function Settings() {
       })
       .catch(() => {
         setAiStatus(t(lang, "无法加载AI设置", "Failed to load AI settings"));
+      });
+  }, [lang]);
+
+  useEffect(() => {
+    fetch(`${getServerUrl()}/settings/email-templates`)
+      .then((res) => res.json())
+      .then((data) => {
+        setEmailTemplateLazy(String(data.emailTemplateLazy || ""));
+        setEmailTemplateDone(String(data.emailTemplateDone || ""));
+      })
+      .catch(() => {
+        setEmailStatus(t(lang, "无法加载邮件模板", "Failed to load email templates"));
       });
   }, [lang]);
 
@@ -144,6 +160,30 @@ export default function Settings() {
       setAiStatus(t(lang, "保存失败", "Save failed"));
     } finally {
       setAiSaving(false);
+    }
+  }
+
+  async function saveEmailTemplates() {
+    setEmailSaving(true);
+    setEmailStatus(null);
+    try {
+      const res = await fetch(`${getServerUrl()}/settings/email-templates`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          emailTemplateLazy: emailTemplateLazy.trim(),
+          emailTemplateDone: emailTemplateDone.trim()
+        })
+      });
+      if (!res.ok) {
+        setEmailStatus(t(lang, "保存失败", "Save failed"));
+      } else {
+        setEmailStatus(t(lang, "已保存", "Saved"));
+      }
+    } catch {
+      setEmailStatus(t(lang, "保存失败", "Save failed"));
+    } finally {
+      setEmailSaving(false);
     }
   }
 
@@ -269,6 +309,47 @@ export default function Settings() {
             {aiSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存AI Key", "Save AI Key")}
           </button>
           {aiStatus && <div className="status-text">{aiStatus}</div>}
+        </div>
+      </section>
+
+      <section className="card" style={{ marginTop: 24 }}>
+        <h3>{t(lang, "邮件模板", "Email Templates")}</h3>
+        <p className="mono">
+          {t(
+            lang,
+            "用于汇报页发送邮件的默认内容。",
+            "Default email content used by the report page."
+          )}
+        </p>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="emailTemplateLazy">
+            {t(lang, "偷懒提醒模板", "Lazy Reminder Template")}
+          </label>
+          <textarea
+            id="emailTemplateLazy"
+            className="settings-input settings-input--wide"
+            rows={3}
+            value={emailTemplateLazy}
+            onChange={(e) => setEmailTemplateLazy(e.target.value)}
+          />
+        </div>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="emailTemplateDone">
+            {t(lang, "完成表扬模板", "Completion Praise Template")}
+          </label>
+          <textarea
+            id="emailTemplateDone"
+            className="settings-input settings-input--wide"
+            rows={3}
+            value={emailTemplateDone}
+            onChange={(e) => setEmailTemplateDone(e.target.value)}
+          />
+        </div>
+        <div className="settings-actions">
+          <button className="button" type="button" onClick={saveEmailTemplates} disabled={emailSaving}>
+            {emailSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存设置", "Save Settings")}
+          </button>
+          {emailStatus && <div className="status-text">{emailStatus}</div>}
         </div>
       </section>
     </DashboardShell>
