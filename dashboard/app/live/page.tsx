@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import DashboardShell from "../components/DashboardShell";
 import { useLang, t } from "../../lib/i18n";
@@ -56,6 +56,12 @@ type ProcessSnapshot = {
   timestamp?: string;
 };
 
+type CameraLayout = {
+  scale: number;
+  offsetX: number;
+  offsetY: number;
+};
+
 export default function Live() {
   const { lang, setLang } = useLang();
   const [devices, setDevices] = useState<Device[]>([]);
@@ -64,11 +70,13 @@ export default function Live() {
   const [processSnapshots, setProcessSnapshots] = useState<ProcessSnapshot[]>([]);
   const [cameraOk, setCameraOk] = useState<Record<string, boolean>>({});
   const [screenOk, setScreenOk] = useState<Record<string, boolean>>({});
+  const [cameraLayout, setCameraLayout] = useState<Record<string, CameraLayout>>({});
   const [hideOfflineMedia, setHideOfflineMedia] = useState(true);
   const [tick, setTick] = useState(0);
   const [editState, setEditState] = useState<Record<string, { name: string; note: string }>>({});
   const [detailOpen, setDetailOpen] = useState<Record<string, boolean>>({});
   const [searchQuery, setSearchQuery] = useState("");
+  const cameraRefs = useRef<Record<string, HTMLImageElement | null>>({});
 
   const userNames: Record<string, string> = {
     "cam-001": "Monitored User"
@@ -168,6 +176,37 @@ export default function Live() {
       });
       return next;
     });
+  }, [devices]);
+
+  function updateCameraLayout(deviceId: string, img: HTMLImageElement | null) {
+    if (!img) return;
+    const parent = img.parentElement;
+    if (!parent) return;
+    const rect = parent.getBoundingClientRect();
+    const naturalW = img.naturalWidth || 0;
+    const naturalH = img.naturalHeight || 0;
+    if (!naturalW || !naturalH || !rect.width || !rect.height) return;
+
+    const scale = Math.min(rect.width / naturalW, rect.height / naturalH);
+    const renderW = naturalW * scale;
+    const renderH = naturalH * scale;
+    const offsetX = Math.max(0, (rect.width - renderW) / 2);
+    const offsetY = Math.max(0, (rect.height - renderH) / 2);
+
+    setCameraLayout((prev) => ({
+      ...prev,
+      [deviceId]: { scale, offsetX, offsetY }
+    }));
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      devices.forEach((device) => {
+        updateCameraLayout(device.id, cameraRefs.current[device.id]);
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [devices]);
 
   function summarize(events: InputEvent[]) {
@@ -476,7 +515,13 @@ export default function Live() {
                       borderRadius: 16,
                       display: hideMedia || cameraOk[device.id] === false ? "none" : "block"
                     }}
-                    onLoad={() => setCameraOk((prev) => ({ ...prev, [device.id]: true }))}
+                    ref={(el) => {
+                      cameraRefs.current[device.id] = el;
+                    }}
+                    onLoad={(e) => {
+                      setCameraOk((prev) => ({ ...prev, [device.id]: true }));
+                      updateCameraLayout(device.id, e.currentTarget);
+                    }}
                     onError={() => setCameraOk((prev) => ({ ...prev, [device.id]: false }))}
                   />
                   {device.cameraDetect?.boxes?.length ? (
@@ -489,10 +534,14 @@ export default function Live() {
                         })
                         .map((box, idx) => {
                         const [x1, y1, x2, y2] = box.box;
-                        const left = Math.max(0, x1);
-                        const top = Math.max(0, y1);
-                        const width = Math.max(0, x2 - x1);
-                        const height = Math.max(0, y2 - y1);
+                        const layout = cameraLayout[device.id];
+                        const scale = layout?.scale ?? 1;
+                        const offsetX = layout?.offsetX ?? 0;
+                        const offsetY = layout?.offsetY ?? 0;
+                        const left = Math.max(0, x1 * scale + offsetX);
+                        const top = Math.max(0, y1 * scale + offsetY);
+                        const width = Math.max(0, (x2 - x1) * scale);
+                        const height = Math.max(0, (y2 - y1) * scale);
                         return (
                           <div
                             key={`${box.label}-${idx}`}

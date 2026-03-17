@@ -1,0 +1,12 @@
+[
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 3675,
+      "count": 1
+    },
+    "timestamp": "2026-03-17T17:14:37.914Z"
+  }
+]

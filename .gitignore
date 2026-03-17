@@ -3,4 +3,4 @@ node_modules/
 storage_data/tmp/
 dashboard/node_modules/
 dashboard/.next/
-storage_data
+storage_data/

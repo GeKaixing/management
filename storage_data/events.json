@@ -15,5 +15,70 @@
       "cameraTimestamp": "2026-03-17T16:54:36.641Z",
       "fps": 2
     }
+  },
+  {
+    "id": "253778c3-ab2b-4d08-af48-f7491be7cbe3",
+    "timestamp": "2026-03-17T17:10:21.910Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/253778c3-ab2b-4d08-af48-f7491be7cbe3-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:10:21.910Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 3053,
+      "detectConf": 0.25,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "2a906664-55e0-4712-9b9e-aea2001e53e4",
+    "timestamp": "2026-03-17T17:11:57.308Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/2a906664-55e0-4712-9b9e-aea2001e53e4-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/2a906664-55e0-4712-9b9e-aea2001e53e4-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/2a906664-55e0-4712-9b9e-aea2001e53e4-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:11:42.284Z",
+      "offlineAt": "2026-03-17T17:11:57.308Z",
+      "screenTimestamp": "2026-03-17T17:11:42.233Z",
+      "cameraTimestamp": "2026-03-17T17:11:42.282Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "34d1e850-f373-4fb1-888b-0e7869469092",
+    "timestamp": "2026-03-17T17:14:38.607Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/34d1e850-f373-4fb1-888b-0e7869469092-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:14:38.607Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 866,
+      "detectConf": 0.25,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
   }
 ]
