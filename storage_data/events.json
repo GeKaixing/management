@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1cf6f895-10e3-47a2-811d-ed546f4c3fec",
+    "timestamp": "2026-03-17T16:54:55.496Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/1cf6f895-10e3-47a2-811d-ed546f4c3fec-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/1cf6f895-10e3-47a2-811d-ed546f4c3fec-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/1cf6f895-10e3-47a2-811d-ed546f4c3fec-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T16:54:36.644Z",
+      "offlineAt": "2026-03-17T16:54:55.495Z",
+      "screenTimestamp": "2026-03-17T16:54:35.690Z",
+      "cameraTimestamp": "2026-03-17T16:54:36.641Z",
+      "fps": 2
+    }
+  }
+]

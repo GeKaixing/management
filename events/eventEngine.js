@@ -58,9 +58,33 @@ function createEventEngine() {
     return event;
   }
 
+  async function handleBehavior({ deviceId, type, cameraBuffer, meta }) {
+    const id = randomUUID();
+    const timestamp = new Date().toISOString();
+
+    const cameraSnapshot = cameraBuffer
+      ? saveSnapshot(cameraBuffer, { eventId: `${id}-camera` })
+      : null;
+
+    const event = {
+      id,
+      timestamp,
+      deviceId,
+      type,
+      cameraSnapshot,
+      meta: meta || {}
+    };
+
+    appendEvent(event);
+    notify(event);
+
+    return event;
+  }
+
   return {
     handleFall,
-    handleDeviceOffline
+    handleDeviceOffline,
+    handleBehavior
   };
 }
 

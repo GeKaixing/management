@@ -1,0 +1,13 @@
+{
+  "name": "vision-service",
+  "private": true,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node node_service.js"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.24.3",
+    "sharp": "^0.33.5"
+  }
+}

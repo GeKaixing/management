@@ -23,6 +23,16 @@ type Device = {
   offlineAt?: string | null;
   offlineReason?: string | null;
   source?: string | null;
+  cameraDetect?: {
+    timestamp?: string;
+    personPresent?: boolean;
+    phonePresent?: boolean;
+    boxes?: { label: string; score: number; box: number[] }[];
+    inferenceMs?: number;
+    detectConf?: number;
+    offDuty?: boolean;
+    lazy?: boolean;
+  } | null;
 };
 
 type InputEvent = {
@@ -438,7 +448,7 @@ export default function Live() {
                   <h3>{t(lang, "摄像头", "Camera")}</h3>
                   <span className="mono">/camera/latest</span>
                 </div>
-                <div className="video-frame" style={{ padding: 0 }}>
+                <div className="video-frame detect-frame" style={{ padding: 0 }}>
                   {hideMedia && (
                     <div style={{ padding: 16, textAlign: "center" }}>
                       {t(lang, "设备离线", "Device offline")}
@@ -469,7 +479,48 @@ export default function Live() {
                     onLoad={() => setCameraOk((prev) => ({ ...prev, [device.id]: true }))}
                     onError={() => setCameraOk((prev) => ({ ...prev, [device.id]: false }))}
                   />
+                  {device.cameraDetect?.boxes?.length ? (
+                    <div className="detect-layer">
+                      {device.cameraDetect.boxes
+                        .filter((box) => box.label === "person" || box.label === "cell phone")
+                        .filter((box) => {
+                          const conf = Number(device.cameraDetect?.detectConf ?? 0);
+                          return Number.isFinite(conf) ? box.score >= conf : true;
+                        })
+                        .map((box, idx) => {
+                        const [x1, y1, x2, y2] = box.box;
+                        const left = Math.max(0, x1);
+                        const top = Math.max(0, y1);
+                        const width = Math.max(0, x2 - x1);
+                        const height = Math.max(0, y2 - y1);
+                        return (
+                          <div
+                            key={`${box.label}-${idx}`}
+                            className="detect-box"
+                            style={{
+                              left: `${left}px`,
+                              top: `${top}px`,
+                              width: `${width}px`,
+                              height: `${height}px`
+                            }}
+                          >
+                            <span>{box.label} {box.score}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : null}
                 </div>
+                {device.cameraDetect && (
+                  <div className="camera-detect">
+                    <span>{t(lang, "离岗", "Off duty")}: {device.cameraDetect.offDuty ? t(lang, "是", "Yes") : t(lang, "否", "No")}</span>
+                    <span>{t(lang, "玩手机", "Phone")}: {device.cameraDetect.phonePresent ? t(lang, "是", "Yes") : t(lang, "否", "No")}</span>
+                    <span>{t(lang, "偷懒", "Lazy")}: {device.cameraDetect.lazy ? t(lang, "是", "Yes") : t(lang, "否", "No")}</span>
+                    {Number(device.cameraDetect.inferenceMs) > 0 && (
+                      <span>{t(lang, "推理", "Inference")}: {device.cameraDetect.inferenceMs}ms</span>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 

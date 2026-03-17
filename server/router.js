@@ -17,6 +17,17 @@ const { addOnlineDuration, getOnlineDuration, toDateKey, startOfDay } = require(
 
 const screenFrames = new Map();
 const cameraFrames = new Map();
+const visionResults = new Map();
+const lastPersonSeen = new Map();
+const phoneSeenSince = new Map();
+const lastVisionState = new Map();
+const detectInFlight = new Set();
+const lastDetectAt = new Map();
+
+const DETECT_URL = process.env.DETECT_URL || "http://127.0.0.1:8010/detect";
+const DETECT_INTERVAL_MS = Number(process.env.DETECT_INTERVAL_MS || 2000);
+const OFF_DUTY_MS = Number(process.env.OFF_DUTY_MS || 60000);
+const PHONE_USE_MS = Number(process.env.PHONE_USE_MS || 15000);
 const router = express.Router();
 const devices = new Map();
 
@@ -140,12 +151,107 @@ function buildDeviceList(nowMs) {
         name: meta.name || device.name || null,
         note: meta.note || device.note || null,
         laze: computeDeviceLaze(id, inputEvents, nowMs),
+        cameraDetect: visionResults.get(id) || null,
         onlineMsToday,
         workHoursPerDay: requiredHours,
         lazyByWorkHours: requiredMs > 0 ? onlineMsToday < requiredMs : false
       };
     })
     .filter(Boolean);
+}
+
+function getDetectSettings() {
+  const settings = loadSettings();
+  const offDutyMs = Number(settings.offDutyMs || OFF_DUTY_MS);
+  const phoneUseMs = Number(settings.phoneUseMs || PHONE_USE_MS);
+  return {
+    offDutyMs: Number.isFinite(offDutyMs) ? offDutyMs : OFF_DUTY_MS,
+    phoneUseMs: Number.isFinite(phoneUseMs) ? phoneUseMs : PHONE_USE_MS
+  };
+}
+
+  async function updateVision(deviceId, data, cameraBuffer) {
+  const now = Date.now();
+  const { offDutyMs, phoneUseMs } = getDetectSettings();
+  const personPresent = Number(data.personCount || 0) > 0;
+  const phonePresent = Number(data.phoneCount || 0) > 0;
+  if (personPresent) {
+    lastPersonSeen.set(deviceId, now);
+  }
+  if (phonePresent) {
+    if (!phoneSeenSince.has(deviceId)) phoneSeenSince.set(deviceId, now);
+  } else {
+    phoneSeenSince.delete(deviceId);
+  }
+  const lastSeen = lastPersonSeen.get(deviceId) || null;
+  const offDuty = lastSeen ? now - lastSeen >= offDutyMs : !personPresent;
+  const phoneSince = phoneSeenSince.get(deviceId);
+  const phoneUse = Boolean(phoneSince && now - phoneSince >= phoneUseMs);
+  const lazy = phoneUse || offDuty;
+  const result = {
+    timestamp: new Date(now).toISOString(),
+    personPresent,
+    phonePresent,
+    phoneUse,
+    offDuty,
+    lazy,
+    personCount: Number(data.personCount || 0),
+    phoneCount: Number(data.phoneCount || 0),
+    boxes: Array.isArray(data.boxes) ? data.boxes : [],
+    inferenceMs: Number(data.inferenceMs || 0),
+    detectConf: Number(data.conf || 0)
+  };
+  visionResults.set(deviceId, result);
+  const prev = lastVisionState.get(deviceId) || {};
+  lastVisionState.set(deviceId, result);
+  try {
+    if (!prev.lazy && lazy) {
+      await eventEngine.handleBehavior({
+        deviceId,
+        type: "lazy",
+        cameraBuffer,
+        meta: {
+          ...result,
+          thresholds: { offDutyMs, phoneUseMs }
+        }
+      });
+    }
+  } catch {
+    // Ignore event write failures.
+  }
+  return result;
+}
+
+async function runDetect(deviceId, buffer) {
+  if (!DETECT_URL) return;
+  const now = Date.now();
+  const lastAt = lastDetectAt.get(deviceId) || 0;
+  if (now - lastAt < DETECT_INTERVAL_MS) return;
+  if (detectInFlight.has(deviceId)) return;
+  detectInFlight.add(deviceId);
+  lastDetectAt.set(deviceId, now);
+  try {
+    const settings = loadSettings();
+    const res = await fetchWithTimeout(
+      DETECT_URL,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          image_base64: buffer.toString("base64"),
+          conf: Number(settings.detectConf || 0.25),
+          iou: Number(settings.detectIou || 0.45)
+        })
+      },
+      5000
+    );
+    const data = await res.json().catch(() => ({}));
+    if (res.ok) await updateVision(deviceId, data, buffer);
+  } catch {
+    // Ignore detection failures.
+  } finally {
+    detectInFlight.delete(deviceId);
+  }
 }
 
 async function fetchWithTimeout(url, options, timeoutMs) {
@@ -430,6 +536,7 @@ router.post("/camera/frame", verifyDevice, (req, res) => {
   const buffer = Buffer.from(body.frameBase64, "base64");
   cameraFrames.set(body.deviceId, { buffer, timestamp: body.timestamp || new Date().toISOString() });
   touchDevice(body.deviceId, "camera");
+  runDetect(body.deviceId, buffer);
   res.json({ ok: true });
 });
 
@@ -442,6 +549,14 @@ router.get("/camera/latest", (req, res) => {
   res.setHeader("Content-Type", "image/jpeg");
   res.setHeader("Cache-Control", "no-store");
   res.end(record.buffer);
+});
+
+router.get("/camera/detect/latest", (req, res) => {
+  const deviceId = req.query.deviceId;
+  if (!deviceId) return res.status(400).json({ error: "missing deviceId" });
+  const record = visionResults.get(deviceId);
+  if (!record) return res.status(404).json({ error: "not found" });
+  res.json({ detection: record });
 });
 
 router.post("/audio/segment", verifyDevice, (req, res) => {
@@ -549,6 +664,57 @@ router.post("/settings/email-templates", (req, res) => {
     emailTemplateLazy: next.emailTemplateLazy || "",
     emailTemplateDone: next.emailTemplateDone || ""
   });
+});
+
+router.get("/settings/detect-thresholds", (req, res) => {
+  const settings = loadSettings();
+  res.json({
+    offDutySeconds: Math.round(Number(settings.offDutyMs || OFF_DUTY_MS) / 1000),
+    phoneUseSeconds: Math.round(Number(settings.phoneUseMs || PHONE_USE_MS) / 1000)
+  });
+});
+
+router.post("/settings/detect-thresholds", (req, res) => {
+  const body = req.body || {};
+  const offDutySeconds = Number(body.offDutySeconds);
+  const phoneUseSeconds = Number(body.phoneUseSeconds);
+  if (!Number.isFinite(offDutySeconds) || offDutySeconds < 5 || offDutySeconds > 3600) {
+    return res.status(400).json({ error: "invalid offDutySeconds" });
+  }
+  if (!Number.isFinite(phoneUseSeconds) || phoneUseSeconds < 1 || phoneUseSeconds > 3600) {
+    return res.status(400).json({ error: "invalid phoneUseSeconds" });
+  }
+  const next = updateSettings({
+    offDutyMs: Math.round(offDutySeconds * 1000),
+    phoneUseMs: Math.round(phoneUseSeconds * 1000)
+  });
+  return res.json({
+    ok: true,
+    offDutySeconds: Math.round(Number(next.offDutyMs || OFF_DUTY_MS) / 1000),
+    phoneUseSeconds: Math.round(Number(next.phoneUseMs || PHONE_USE_MS) / 1000)
+  });
+});
+
+router.get("/settings/detect-model", (req, res) => {
+  const settings = loadSettings();
+  res.json({
+    detectConf: Number(settings.detectConf || 0.25),
+    detectIou: Number(settings.detectIou || 0.45)
+  });
+});
+
+router.post("/settings/detect-model", (req, res) => {
+  const body = req.body || {};
+  const detectConf = Number(body.detectConf);
+  const detectIou = Number(body.detectIou);
+  if (!Number.isFinite(detectConf) || detectConf < 0.05 || detectConf > 0.95) {
+    return res.status(400).json({ error: "invalid detectConf" });
+  }
+  if (!Number.isFinite(detectIou) || detectIou < 0.1 || detectIou > 0.9) {
+    return res.status(400).json({ error: "invalid detectIou" });
+  }
+  const next = updateSettings({ detectConf, detectIou });
+  return res.json({ ok: true, detectConf: next.detectConf, detectIou: next.detectIou });
 });
 
 router.get("/employees", (req, res) => {

@@ -26,6 +26,14 @@ export default function Settings() {
   const [emailTemplateDone, setEmailTemplateDone] = useState("");
   const [emailSaving, setEmailSaving] = useState(false);
   const [emailStatus, setEmailStatus] = useState<string | null>(null);
+  const [offDutySeconds, setOffDutySeconds] = useState(60);
+  const [phoneUseSeconds, setPhoneUseSeconds] = useState(15);
+  const [detectSaving, setDetectSaving] = useState(false);
+  const [detectStatus, setDetectStatus] = useState<string | null>(null);
+  const [detectConf, setDetectConf] = useState(0.25);
+  const [detectIou, setDetectIou] = useState(0.45);
+  const [modelSaving, setModelSaving] = useState(false);
+  const [modelStatus, setModelStatus] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`${getServerUrl()}/settings/work-hours`)
@@ -71,6 +79,30 @@ export default function Settings() {
       })
       .catch(() => {
         setEmailStatus(t(lang, "无法加载邮件模板", "Failed to load email templates"));
+      });
+  }, [lang]);
+
+  useEffect(() => {
+    fetch(`${getServerUrl()}/settings/detect-thresholds`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (Number.isFinite(data.offDutySeconds)) setOffDutySeconds(Number(data.offDutySeconds));
+        if (Number.isFinite(data.phoneUseSeconds)) setPhoneUseSeconds(Number(data.phoneUseSeconds));
+      })
+      .catch(() => {
+        setDetectStatus(t(lang, "无法加载检测阈值", "Failed to load detection thresholds"));
+      });
+  }, [lang]);
+
+  useEffect(() => {
+    fetch(`${getServerUrl()}/settings/detect-model`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (Number.isFinite(data.detectConf)) setDetectConf(Number(data.detectConf));
+        if (Number.isFinite(data.detectIou)) setDetectIou(Number(data.detectIou));
+      })
+      .catch(() => {
+        setModelStatus(t(lang, "无法加载检测参数", "Failed to load detection params"));
       });
   }, [lang]);
 
@@ -184,6 +216,54 @@ export default function Settings() {
       setEmailStatus(t(lang, "保存失败", "Save failed"));
     } finally {
       setEmailSaving(false);
+    }
+  }
+
+  async function saveDetectThresholds() {
+    setDetectSaving(true);
+    setDetectStatus(null);
+    try {
+      const res = await fetch(`${getServerUrl()}/settings/detect-thresholds`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          offDutySeconds,
+          phoneUseSeconds
+        })
+      });
+      if (!res.ok) {
+        setDetectStatus(t(lang, "保存失败", "Save failed"));
+      } else {
+        setDetectStatus(t(lang, "已保存", "Saved"));
+      }
+    } catch {
+      setDetectStatus(t(lang, "保存失败", "Save failed"));
+    } finally {
+      setDetectSaving(false);
+    }
+  }
+
+  async function saveDetectModel() {
+    setModelSaving(true);
+    setModelStatus(null);
+    try {
+      const res = await fetch(`${getServerUrl()}/settings/detect-model`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          detectConf,
+          detectIou
+        })
+      });
+      if (!res.ok) {
+        setModelStatus(t(lang, "保存失败", "Save failed"));
+      } else {
+        setModelStatus(t(lang, "已保存", "Saved"));
+      }
+    } catch {
+      setModelStatus(t(lang, "保存失败", "Save failed"));
+    } finally {
+      setModelSaving(false);
     }
   }
 
@@ -350,6 +430,98 @@ export default function Settings() {
             {emailSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存设置", "Save Settings")}
           </button>
           {emailStatus && <div className="status-text">{emailStatus}</div>}
+        </div>
+      </section>
+
+      <section className="card" style={{ marginTop: 24 }}>
+        <h3>{t(lang, "检测阈值", "Detection Thresholds")}</h3>
+        <p className="mono">
+          {t(
+            lang,
+            "调整离岗/玩手机的判定时间（秒）。",
+            "Adjust off-duty and phone-use thresholds (seconds)."
+          )}
+        </p>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="offDutySeconds">
+            {t(lang, "离岗判定(秒)", "Off-duty (seconds)")}
+          </label>
+          <input
+            id="offDutySeconds"
+            className="settings-input"
+            type="number"
+            min={5}
+            max={3600}
+            value={offDutySeconds}
+            onChange={(e) => setOffDutySeconds(Number(e.target.value))}
+          />
+        </div>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="phoneUseSeconds">
+            {t(lang, "玩手机判定(秒)", "Phone use (seconds)")}
+          </label>
+          <input
+            id="phoneUseSeconds"
+            className="settings-input"
+            type="number"
+            min={1}
+            max={3600}
+            value={phoneUseSeconds}
+            onChange={(e) => setPhoneUseSeconds(Number(e.target.value))}
+          />
+        </div>
+        <div className="settings-actions">
+          <button className="button" type="button" onClick={saveDetectThresholds} disabled={detectSaving}>
+            {detectSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存设置", "Save Settings")}
+          </button>
+          {detectStatus && <div className="status-text">{detectStatus}</div>}
+        </div>
+      </section>
+
+      <section className="card" style={{ marginTop: 24 }}>
+        <h3>{t(lang, "检测模型参数", "Detection Model Params")}</h3>
+        <p className="mono">
+          {t(
+            lang,
+            "调整检测置信度与重叠阈值（IOU）。",
+            "Adjust detection confidence and IoU thresholds."
+          )}
+        </p>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="detectConf">
+            {t(lang, "置信度阈值", "Confidence")}
+          </label>
+          <input
+            id="detectConf"
+            className="settings-input"
+            type="number"
+            step="0.05"
+            min={0.05}
+            max={0.95}
+            value={detectConf}
+            onChange={(e) => setDetectConf(Number(e.target.value))}
+          />
+        </div>
+        <div className="settings-row">
+          <label className="settings-label" htmlFor="detectIou">
+            {t(lang, "IOU 阈值", "IoU")}
+          </label>
+          <input
+            id="detectIou"
+            className="settings-input"
+            type="number"
+            step="0.05"
+            min={0.1}
+            max={0.9}
+            value={detectIou}
+            onChange={(e) => setDetectIou(Number(e.target.value))}
+          />
+        </div>
+        <div className="settings-actions">
+          <button className="button" type="button" onClick={saveDetectModel} disabled={modelSaving}>
+            {modelSaving ? t(lang, "保存中...", "Saving...") : t(lang, "保存设置", "Save Settings")}
+          </button>
+          {modelStatus && <div className="status-text">{modelStatus}</div>}
         </div>
       </section>
     </DashboardShell>

@@ -7,6 +7,10 @@ const DEFAULT_SETTINGS = {
   hideOfflineMedia: true,
   emailTemplateLazy: "最近监测到你有些偷懒，请注意按时完成任务。",
   emailTemplateDone: "干得真棒了！任务已完成。",
+  offDutyMs: 60000,
+  phoneUseMs: 15000,
+  detectConf: 0.25,
+  detectIou: 0.45,
   aiProvider: "gemini",
   geminiApiKey: ""
 };

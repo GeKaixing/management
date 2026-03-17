@@ -345,7 +345,12 @@ nav a:hover {
 }
 
 .report-name-cell {
-  width: 220px;
+  width: 180px;
+}
+
+.report-table-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
 }
 
 .report-name-input {
@@ -368,14 +373,34 @@ nav a:hover {
 .report-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.report-actions-cell {
+  min-width: 140px;
 }
 
 .report-button-sm {
   padding: 6px 10px;
   font-size: 12px;
   white-space: nowrap;
+}
+
+.report-table th,
+.report-table td {
+  padding: 8px 6px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.report-table .settings-input {
+  padding: 6px 8px;
+  font-size: 12px;
+  height: 30px;
 }
 
 .report-email-input {
@@ -413,6 +438,51 @@ nav a:hover {
   place-items: center;
   font-weight: 600;
   display: grid;
+}
+
+.camera-detect {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #2e4b52;
+}
+
+.camera-detect span {
+  background: #e7f0f2;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.detect-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.detect-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.detect-box {
+  position: absolute;
+  border: 2px solid #2a7a85;
+  box-shadow: 0 0 0 1px #ffffff80;
+  border-radius: 6px;
+}
+
+.detect-box span {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  background: #2a7a85;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .device-card {

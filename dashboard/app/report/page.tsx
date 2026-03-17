@@ -21,6 +21,11 @@ type Device = {
   offlineAt?: string | null;
   offlineReason?: string | null;
   source?: string | null;
+  cameraDetect?: {
+    offDuty?: boolean;
+    phoneUse?: boolean;
+    lazy?: boolean;
+  } | null;
 };
 
 type EmployeeMeta = {
@@ -205,7 +210,8 @@ export default function ReportPage() {
         <div className="card-title">
           <h3>{t(lang, "员工今日状态", "Employee Status Today")}</h3>
         </div>
-        <table className="table report-table">
+        <div className="report-table-wrap">
+          <table className="table report-table">
           <thead>
             <tr>
               <th>{t(lang, "姓名", "Name")}</th>
@@ -216,6 +222,9 @@ export default function ReportPage() {
               <th>{t(lang, "今日在线(h)", "Online Today (h)")}</th>
               <th>{t(lang, "偷懒", "Lazy")}</th>
               <th>{t(lang, "长离线", "Long Offline")}</th>
+              <th>{t(lang, "离岗", "Off duty")}</th>
+              <th>{t(lang, "玩手机", "Phone")}</th>
+              <th>{t(lang, "摄像头偷懒", "Cam Lazy")}</th>
               <th>{t(lang, "最近在线", "Last Seen")}</th>
               <th>{t(lang, "操作", "Actions")}</th>
             </tr>
@@ -321,8 +330,29 @@ export default function ReportPage() {
                   <td>{formatHours(device.onlineMsToday)}</td>
                   <td>{isLazy ? t(lang, "是", "Yes") : t(lang, "否", "No")}</td>
                   <td>{longOffline ? t(lang, "是", "Yes") : t(lang, "否", "No")}</td>
-                  <td>{lastSeen}</td>
                   <td>
+                    {device.cameraDetect
+                      ? device.cameraDetect.offDuty
+                        ? t(lang, "是", "Yes")
+                        : t(lang, "否", "No")
+                      : "-"}
+                  </td>
+                  <td>
+                    {device.cameraDetect
+                      ? device.cameraDetect.phoneUse
+                        ? t(lang, "是", "Yes")
+                        : t(lang, "否", "No")
+                      : "-"}
+                  </td>
+                  <td>
+                    {device.cameraDetect
+                      ? device.cameraDetect.lazy
+                        ? t(lang, "是", "Yes")
+                        : t(lang, "否", "No")
+                      : "-"}
+                  </td>
+                  <td>{lastSeen}</td>
+                  <td className="report-actions-cell">
                     <div className="report-actions">
                       <button
                         className="button report-button-sm"
@@ -349,7 +379,8 @@ export default function ReportPage() {
               );
             })}
           </tbody>
-        </table>
+          </table>
+        </div>
       </section>
 
       <section className="card" style={{ marginTop: 24 }}>
