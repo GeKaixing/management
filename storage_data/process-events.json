@@ -2494,5 +2494,1253 @@
       }
     ],
     "timestamp": "2026-03-18T08:07:58.126Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 377,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 12
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:15:43.205Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 372,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "node",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:16:43.075Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 368,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:17:43.112Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 364,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:18:43.060Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 371,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:19:43.004Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 382,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 11
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 8
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:20:43.349Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 388,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 16
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:21:42.992Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 368,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 11
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:22:42.988Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 371,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 16
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:23:43.129Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 382,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 16
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:24:43.047Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 423,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 14
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:25:43.018Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 382,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 13
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:26:43.014Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 425,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 17
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 11
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:27:47.763Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 432,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 17
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 16
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:28:43.591Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 404,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 18
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:29:43.039Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 381,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 17
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 7
+      }
+    ],
+    "timestamp": "2026-03-18T08:30:43.060Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 380,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 11
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:31:43.753Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 386,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:32:43.184Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 412,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:33:43.199Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 415,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:34:43.115Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 409,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:35:43.080Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 410,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:36:43.162Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 372,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:37:43.140Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 411,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 12
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 6
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:38:54.304Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 370,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:40:54.313Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 351,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:41:54.293Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 364,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 10
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:43:05.197Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 366,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 11
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:44:05.288Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 352,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:45:05.371Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 358,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:46:05.326Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 380,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T08:47:05.447Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 417,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 15
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 10
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 7
+      },
+      {
+        "name": "/bin/zsh",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T08:47:25.674Z"
   }
 ]

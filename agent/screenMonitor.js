@@ -6,11 +6,26 @@ function startScreenMonitor({ deviceId, serverUrl, token, enabled, intervalMs = 
   let timer = null;
   let inFlight = false;
 
+  async function withTimeout(promise, ms) {
+    return new Promise((resolve, reject) => {
+      const timerId = setTimeout(() => reject(new Error("screen_capture_timeout")), ms);
+      promise
+        .then((value) => {
+          clearTimeout(timerId);
+          resolve(value);
+        })
+        .catch((err) => {
+          clearTimeout(timerId);
+          reject(err);
+        });
+    });
+  }
+
   async function sendFrame() {
     if (inFlight) return;
     inFlight = true;
     try {
-      const buffer = await screenshot({ format: "jpg" });
+      const buffer = await withTimeout(screenshot({ format: "jpg" }), 3000);
       const headers = { "Content-Type": "application/json" };
       if (token) headers["x-device-token"] = token;
 
@@ -25,6 +40,7 @@ function startScreenMonitor({ deviceId, serverUrl, token, enabled, intervalMs = 
         })
       });
     } catch (err) {
+      console.warn("screen capture failed:", err && err.message ? err.message : err);
       // Best-effort, ignore errors to keep capture loop alive.
     } finally {
       inFlight = false;

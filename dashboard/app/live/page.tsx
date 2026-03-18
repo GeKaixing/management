@@ -76,6 +76,7 @@ export default function Live() {
   const [editState, setEditState] = useState<Record<string, { name: string; note: string }>>({});
   const [detailOpen, setDetailOpen] = useState<Record<string, boolean>>({});
   const [searchQuery, setSearchQuery] = useState("");
+  const [inputBucketMs, setInputBucketMs] = useState(60 * 1000);
   const cameraRefs = useRef<Record<string, HTMLImageElement | null>>({});
 
   const userNames: Record<string, string> = {
@@ -117,7 +118,7 @@ export default function Live() {
   useEffect(() => {
     async function loadInputs() {
       try {
-        const res = await fetch(`${SERVER_URL}/input/events`);
+        const res = await fetch(`${SERVER_URL}/input/events?ts=${Date.now()}`, { cache: "no-store" });
         const data = await res.json();
         setInputEvents(Array.isArray(data.events) ? data.events : []);
       } catch {
@@ -178,6 +179,26 @@ export default function Live() {
     });
   }, [devices]);
 
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("live.inputBucketMs");
+      const parsed = saved ? Number(saved) : NaN;
+      if (Number.isFinite(parsed) && parsed >= 60 * 1000) {
+        setInputBucketMs(parsed);
+      }
+    } catch {
+      // Ignore storage errors.
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("live.inputBucketMs", String(inputBucketMs));
+    } catch {
+      // Ignore storage errors.
+    }
+  }, [inputBucketMs]);
+
   function updateCameraLayout(deviceId: string, img: HTMLImageElement | null) {
     if (!img) return;
     const parent = img.parentElement;
@@ -209,12 +230,17 @@ export default function Live() {
     return () => window.removeEventListener("resize", handleResize);
   }, [devices]);
 
-  function summarize(events: InputEvent[]) {
+  function summarize(events: InputEvent[], series: { values: number[] }, bucketMs: number) {
     if (events.length === 0) return t(lang, "无数据", "No data");
     const last = events[events.length - 1];
     const time = last.timestamp ? safeDateString(last.timestamp) : "unknown";
-    const count = events.length;
-    return `${count} events · last ${time}`;
+    const lastCount = series.values.length ? series.values[series.values.length - 1] : 0;
+    const minutes = Math.max(1, Math.round(bucketMs / 60000));
+    return t(
+      lang,
+      `每${minutes}分钟 ${lastCount} 次 · 最近 ${time}`,
+      `${lastCount} / ${minutes}min · last ${time}`
+    );
   }
 
   function formatHours(ms?: number) {
@@ -223,9 +249,10 @@ export default function Live() {
     return (safeMs / (60 * 60 * 1000)).toFixed(1);
   }
 
-  function buildSeries(events: { timestamp?: string }[], bucketMs = 5 * 60 * 1000, windowMs = 6 * 60 * 60 * 1000) {
+  function buildSeries(events: { timestamp?: string }[], bucketMs = 60 * 1000, windowMs = 60 * 60 * 1000) {
     const now = Date.now();
-    const start = now - windowMs;
+    const endBucket = Math.floor(now / bucketMs) * bucketMs;
+    const start = endBucket - windowMs + bucketMs;
 
     const buckets = new Map<number, number>();
 
@@ -258,11 +285,11 @@ export default function Live() {
     };
   }
 
-  function buildSeriesWithFallback(events: { timestamp?: string }[]) {
-    const primary = buildSeries(events, 5 * 60 * 1000, 60 * 60 * 1000);
+  function buildSeriesWithFallback(events: { timestamp?: string }[], bucketMs: number) {
+    const primary = buildSeries(events, bucketMs, 60 * 60 * 1000);
     const hasPoints = primary.values.some((v) => Number(v) > 0);
     if (hasPoints || events.length === 0) return primary;
-    return buildSeries(events, 5 * 60 * 1000, 6 * 60 * 60 * 1000);
+    return buildSeries(events, bucketMs, 6 * 60 * 60 * 1000);
   }
 
   async function refreshDevices() {
@@ -311,6 +338,18 @@ export default function Live() {
         <Link className="ghost-button" href="/settings">
           {t(lang, "设置工作时间", "Work Hours Settings")}
         </Link>
+        <div className="device-field" style={{ minWidth: 200 }}>
+          <label>{t(lang, "输入统计间隔", "Input Interval")}</label>
+          <select
+            className="device-input"
+            value={inputBucketMs}
+            onChange={(event) => setInputBucketMs(Number(event.target.value))}
+          >
+            <option value={60 * 1000}>{t(lang, "1 分钟", "1 min")}</option>
+            <option value={5 * 60 * 1000}>{t(lang, "5 分钟", "5 min")}</option>
+            <option value={10 * 60 * 1000}>{t(lang, "10 分钟", "10 min")}</option>
+          </select>
+        </div>
         <div className="device-field" style={{ marginLeft: "auto", minWidth: 220 }}>
           <label>{t(lang, "搜索名称", "Search name")}</label>
           <input
@@ -340,8 +379,8 @@ export default function Live() {
         const processKey = `${device.id}-process`;
         const maxProcessCount = processInfo?.top?.reduce((max, item) => Math.max(max, item.count || 0), 0) || 0;
 
-        const keyboardSeries = buildSeriesWithFallback(keyboardEvents);
-        const mouseSeries = buildSeriesWithFallback(mouseEvents);
+        const keyboardSeries = buildSeriesWithFallback(keyboardEvents, inputBucketMs);
+        const mouseSeries = buildSeriesWithFallback(mouseEvents, inputBucketMs);
 
         const onlineHours = formatHours(device.onlineMsToday);
         const requiredHours = device.workHoursPerDay ?? 8;
@@ -584,7 +623,7 @@ export default function Live() {
               <div className="input-row">
                 <div>
                   <strong>{t(lang, "键盘", "Keyboard")}</strong>
-                  <div className="mono">{summarize(keyboardEvents)}</div>
+                <div className="mono">{summarize(keyboardEvents, keyboardSeries, inputBucketMs)}</div>
                 </div>
               </div>
               <div className="input-detail">
@@ -594,7 +633,7 @@ export default function Live() {
               <div className="input-row">
                 <div>
                   <strong>{t(lang, "鼠标", "Mouse")}</strong>
-                  <div className="mono">{summarize(mouseEvents)}</div>
+                <div className="mono">{summarize(mouseEvents, mouseSeries, inputBucketMs)}</div>
                 </div>
               </div>
               <div className="input-detail">

@@ -346,5 +346,77 @@
       "cameraTimestamp": "2026-03-17T17:57:15.230Z",
       "fps": null
     }
+  },
+  {
+    "id": "6740fa4a-4d54-4406-a346-8766af8ccf34",
+    "timestamp": "2026-03-18T08:17:10.389Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/6740fa4a-4d54-4406-a346-8766af8ccf34-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-18T08:17:10.388Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 3235,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "127a19df-ff8a-4f6b-a534-b94b1b91421c",
+    "timestamp": "2026-03-18T08:19:36.005Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/127a19df-ff8a-4f6b-a534-b94b1b91421c-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-18T08:19:36.004Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 3813,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "0c92b4db-fe14-4cdf-990a-8f677fe9a2a3",
+    "timestamp": "2026-03-18T08:38:59.996Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/0c92b4db-fe14-4cdf-990a-8f677fe9a2a3-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-18T08:38:59.995Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 4013,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
   }
 ]
