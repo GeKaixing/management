@@ -141388,5 +141388,8011 @@
       "direction": 3
     },
     "timestamp": "2026-03-18T08:47:31Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 1
+    },
+    "timestamp": "2026-03-18T09:00:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 2
+    },
+    "timestamp": "2026-03-18T09:00:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 3
+    },
+    "timestamp": "2026-03-18T09:00:47Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1,
+      "x": 650,
+      "y": 431
+    },
+    "timestamp": "2026-03-18T09:00:48Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 2,
+      "x": 650,
+      "y": 431
+    },
+    "timestamp": "2026-03-18T09:00:48Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 4
+    },
+    "timestamp": "2026-03-18T09:00:48Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 5,
+      "x": 620,
+      "y": 448
+    },
+    "timestamp": "2026-03-18T09:00:49Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 6,
+      "x": 621,
+      "y": 448
+    },
+    "timestamp": "2026-03-18T09:00:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 3,
+      "x": 568,
+      "y": 454
+    },
+    "timestamp": "2026-03-18T09:00:49Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 4,
+      "x": 568,
+      "y": 454
+    },
+    "timestamp": "2026-03-18T09:00:49Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 7,
+      "x": 815,
+      "y": 61
+    },
+    "timestamp": "2026-03-18T09:00:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 5
+    },
+    "timestamp": "2026-03-18T09:00:49Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 8,
+      "x": 815,
+      "y": 61
+    },
+    "timestamp": "2026-03-18T09:00:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 9,
+      "x": 964,
+      "y": 53
+    },
+    "timestamp": "2026-03-18T09:00:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 10,
+      "x": 964,
+      "y": 53
+    },
+    "timestamp": "2026-03-18T09:00:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 11,
+      "x": 1171,
+      "y": 43
+    },
+    "timestamp": "2026-03-18T09:00:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 12,
+      "x": 1171,
+      "y": 43
+    },
+    "timestamp": "2026-03-18T09:00:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 23,
+      "x": 908,
+      "y": 256,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 13,
+      "x": 908,
+      "y": 256,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 14,
+      "x": 908,
+      "y": 256,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 15,
+      "x": 908,
+      "y": 256,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 16,
+      "x": 908,
+      "y": 256,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 17,
+      "x": 908,
+      "y": 256,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 18,
+      "x": 908,
+      "y": 256,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 32,
+      "x": 158,
+      "y": 361
+    },
+    "timestamp": "2026-03-18T09:00:55Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 31,
+      "x": 158,
+      "y": 361
+    },
+    "timestamp": "2026-03-18T09:00:55Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 19,
+      "x": 908,
+      "y": 256,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 50,
+      "x": 385,
+      "y": 396,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 62,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 33,
+      "x": 385,
+      "y": 396,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:55Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 34,
+      "x": 385,
+      "y": 396,
+      "amount": -5,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:55Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 35,
+      "x": 385,
+      "y": 396,
+      "amount": -13,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:55Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 36,
+      "x": 385,
+      "y": 396,
+      "amount": -20,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 37,
+      "x": 385,
+      "y": 396,
+      "amount": -25,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 38,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 20,
+      "x": 908,
+      "y": 256,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 63,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 73,
+      "x": 385,
+      "y": 396,
+      "amount": 15,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 79,
+      "x": 385,
+      "y": 396,
+      "amount": 13,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 89,
+      "x": 385,
+      "y": 396,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 64,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 21,
+      "x": 908,
+      "y": 256,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 113,
+      "x": 390,
+      "y": 420,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 127,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:59Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 112,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 114,
+      "x": 390,
+      "y": 420,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 115,
+      "x": 390,
+      "y": 420,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 116,
+      "x": 390,
+      "y": 420,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 22,
+      "x": 908,
+      "y": 256,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 24,
+      "x": 908,
+      "y": 256,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 25,
+      "x": 908,
+      "y": 256,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 26,
+      "x": 908,
+      "y": 256,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 27,
+      "x": 908,
+      "y": 256,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 28,
+      "x": 908,
+      "y": 256,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 129,
+      "x": 390,
+      "y": 420,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 130,
+      "x": 390,
+      "y": 420,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 131,
+      "x": 390,
+      "y": 420,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 134,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 135,
+      "x": 390,
+      "y": 420,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 136,
+      "x": 390,
+      "y": 420,
+      "amount": -33,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 138,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 139,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 140,
+      "x": 390,
+      "y": 420,
+      "amount": -33,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 141,
+      "x": 390,
+      "y": 420,
+      "amount": -36,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 142,
+      "x": 390,
+      "y": 420,
+      "amount": -35,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 143,
+      "x": 390,
+      "y": 420,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 144,
+      "x": 390,
+      "y": 420,
+      "amount": -29,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 7
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 198,
+      "x": 714,
+      "y": 733,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 199,
+      "x": 714,
+      "y": 733,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 200,
+      "x": 714,
+      "y": 733,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 201,
+      "x": 714,
+      "y": 733,
+      "amount": -11,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 210,
+      "x": 714,
+      "y": 733,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 213,
+      "x": 714,
+      "y": 733,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 233,
+      "x": 714,
+      "y": 733,
+      "amount": -16,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 241,
+      "x": 714,
+      "y": 733,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 250,
+      "x": 714,
+      "y": 733,
+      "amount": -31,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:06Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 254,
+      "x": 714,
+      "y": 733,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:06Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 177,
+      "x": 390,
+      "y": 420,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 29,
+      "x": 203,
+      "y": 358
+    },
+    "timestamp": "2026-03-18T09:00:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 256,
+      "x": 1347,
+      "y": 597
+    },
+    "timestamp": "2026-03-18T09:01:07Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 257,
+      "x": 1347,
+      "y": 597
+    },
+    "timestamp": "2026-03-18T09:01:07Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 30,
+      "x": 202,
+      "y": 358
+    },
+    "timestamp": "2026-03-18T09:00:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 258,
+      "x": 1357,
+      "y": 576
+    },
+    "timestamp": "2026-03-18T09:01:08Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 259,
+      "x": 1357,
+      "y": 576
+    },
+    "timestamp": "2026-03-18T09:01:08Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 39,
+      "x": 385,
+      "y": 396,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 40,
+      "x": 385,
+      "y": 396,
+      "amount": -39,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 260,
+      "x": 1353,
+      "y": 590
+    },
+    "timestamp": "2026-03-18T09:01:09Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 41,
+      "x": 385,
+      "y": 396,
+      "amount": -41,
+      "rotation": -4,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 261,
+      "x": 1353,
+      "y": 590
+    },
+    "timestamp": "2026-03-18T09:01:09Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 42,
+      "x": 385,
+      "y": 396,
+      "amount": -41,
+      "rotation": -4,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 262,
+      "x": 1355,
+      "y": 624
+    },
+    "timestamp": "2026-03-18T09:01:09Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 263,
+      "x": 1355,
+      "y": 624
+    },
+    "timestamp": "2026-03-18T09:01:09Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 43,
+      "x": 385,
+      "y": 396,
+      "amount": -40,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 44,
+      "x": 385,
+      "y": 396,
+      "amount": -39,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 8
+    },
+    "timestamp": "2026-03-18T09:01:10Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 45,
+      "x": 385,
+      "y": 396,
+      "amount": -42,
+      "rotation": -4,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 46,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 47,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "rawcode": 15,
+      "count": 9
+    },
+    "timestamp": "2026-03-18T09:01:11Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 48,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 49,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 51,
+      "x": 385,
+      "y": 396,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 52,
+      "x": 385,
+      "y": 396,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 53,
+      "x": 385,
+      "y": 396,
+      "amount": -14,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 264,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 265,
+      "x": 795,
+      "y": 479,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 54,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 282,
+      "x": 795,
+      "y": 479,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 305,
+      "x": 795,
+      "y": 479,
+      "amount": -58,
+      "rotation": -5,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 285,
+      "x": 795,
+      "y": 479,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 286,
+      "x": 795,
+      "y": 479,
+      "amount": 18,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 287,
+      "x": 795,
+      "y": 479,
+      "amount": 13,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 288,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 289,
+      "x": 795,
+      "y": 479,
+      "amount": 21,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 290,
+      "x": 795,
+      "y": 479,
+      "amount": 23,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 291,
+      "x": 795,
+      "y": 479,
+      "amount": 24,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 292,
+      "x": 795,
+      "y": 479,
+      "amount": 24,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 293,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 294,
+      "x": 795,
+      "y": 479,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 295,
+      "x": 795,
+      "y": 479,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 55,
+      "x": 385,
+      "y": 396,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 328,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 329,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 330,
+      "x": 795,
+      "y": 479,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 339,
+      "x": 795,
+      "y": 479,
+      "amount": 50,
+      "rotation": 5,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 361,
+      "x": 795,
+      "y": 479,
+      "amount": 41,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 10
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 370,
+      "x": 1365,
+      "y": 574
+    },
+    "timestamp": "2026-03-18T09:01:16Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 371,
+      "x": 1365,
+      "y": 574
+    },
+    "timestamp": "2026-03-18T09:01:16Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 317,
+      "x": 795,
+      "y": 479,
+      "amount": -31,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 56,
+      "x": 385,
+      "y": 396,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 372,
+      "x": 1421,
+      "y": 574
+    },
+    "timestamp": "2026-03-18T09:01:17Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 373,
+      "x": 1421,
+      "y": 574
+    },
+    "timestamp": "2026-03-18T09:01:17Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 57,
+      "x": 385,
+      "y": 396,
+      "amount": -19,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 374,
+      "x": 448,
+      "y": 215
+    },
+    "timestamp": "2026-03-18T09:01:19Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 375,
+      "x": 447,
+      "y": 215
+    },
+    "timestamp": "2026-03-18T09:01:19Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 58,
+      "x": 385,
+      "y": 396,
+      "amount": -19,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 59,
+      "x": 385,
+      "y": 396,
+      "amount": -19,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 60,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 61,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 65,
+      "x": 385,
+      "y": 396,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 376,
+      "x": 507,
+      "y": 182
+    },
+    "timestamp": "2026-03-18T09:01:20Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 66,
+      "x": 385,
+      "y": 396,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 377,
+      "x": 507,
+      "y": 182
+    },
+    "timestamp": "2026-03-18T09:01:20Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 67,
+      "x": 385,
+      "y": 396,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 68,
+      "x": 385,
+      "y": 396,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 69,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 70,
+      "x": 385,
+      "y": 396,
+      "amount": 14,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:56Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 71,
+      "x": 385,
+      "y": 396,
+      "amount": 15,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 72,
+      "x": 385,
+      "y": 396,
+      "amount": 15,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 74,
+      "x": 385,
+      "y": 396,
+      "amount": 15,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 75,
+      "x": 385,
+      "y": 396,
+      "amount": 15,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 76,
+      "x": 385,
+      "y": 396,
+      "amount": 16,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 77,
+      "x": 385,
+      "y": 396,
+      "amount": 16,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 78,
+      "x": 385,
+      "y": 396,
+      "amount": 14,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 80,
+      "x": 385,
+      "y": 396,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 81,
+      "x": 385,
+      "y": 396,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 82,
+      "x": 385,
+      "y": 396,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 83,
+      "x": 385,
+      "y": 396,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 84,
+      "x": 385,
+      "y": 396,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 85,
+      "x": 385,
+      "y": 396,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 86,
+      "x": 385,
+      "y": 396,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 87,
+      "x": 385,
+      "y": 396,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 88,
+      "x": 385,
+      "y": 396,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 90,
+      "x": 385,
+      "y": 396,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 91,
+      "x": 385,
+      "y": 396,
+      "amount": 5,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 92,
+      "x": 385,
+      "y": 396,
+      "amount": 4,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 93,
+      "x": 385,
+      "y": 396,
+      "amount": 4,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 15,
+      "rawcode": 15,
+      "count": 6
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 94,
+      "x": 385,
+      "y": 396,
+      "amount": 4,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 95,
+      "x": 385,
+      "y": 396,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 96,
+      "x": 385,
+      "y": 396,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 97,
+      "x": 385,
+      "y": 396,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 98,
+      "x": 385,
+      "y": 396,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 99,
+      "x": 385,
+      "y": 396,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 100,
+      "x": 385,
+      "y": 396,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 101,
+      "x": 385,
+      "y": 396,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 102,
+      "x": 385,
+      "y": 396,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 103,
+      "x": 385,
+      "y": 396,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 104,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 105,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 106,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 107,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 108,
+      "x": 385,
+      "y": 396,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 109,
+      "x": 385,
+      "y": 396,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 110,
+      "x": 385,
+      "y": 405
+    },
+    "timestamp": "2026-03-18T09:00:57Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 111,
+      "x": 385,
+      "y": 405
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 117,
+      "x": 390,
+      "y": 420,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 118,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 119,
+      "x": 390,
+      "y": 420,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 120,
+      "x": 390,
+      "y": 420,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 121,
+      "x": 390,
+      "y": 420,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 122,
+      "x": 390,
+      "y": 420,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 123,
+      "x": 390,
+      "y": 420,
+      "amount": 12,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 124,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:58Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 125,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:59Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 126,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:59Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 128,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:00:59Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 132,
+      "x": 390,
+      "y": 420,
+      "amount": -22,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 133,
+      "x": 390,
+      "y": 420,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 137,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 145,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 146,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 147,
+      "x": 390,
+      "y": 420,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 148,
+      "x": 390,
+      "y": 420,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 149,
+      "x": 390,
+      "y": 420,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 150,
+      "x": 390,
+      "y": 420,
+      "amount": -15,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 151,
+      "x": 390,
+      "y": 420,
+      "amount": -21,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 152,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 153,
+      "x": 390,
+      "y": 420,
+      "amount": -28,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 154,
+      "x": 390,
+      "y": 420,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 155,
+      "x": 390,
+      "y": 420,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 156,
+      "x": 390,
+      "y": 420,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 157,
+      "x": 390,
+      "y": 420,
+      "amount": -31,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 158,
+      "x": 390,
+      "y": 420,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 159,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 160,
+      "x": 390,
+      "y": 420,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 161,
+      "x": 390,
+      "y": 420,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 162,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 163,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:02Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 164,
+      "x": 390,
+      "y": 420,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 165,
+      "x": 390,
+      "y": 420,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 166,
+      "x": 390,
+      "y": 420,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 167,
+      "x": 390,
+      "y": 420,
+      "amount": -23,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 168,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 169,
+      "x": 390,
+      "y": 420,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 170,
+      "x": 390,
+      "y": 420,
+      "amount": -33,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 173,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 229,
+      "x": 714,
+      "y": 733,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 203,
+      "x": 714,
+      "y": 733,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 202,
+      "x": 714,
+      "y": 733,
+      "amount": -14,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 204,
+      "x": 714,
+      "y": 733,
+      "amount": -7,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 205,
+      "x": 714,
+      "y": 733,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 206,
+      "x": 714,
+      "y": 733,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 228,
+      "x": 714,
+      "y": 733,
+      "amount": -15,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 230,
+      "x": 714,
+      "y": 733,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 231,
+      "x": 714,
+      "y": 733,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 232,
+      "x": 714,
+      "y": 733,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 234,
+      "x": 714,
+      "y": 733,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 239,
+      "x": 714,
+      "y": 733,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 247,
+      "x": 714,
+      "y": 733,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:06Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 171,
+      "x": 390,
+      "y": 420,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 178,
+      "x": 390,
+      "y": 420,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:03Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 207,
+      "x": 714,
+      "y": 733,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 208,
+      "x": 714,
+      "y": 733,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 209,
+      "x": 714,
+      "y": 733,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 214,
+      "x": 714,
+      "y": 733,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 225,
+      "x": 714,
+      "y": 733,
+      "amount": -12,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 235,
+      "x": 714,
+      "y": 733,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:05Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 266,
+      "x": 795,
+      "y": 479,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 272,
+      "x": 795,
+      "y": 479,
+      "amount": 26,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 297,
+      "x": 795,
+      "y": 479,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 359,
+      "x": 795,
+      "y": 479,
+      "amount": 42,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 267,
+      "x": 795,
+      "y": 479,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 284,
+      "x": 795,
+      "y": 479,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:12Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 306,
+      "x": 795,
+      "y": 479,
+      "amount": -56,
+      "rotation": -5,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 312,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 320,
+      "x": 795,
+      "y": 479,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 324,
+      "x": 795,
+      "y": 479,
+      "amount": -35,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:13Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 378,
+      "x": 642,
+      "y": 698,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 379,
+      "x": 642,
+      "y": 698,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 382,
+      "x": 642,
+      "y": 698,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 394,
+      "x": 642,
+      "y": 698,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 384,
+      "x": 642,
+      "y": 698,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 385,
+      "x": 642,
+      "y": 698,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 397,
+      "x": 642,
+      "y": 698,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 331,
+      "x": 795,
+      "y": 479,
+      "amount": 4,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 338,
+      "x": 795,
+      "y": 479,
+      "amount": 48,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 341,
+      "x": 795,
+      "y": 479,
+      "amount": 49,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:14Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 343,
+      "x": 795,
+      "y": 479,
+      "amount": 49,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 398,
+      "x": 642,
+      "y": 698,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:38Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 346,
+      "x": 795,
+      "y": 479,
+      "amount": 41,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 350,
+      "x": 795,
+      "y": 479,
+      "amount": 4,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 358,
+      "x": 795,
+      "y": 479,
+      "amount": 40,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 369,
+      "x": 795,
+      "y": 479,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:15Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 380,
+      "x": 642,
+      "y": 698,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 381,
+      "x": 642,
+      "y": 698,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 383,
+      "x": 642,
+      "y": 698,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 386,
+      "x": 642,
+      "y": 698,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 387,
+      "x": 642,
+      "y": 698,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 388,
+      "x": 642,
+      "y": 698,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:35Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 389,
+      "x": 642,
+      "y": 698,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 11
+    },
+    "timestamp": "2026-03-18T09:01:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 390,
+      "x": 642,
+      "y": 698,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 391,
+      "x": 642,
+      "y": 698,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 392,
+      "x": 642,
+      "y": 698,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 399,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 401,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 402,
+      "x": 658,
+      "y": 592,
+      "amount": -12,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 404,
+      "x": 658,
+      "y": 592,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 407,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 408,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 409,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 410,
+      "x": 658,
+      "y": 592,
+      "amount": -31,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 411,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 412,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 393,
+      "x": 642,
+      "y": 698,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 423,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 429,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 445,
+      "x": 658,
+      "y": 592,
+      "amount": -5,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 452,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 455,
+      "x": 658,
+      "y": 592,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 478,
+      "x": 658,
+      "y": 592,
+      "amount": -28,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 486,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 505,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 512,
+      "x": 658,
+      "y": 592,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 526,
+      "x": 658,
+      "y": 592,
+      "amount": 31,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 528,
+      "x": 658,
+      "y": 592,
+      "amount": 29,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 424,
+      "x": 658,
+      "y": 592,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 395,
+      "x": 642,
+      "y": 698,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 574,
+      "x": 658,
+      "y": 592,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:47Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 578,
+      "x": 658,
+      "y": 592,
+      "amount": 1,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:47Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 588,
+      "x": 658,
+      "y": 592,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:47Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 593,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:47Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 548,
+      "x": 658,
+      "y": 592,
+      "amount": 44,
+      "rotation": 4,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 396,
+      "x": 642,
+      "y": 698,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 595,
+      "x": 658,
+      "y": 592,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 596,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 597,
+      "x": 658,
+      "y": 592,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 598,
+      "x": 658,
+      "y": 592,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 599,
+      "x": 658,
+      "y": 592,
+      "amount": 13,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 600,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 601,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 602,
+      "x": 658,
+      "y": 592,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 400,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 619,
+      "x": 658,
+      "y": 592,
+      "amount": -11,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 641,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 675,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 693,
+      "x": 658,
+      "y": 592,
+      "amount": -7,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 720,
+      "x": 658,
+      "y": 592,
+      "amount": 26,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 740,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 741,
+      "x": 658,
+      "y": 592,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 742,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 752,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 604,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 605,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 606,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 607,
+      "x": 658,
+      "y": 592,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 608,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:50Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 403,
+      "x": 658,
+      "y": 592,
+      "amount": -20,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 405,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 406,
+      "x": 658,
+      "y": 592,
+      "amount": -28,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 413,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 414,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 415,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 416,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 417,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 418,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 419,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 420,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 421,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 422,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 425,
+      "x": 658,
+      "y": 592,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 426,
+      "x": 658,
+      "y": 592,
+      "amount": -15,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 427,
+      "x": 658,
+      "y": 592,
+      "amount": -22,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 428,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 430,
+      "x": 658,
+      "y": 592,
+      "amount": -33,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 431,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 432,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 433,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 434,
+      "x": 658,
+      "y": 592,
+      "amount": -33,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 435,
+      "x": 658,
+      "y": 592,
+      "amount": -36,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 436,
+      "x": 658,
+      "y": 592,
+      "amount": -35,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 437,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 438,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 439,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 440,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 441,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 442,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 443,
+      "x": 658,
+      "y": 592,
+      "amount": -14,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 444,
+      "x": 658,
+      "y": 592,
+      "amount": -5,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 446,
+      "x": 658,
+      "y": 592,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 447,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 448,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 449,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 450,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 451,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 453,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 454,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 456,
+      "x": 658,
+      "y": 592,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 457,
+      "x": 658,
+      "y": 592,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 458,
+      "x": 658,
+      "y": 592,
+      "amount": -13,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 459,
+      "x": 658,
+      "y": 592,
+      "amount": -12,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 460,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 461,
+      "x": 658,
+      "y": 592,
+      "amount": -15,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 462,
+      "x": 658,
+      "y": 592,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 463,
+      "x": 658,
+      "y": 592,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 464,
+      "x": 658,
+      "y": 592,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 465,
+      "x": 658,
+      "y": 592,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 466,
+      "x": 658,
+      "y": 592,
+      "amount": -16,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 467,
+      "x": 658,
+      "y": 592,
+      "amount": -18,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 468,
+      "x": 658,
+      "y": 592,
+      "amount": -17,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 469,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 470,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 471,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 472,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 473,
+      "x": 658,
+      "y": 592,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 474,
+      "x": 658,
+      "y": 592,
+      "amount": -16,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 475,
+      "x": 658,
+      "y": 592,
+      "amount": -19,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 476,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 477,
+      "x": 658,
+      "y": 592,
+      "amount": -25,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:44Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 479,
+      "x": 658,
+      "y": 592,
+      "amount": -29,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 480,
+      "x": 658,
+      "y": 592,
+      "amount": -29,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 481,
+      "x": 658,
+      "y": 592,
+      "amount": -28,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 482,
+      "x": 658,
+      "y": 592,
+      "amount": -28,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 483,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 484,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 485,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 487,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 488,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 489,
+      "x": 658,
+      "y": 592,
+      "amount": -5,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 490,
+      "x": 658,
+      "y": 592,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 491,
+      "x": 658,
+      "y": 592,
+      "amount": -15,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 492,
+      "x": 658,
+      "y": 592,
+      "amount": -20,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 493,
+      "x": 658,
+      "y": 592,
+      "amount": -21,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 494,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 495,
+      "x": 658,
+      "y": 592,
+      "amount": -29,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 496,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 497,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 498,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 499,
+      "x": 658,
+      "y": 592,
+      "amount": -34,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 500,
+      "x": 658,
+      "y": 592,
+      "amount": -32,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 501,
+      "x": 658,
+      "y": 592,
+      "amount": -36,
+      "rotation": -3,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 502,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 503,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 504,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 506,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 507,
+      "x": 658,
+      "y": 592,
+      "amount": -7,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 508,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 509,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 510,
+      "x": 658,
+      "y": 592,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 511,
+      "x": 658,
+      "y": 592,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 513,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:45Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 514,
+      "x": 658,
+      "y": 592,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 515,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 516,
+      "x": 658,
+      "y": 592,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 517,
+      "x": 658,
+      "y": 592,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 518,
+      "x": 658,
+      "y": 592,
+      "amount": 16,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 519,
+      "x": 658,
+      "y": 592,
+      "amount": 20,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 520,
+      "x": 658,
+      "y": 592,
+      "amount": 19,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 521,
+      "x": 658,
+      "y": 592,
+      "amount": 19,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 522,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 523,
+      "x": 658,
+      "y": 592,
+      "amount": 26,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 524,
+      "x": 658,
+      "y": 592,
+      "amount": 29,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 525,
+      "x": 658,
+      "y": 592,
+      "amount": 31,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 527,
+      "x": 658,
+      "y": 592,
+      "amount": 30,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 529,
+      "x": 658,
+      "y": 592,
+      "amount": 34,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 530,
+      "x": 658,
+      "y": 592,
+      "amount": 32,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 531,
+      "x": 658,
+      "y": 592,
+      "amount": 30,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 532,
+      "x": 658,
+      "y": 592,
+      "amount": 27,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 533,
+      "x": 658,
+      "y": 592,
+      "amount": 24,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 542,
+      "x": 658,
+      "y": 592,
+      "amount": 20,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 567,
+      "x": 658,
+      "y": 592,
+      "amount": 29,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:46Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 744,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 652,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 653,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:51Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 678,
+      "x": 658,
+      "y": 592,
+      "amount": -54,
+      "rotation": -5,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 709,
+      "x": 658,
+      "y": 592,
+      "amount": 31,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:52Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 735,
+      "x": 658,
+      "y": 592,
+      "amount": 33,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:53Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 743,
+      "x": 658,
+      "y": 592,
+      "amount": -7,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 747,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 746,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 751,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:01:54Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 753,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 754,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 759,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 755,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 763,
+      "x": 658,
+      "y": 592,
+      "amount": -2,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 756,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 800,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 801,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 799,
+      "x": 658,
+      "y": 592,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 757,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 816,
+      "x": 658,
+      "y": 592,
+      "amount": -12,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:24Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 820,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:24Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 843,
+      "x": 658,
+      "y": 592,
+      "amount": -30,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:24Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 812,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:24Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 758,
+      "x": 658,
+      "y": 592,
+      "amount": -8,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 851,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:25Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 852,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:25Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 857,
+      "x": 658,
+      "y": 592,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:25Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 864,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:25Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 850,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:24Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 760,
+      "x": 658,
+      "y": 592,
+      "amount": -5,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 901,
+      "x": 658,
+      "y": 592,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:26Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 906,
+      "x": 658,
+      "y": 592,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:26Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 917,
+      "x": 658,
+      "y": 592,
+      "amount": 7,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:26Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 940,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:26Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 874,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:25Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 761,
+      "x": 658,
+      "y": 592,
+      "amount": -4,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 945,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:27Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 959,
+      "x": 658,
+      "y": 592,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:27Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 970,
+      "x": 658,
+      "y": 592,
+      "amount": 4,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:27Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 985,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:27Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1010,
+      "x": 658,
+      "y": 592,
+      "amount": -24,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:28Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1018,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:28Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 946,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:27Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 762,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1023,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1024,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1025,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1033,
+      "x": 658,
+      "y": 592,
+      "amount": -25,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1042,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1049,
+      "x": 658,
+      "y": 592,
+      "amount": -21,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:29Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1022,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:28Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 764,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1059,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1060,
+      "x": 658,
+      "y": 592,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1067,
+      "x": 658,
+      "y": 592,
+      "amount": -24,
+      "rotation": -2,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1081,
+      "x": 658,
+      "y": 592,
+      "amount": 30,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1082,
+      "x": 658,
+      "y": 592,
+      "amount": 35,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1083,
+      "x": 658,
+      "y": 592,
+      "amount": 36,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1090,
+      "x": 658,
+      "y": 592,
+      "amount": 32,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1095,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1061,
+      "x": 658,
+      "y": 592,
+      "amount": -6,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 765,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1110,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:31Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1131,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:31Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1152,
+      "x": 658,
+      "y": 592,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:31Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1163,
+      "x": 658,
+      "y": 592,
+      "amount": 13,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:32Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1166,
+      "x": 658,
+      "y": 592,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:32Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1177,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:32Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1194,
+      "x": 658,
+      "y": 592,
+      "amount": 9,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:32Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1202,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:32Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1206,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:33Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1101,
+      "x": 658,
+      "y": 592,
+      "amount": -55,
+      "rotation": -5,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:30Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 766,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:22Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1219,
+      "x": 658,
+      "y": 592,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:33Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1220,
+      "x": 658,
+      "y": 592,
+      "amount": -11,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:33Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1224,
+      "x": 658,
+      "y": 592,
+      "amount": -49,
+      "rotation": -4,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:33Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1229,
+      "x": 658,
+      "y": 592,
+      "amount": -54,
+      "rotation": -5,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:33Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 12
+    },
+    "timestamp": "2026-03-18T09:02:34Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 767,
+      "x": 658,
+      "y": 592,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1235,
+      "x": 1350,
+      "y": 594
+    },
+    "timestamp": "2026-03-18T09:02:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 1236,
+      "x": 1350,
+      "y": 594
+    },
+    "timestamp": "2026-03-18T09:02:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1237,
+      "x": 1366,
+      "y": 578
+    },
+    "timestamp": "2026-03-18T09:02:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 1238,
+      "x": 1366,
+      "y": 578
+    },
+    "timestamp": "2026-03-18T09:02:36Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 768,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 769,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 770,
+      "x": 658,
+      "y": 592,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1239,
+      "x": 1360,
+      "y": 606
+    },
+    "timestamp": "2026-03-18T09:02:38Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 1240,
+      "x": 1360,
+      "y": 606
+    },
+    "timestamp": "2026-03-18T09:02:38Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 771,
+      "x": 658,
+      "y": 592,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1241,
+      "x": 1358,
+      "y": 622
+    },
+    "timestamp": "2026-03-18T09:02:38Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mouseup",
+    "detail": {
+      "button": 0,
+      "clicks": 1242,
+      "x": 1358,
+      "y": 622
+    },
+    "timestamp": "2026-03-18T09:02:38Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 772,
+      "x": 658,
+      "y": 592,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 13
+    },
+    "timestamp": "2026-03-18T09:02:39Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 773,
+      "x": 658,
+      "y": 592,
+      "amount": 11,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 774,
+      "x": 658,
+      "y": 592,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1245,
+      "x": 824,
+      "y": 490,
+      "amount": 8,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1243,
+      "x": 824,
+      "y": 490,
+      "amount": 1,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1244,
+      "x": 824,
+      "y": 490,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1246,
+      "x": 824,
+      "y": 490,
+      "amount": 10,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1249,
+      "x": 824,
+      "y": 490,
+      "amount": 17,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 775,
+      "x": 658,
+      "y": 592,
+      "amount": 6,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1275,
+      "x": 824,
+      "y": 490,
+      "amount": 28,
+      "rotation": 2,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1281,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1282,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1283,
+      "x": 824,
+      "y": 490,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1284,
+      "x": 824,
+      "y": 490,
+      "amount": -3,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1256,
+      "x": 824,
+      "y": 490,
+      "amount": 35,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1257,
+      "x": 824,
+      "y": 490,
+      "amount": 39,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1258,
+      "x": 824,
+      "y": 490,
+      "amount": 37,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1259,
+      "x": 824,
+      "y": 490,
+      "amount": 35,
+      "rotation": 3,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1260,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1261,
+      "x": 824,
+      "y": 490,
+      "amount": 2,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1264,
+      "x": 824,
+      "y": 490,
+      "amount": 14,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:40Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 776,
+      "x": 658,
+      "y": 592,
+      "amount": 5,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1293,
+      "x": 824,
+      "y": 490,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1301,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1304,
+      "x": 824,
+      "y": 490,
+      "amount": -9,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1318,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1319,
+      "x": 824,
+      "y": 490,
+      "amount": -1,
+      "rotation": 0,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1320,
+      "x": 824,
+      "y": 490,
+      "amount": -3,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1322,
+      "x": 824,
+      "y": 490,
+      "amount": -7,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1334,
+      "x": 824,
+      "y": 490,
+      "amount": 0,
+      "rotation": 0,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:42Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "keyboard",
+    "action": "keydown",
+    "detail": {
+      "keycode": 48,
+      "rawcode": 48,
+      "count": 14
+    },
+    "timestamp": "2026-03-18T09:02:43Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 1286,
+      "x": 824,
+      "y": 490,
+      "amount": -10,
+      "rotation": -1,
+      "direction": 4
+    },
+    "timestamp": "2026-03-18T09:02:41Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "wheel",
+    "detail": {
+      "clicks": 777,
+      "x": 658,
+      "y": 592,
+      "amount": 3,
+      "rotation": 1,
+      "direction": 3
+    },
+    "timestamp": "2026-03-18T09:02:23Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "type": "mouse",
+    "action": "mousedown",
+    "detail": {
+      "button": 0,
+      "clicks": 1351,
+      "x": 1434,
+      "y": 578
+    },
+    "timestamp": "2026-03-18T09:02:44Z"
   }
 ]

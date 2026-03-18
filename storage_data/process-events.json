@@ -3742,5 +3742,122 @@
       }
     ],
     "timestamp": "2026-03-18T08:47:25.674Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 422,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 8
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper",
+        "count": 5
+      }
+    ],
+    "timestamp": "2026-03-18T09:00:44.198Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 380,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 8
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 7
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T09:01:44.479Z"
+  },
+  {
+    "deviceId": "cam-e3c384bafa",
+    "total": 377,
+    "top": [
+      {
+        "name": "(dscacheutil)",
+        "count": 20
+      },
+      {
+        "name": "/usr/sbin/distnoted",
+        "count": 18
+      },
+      {
+        "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "count": 15
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "count": 9
+      },
+      {
+        "name": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+        "count": 9
+      },
+      {
+        "name": "/usr/local/bin/node",
+        "count": 8
+      },
+      {
+        "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/146.0.7680.80/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "count": 6
+      },
+      {
+        "name": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared",
+        "count": 6
+      }
+    ],
+    "timestamp": "2026-03-18T09:02:44.474Z"
   }
 ]
