@@ -20,6 +20,7 @@ type Props = {
 
 export default function MiniLineChart({ labels, values }: Props) {
   const hasData = values.some((v) => Number(v) > 0);
+  const hasSeries = labels.length > 1 || values.length > 1;
 
   const data = {
     labels,
@@ -64,7 +65,7 @@ export default function MiniLineChart({ labels, values }: Props) {
 
   return (
     <div className="chart-canvas" style={{ minHeight: 140 }}>
-      {hasData ? <Line data={data} options={options} /> : <div className="chart-empty">暂无数据</div>}
+      {hasSeries ? <Line data={data} options={options} /> : <div className="chart-empty">暂无数据</div>}
     </div>
   );
 }

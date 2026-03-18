@@ -80,5 +80,271 @@
         "phoneUseMs": 15000
       }
     }
+  },
+  {
+    "id": "1d0d62be-1651-4d2e-b057-74b30a57ba34",
+    "timestamp": "2026-03-17T17:22:28.903Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/1d0d62be-1651-4d2e-b057-74b30a57ba34-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/1d0d62be-1651-4d2e-b057-74b30a57ba34-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/1d0d62be-1651-4d2e-b057-74b30a57ba34-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:22:11.418Z",
+      "offlineAt": "2026-03-17T17:22:28.903Z",
+      "screenTimestamp": "2026-03-17T17:22:11.187Z",
+      "cameraTimestamp": "2026-03-17T17:22:10.048Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "d039112d-adcb-44a6-8d24-da56f9837a9f",
+    "timestamp": "2026-03-17T17:28:42.249Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/d039112d-adcb-44a6-8d24-da56f9837a9f-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:28:42.249Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 1033,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "542e1773-2173-4e8d-bd2e-4c60611c8ead",
+    "timestamp": "2026-03-17T17:29:10.188Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/542e1773-2173-4e8d-bd2e-4c60611c8ead-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/542e1773-2173-4e8d-bd2e-4c60611c8ead-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/542e1773-2173-4e8d-bd2e-4c60611c8ead-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:28:51.940Z",
+      "offlineAt": "2026-03-17T17:29:10.187Z",
+      "screenTimestamp": "2026-03-17T17:28:48.529Z",
+      "cameraTimestamp": "2026-03-17T17:28:48.801Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "04d9f9ac-97b4-451f-9b29-8b6f082bad58",
+    "timestamp": "2026-03-17T17:31:25.197Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/04d9f9ac-97b4-451f-9b29-8b6f082bad58-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/04d9f9ac-97b4-451f-9b29-8b6f082bad58-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/04d9f9ac-97b4-451f-9b29-8b6f082bad58-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:31:09.907Z",
+      "offlineAt": "2026-03-17T17:31:25.197Z",
+      "screenTimestamp": "2026-03-17T17:31:09.889Z",
+      "cameraTimestamp": "2026-03-17T17:31:09.624Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "99976ab3-d438-4275-a3b3-17af8a0af9f3",
+    "timestamp": "2026-03-17T17:32:30.209Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/99976ab3-d438-4275-a3b3-17af8a0af9f3-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/99976ab3-d438-4275-a3b3-17af8a0af9f3-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/99976ab3-d438-4275-a3b3-17af8a0af9f3-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:32:12.656Z",
+      "offlineAt": "2026-03-17T17:32:30.209Z",
+      "screenTimestamp": "2026-03-17T17:32:12.190Z",
+      "cameraTimestamp": "2026-03-17T17:32:12.613Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "217dd963-18c0-4a5a-8035-064cbe611b21",
+    "timestamp": "2026-03-17T17:34:47.048Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/217dd963-18c0-4a5a-8035-064cbe611b21-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:34:47.048Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 902,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "5b99f9af-d723-4db6-bc8b-67ceca13c26b",
+    "timestamp": "2026-03-17T17:36:10.401Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/5b99f9af-d723-4db6-bc8b-67ceca13c26b-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/5b99f9af-d723-4db6-bc8b-67ceca13c26b-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/5b99f9af-d723-4db6-bc8b-67ceca13c26b-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:35:55.396Z",
+      "offlineAt": "2026-03-17T17:36:10.401Z",
+      "screenTimestamp": "2026-03-17T17:35:53.742Z",
+      "cameraTimestamp": "2026-03-17T17:35:55.393Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "5095b6ce-d975-4493-8d01-d9be3253ce35",
+    "timestamp": "2026-03-17T17:37:38.453Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/5095b6ce-d975-4493-8d01-d9be3253ce35-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:37:38.452Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 889,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "4b97f1b4-1fda-4ad9-8cbb-472fdaca7a99",
+    "timestamp": "2026-03-17T17:43:00.472Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/4b97f1b4-1fda-4ad9-8cbb-472fdaca7a99-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/4b97f1b4-1fda-4ad9-8cbb-472fdaca7a99-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/4b97f1b4-1fda-4ad9-8cbb-472fdaca7a99-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:42:45.261Z",
+      "offlineAt": "2026-03-17T17:43:00.472Z",
+      "screenTimestamp": "2026-03-17T17:42:44.460Z",
+      "cameraTimestamp": "2026-03-17T17:42:45.259Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "f3610c22-7d63-41b3-8f62-fbfe9a2ebb7e",
+    "timestamp": "2026-03-17T17:49:33.510Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/f3610c22-7d63-41b3-8f62-fbfe9a2ebb7e-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/f3610c22-7d63-41b3-8f62-fbfe9a2ebb7e-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/f3610c22-7d63-41b3-8f62-fbfe9a2ebb7e-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:49:13.839Z",
+      "offlineAt": "2026-03-17T17:49:33.510Z",
+      "screenTimestamp": "2026-03-17T17:49:11.059Z",
+      "cameraTimestamp": "2026-03-17T17:49:12.163Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "ae887a46-2d4f-48b1-a121-b2f74f0ee46d",
+    "timestamp": "2026-03-17T17:51:21.938Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "lazy",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/ae887a46-2d4f-48b1-a121-b2f74f0ee46d-camera.jpg",
+    "meta": {
+      "timestamp": "2026-03-17T17:51:21.938Z",
+      "personPresent": false,
+      "phonePresent": false,
+      "phoneUse": false,
+      "offDuty": true,
+      "lazy": true,
+      "personCount": 0,
+      "phoneCount": 0,
+      "boxes": [],
+      "inferenceMs": 1045,
+      "detectConf": 0.15,
+      "thresholds": {
+        "offDutyMs": 60000,
+        "phoneUseMs": 15000
+      }
+    }
+  },
+  {
+    "id": "6d62b302-d73f-4bc5-afb3-62f24334dd4f",
+    "timestamp": "2026-03-17T17:57:34.744Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/6d62b302-d73f-4bc5-afb3-62f24334dd4f-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/6d62b302-d73f-4bc5-afb3-62f24334dd4f-camera.jpg",
+    "video": "/Users/kaixingge/Desktop/management/storage_data/recordings/6d62b302-d73f-4bc5-afb3-62f24334dd4f-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-17T17:57:15.487Z",
+      "offlineAt": "2026-03-17T17:57:34.744Z",
+      "screenTimestamp": "2026-03-17T17:57:15.462Z",
+      "cameraTimestamp": "2026-03-17T17:57:15.230Z",
+      "fps": 2
+    }
+  },
+  {
+    "id": "affc897d-b9fa-4e12-b701-16a33778a663",
+    "timestamp": "2026-03-18T08:03:33.453Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/affc897d-b9fa-4e12-b701-16a33778a663-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/affc897d-b9fa-4e12-b701-16a33778a663-camera.jpg",
+    "video": null,
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-18T08:03:16.792Z",
+      "offlineAt": "2026-03-18T08:03:33.452Z",
+      "screenTimestamp": "2026-03-17T17:57:15.462Z",
+      "cameraTimestamp": "2026-03-17T17:57:15.230Z",
+      "fps": null
+    }
+  },
+  {
+    "id": "7dc6cebe-ab67-4865-8b4e-fcad5e131cbe",
+    "timestamp": "2026-03-18T08:05:08.481Z",
+    "deviceId": "cam-e3c384bafa",
+    "type": "device_offline",
+    "screenSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/7dc6cebe-ab67-4865-8b4e-fcad5e131cbe-screen.jpg",
+    "cameraSnapshot": "/Users/kaixingge/Desktop/management/storage_data/snapshots/7dc6cebe-ab67-4865-8b4e-fcad5e131cbe-camera.jpg",
+    "video": null,
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-18T08:04:49.388Z",
+      "offlineAt": "2026-03-18T08:05:08.481Z",
+      "screenTimestamp": "2026-03-17T17:57:15.462Z",
+      "cameraTimestamp": "2026-03-17T17:57:15.230Z",
+      "fps": null
+    }
   }
 ]

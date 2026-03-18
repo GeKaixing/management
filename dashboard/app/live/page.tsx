@@ -258,6 +258,13 @@ export default function Live() {
     };
   }
 
+  function buildSeriesWithFallback(events: { timestamp?: string }[]) {
+    const primary = buildSeries(events, 5 * 60 * 1000, 60 * 60 * 1000);
+    const hasPoints = primary.values.some((v) => Number(v) > 0);
+    if (hasPoints || events.length === 0) return primary;
+    return buildSeries(events, 5 * 60 * 1000, 6 * 60 * 60 * 1000);
+  }
+
   async function refreshDevices() {
     try {
       const res = await fetch(`${SERVER_URL}/devices`);
@@ -333,8 +340,8 @@ export default function Live() {
         const processKey = `${device.id}-process`;
         const maxProcessCount = processInfo?.top?.reduce((max, item) => Math.max(max, item.count || 0), 0) || 0;
 
-        const keyboardSeries = buildSeries(keyboardEvents, 5 * 60 * 1000, 60 * 60 * 1000);
-        const mouseSeries = buildSeries(mouseEvents, 5 * 60 * 1000, 60 * 60 * 1000);
+        const keyboardSeries = buildSeriesWithFallback(keyboardEvents);
+        const mouseSeries = buildSeriesWithFallback(mouseEvents);
 
         const onlineHours = formatHours(device.onlineMsToday);
         const requiredHours = device.workHoursPerDay ?? 8;
