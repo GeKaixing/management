@@ -788,46 +788,15 @@ router.post("/settings/ai", (req, res) => {
   return res.json({ ok: true, provider: next.aiProvider, hasKey: Boolean(next.geminiApiKey) });
 });
 
+const { buildReportPayload, buildPrompt, buildFallbackSummary } = require("./aiSummary");
+
 async function generateAiSummary(devicesList) {
   const settings = loadSettings();
   const apiKey = settings.geminiApiKey;
   if (!apiKey) throw new Error("missing_api_key");
-  const now = new Date().toISOString();
-
-  const reportData = devicesList.map((device) => {
-    const lastTs = device.lastSeen
-      ? device.lastSeen
-      : device.offlineAt
-        ? Date.parse(device.offlineAt)
-        : null;
-    const longOffline = device.status === "offline" && (!lastTs || Date.now() - lastTs >= LONG_OFFLINE_MS);
-    return {
-      id: device.id,
-      name: device.name || null,
-      status: device.status || "offline",
-      onlineMsToday: Number(device.onlineMsToday || 0),
-      requiredHours: Number(device.workHoursPerDay || 0),
-      lazy: Boolean(device.laze || device.lazyByWorkHours),
-      longOffline
-    };
-  });
-
-  const payload = {
-    now,
-    total: reportData.length,
-    devices: reportData
-  };
-
-  const prompt = [
-    "You are an operations assistant. Provide a concise, factual summary in Chinese and English.",
-    "Rules:",
-    "- Only summarize the data given. Do NOT make HR decisions (no firing, promotion, workload changes).",
-    "- Highlight risks and trends without judgments.",
-    "- Output two sections: Chinese then English.",
-    "",
-    "DATA:",
-    JSON.stringify(payload)
-  ].join("\n");
+  const nowMs = Date.now();
+  const payload = buildReportPayload(devicesList, nowMs, LONG_OFFLINE_MS);
+  const prompt = buildPrompt(payload);
 
   let response;
   try {
@@ -844,28 +813,28 @@ async function generateAiSummary(devicesList) {
       AI_TIMEOUT_MS
     );
   } catch (err) {
-    if (err && err.name === "AbortError") {
-      throw new Error("timeout");
-    }
-    throw new Error("network_error");
+    const reason = err && err.name === "AbortError" ? "timeout" : "network_error";
+    return { text: buildFallbackSummary(payload), fallback: true, warning: reason };
   }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     const message = data?.error?.message || "gemini_error";
-    throw new Error(message);
+    return { text: buildFallbackSummary(payload), fallback: true, warning: message };
   }
 
   const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) throw new Error("empty_response");
-  return text;
+  if (!text) {
+    return { text: buildFallbackSummary(payload), fallback: true, warning: "empty_response" };
+  }
+  return { text, fallback: false, warning: null };
 }
 
 router.post("/report/ai-summary", async (req, res) => {
   const devicesList = buildDeviceList(Date.now());
   try {
-    const summary = await generateAiSummary(devicesList);
-    res.json({ ok: true, summary });
+    const result = await generateAiSummary(devicesList);
+    res.json({ ok: true, summary: result.text, fallback: result.fallback, warning: result.warning });
   } catch (err) {
     const message = err && err.message ? err.message : "ai_error";
     if (message === "missing_api_key") {

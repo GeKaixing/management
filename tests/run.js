@@ -13,6 +13,7 @@ global.assert = assert;
 require(path.join(__dirname, "ringBuffer.test.js"));
 require(path.join(__dirname, "fallDetector.test.js"));
 require(path.join(__dirname, "storageDb.test.js"));
+require(path.join(__dirname, "aiSummary.test.js"));
 
 async function run() {
   let failed = 0;
