@@ -418,5 +418,39 @@
         "phoneUseMs": 15000
       }
     }
+  },
+  {
+    "id": "b050e48d-bc96-47d3-a92c-4a89637f1d8d",
+    "timestamp": "2026-03-21T10:22:11.858Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": null,
+    "cameraSnapshot": null,
+    "video": null,
+    "meta": {
+      "reason": "uncaughtException",
+      "lastSeen": "2026-03-21T10:22:11.782Z",
+      "offlineAt": "2026-03-21T10:22:11.858Z",
+      "screenTimestamp": null,
+      "cameraTimestamp": null,
+      "fps": null
+    }
+  },
+  {
+    "id": "34acb03e-e924-4a40-aaf1-0260ceb545be",
+    "timestamp": "2026-03-21T11:26:12.462Z",
+    "deviceId": "cam-001",
+    "type": "device_offline",
+    "screenSnapshot": "/app/storage_data/snapshots/34acb03e-e924-4a40-aaf1-0260ceb545be-screen.jpg",
+    "cameraSnapshot": null,
+    "video": "/app/storage_data/recordings/34acb03e-e924-4a40-aaf1-0260ceb545be-stream.mp4",
+    "meta": {
+      "reason": "timeout",
+      "lastSeen": "2026-03-21T11:25:56.974Z",
+      "offlineAt": "2026-03-21T11:26:12.366Z",
+      "screenTimestamp": "2026-03-21T11:25:04.889Z",
+      "cameraTimestamp": null,
+      "fps": 2
+    }
   }
 ]

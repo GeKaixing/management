@@ -3859,5 +3859,1799 @@
       }
     ],
     "timestamp": "2026-03-18T09:02:44.474Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 328,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 11
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:24:28.682Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 327,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 11
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:25:28.644Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 331,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "powershell.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 11
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:26:29.889Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 326,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 11
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:27:28.513Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 331,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:28:29.680Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 334,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:29:28.589Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 334,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 11
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:30:28.578Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 327,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:31:28.611Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 341,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 38
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:32:29.729Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 328,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:33:29.518Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 324,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "chrome.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:34:28.689Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 329,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 90
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:35:28.768Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 336,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 90
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:36:28.719Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 329,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 89
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:37:28.850Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 331,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:38:28.826Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 334,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 17
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:39:28.856Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 330,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:40:28.781Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 326,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:41:28.807Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 328,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:42:28.661Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 331,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 31
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:43:28.731Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 336,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:44:28.636Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 337,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:45:28.853Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 332,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 10
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:46:28.744Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 335,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 32
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "powershell.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:47:28.628Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 370,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 37
+      },
+      {
+        "name": "git.exe",
+        "count": 30
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      }
+    ],
+    "timestamp": "2026-03-21T10:48:30.338Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 343,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 33
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:49:28.878Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 343,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 33
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:50:29.624Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 357,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 34
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "git.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      }
+    ],
+    "timestamp": "2026-03-21T10:51:29.238Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 345,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 34
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 12
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "git.exe",
+        "count": 9
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      }
+    ],
+    "timestamp": "2026-03-21T10:52:28.720Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 386,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 53
+      },
+      {
+        "name": "git.exe",
+        "count": 28
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "powershell.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      }
+    ],
+    "timestamp": "2026-03-21T10:54:24.153Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 342,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "powershell.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T10:55:28.930Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 423,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 65
+      },
+      {
+        "name": "git.exe",
+        "count": 47
+      },
+      {
+        "name": "powershell.exe",
+        "count": 17
+      },
+      {
+        "name": "chrome.exe",
+        "count": 15
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      }
+    ],
+    "timestamp": "2026-03-21T11:02:13.647Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 353,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 18
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:02:30.684Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 350,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 87
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 18
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:03:29.532Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 346,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 34
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:04:29.307Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 343,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 34
+      },
+      {
+        "name": "powershell.exe",
+        "count": 15
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:05:29.187Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 347,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 15
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "git.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:06:29.159Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 341,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 15
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:07:29.480Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 344,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:08:29.954Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 345,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 14
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:09:30.084Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 346,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 35
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:10:29.226Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 345,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 36
+      },
+      {
+        "name": "powershell.exe",
+        "count": 15
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:11:29.239Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 351,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 36
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:12:29.845Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 347,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 88
+      },
+      {
+        "name": "conhost.exe",
+        "count": 37
+      },
+      {
+        "name": "powershell.exe",
+        "count": 14
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:13:29.932Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 343,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 36
+      },
+      {
+        "name": "powershell.exe",
+        "count": 16
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:14:29.929Z"
+  },
+  {
+    "deviceId": "cam-001",
+    "total": 340,
+    "top": [
+      {
+        "name": "svchost.exe",
+        "count": 86
+      },
+      {
+        "name": "conhost.exe",
+        "count": 36
+      },
+      {
+        "name": "powershell.exe",
+        "count": 14
+      },
+      {
+        "name": "chrome.exe",
+        "count": 13
+      },
+      {
+        "name": "Codex.exe",
+        "count": 13
+      },
+      {
+        "name": "Code.exe",
+        "count": 11
+      },
+      {
+        "name": "RazerAppEngine.exe",
+        "count": 9
+      },
+      {
+        "name": "YoudaoDictHelper.exe",
+        "count": 8
+      }
+    ],
+    "timestamp": "2026-03-21T11:15:29.180Z"
   }
 ]

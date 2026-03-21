@@ -1,0 +1,32 @@
+﻿services:
+  db:
+    image: postgres:16-alpine
+    container_name: nocobase-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nocobase
+      POSTGRES_USER: nocobase
+      POSTGRES_PASSWORD: nocobase
+      TZ: Asia/Shanghai
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+
+  nocobase:
+    image: nocobase/nocobase:latest
+    container_name: nocobase-local
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:13000:80"
+    environment:
+      TZ: Asia/Shanghai
+      APP_KEY: change_this_to_a_long_random_secret_key_32_chars_min
+      DB_DIALECT: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: nocobase
+      DB_USER: nocobase
+      DB_PASSWORD: nocobase
+    volumes:
+      - ./storage:/app/nocobase/storage

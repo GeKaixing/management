@@ -10,9 +10,3 @@ storage_data/*
 *.run.log
 *.out.log
 *.err.log
-feishu-office/data/
-nocobase/db_data/
-outline/postgres/
-outline/redis/
-*/postgres/pgdata/
-*/postgres/base/

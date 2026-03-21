@@ -1,0 +1,12 @@
+{
+  "name": "feishu-office",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "docker compose up -d",
+    "stop": "docker compose down",
+    "logs": "docker compose logs -f affine",
+    "pull": "docker compose pull",
+    "open:zh": "powershell -NoProfile -ExecutionPolicy Bypass -File ./open-zh.ps1"
+  }
+}
