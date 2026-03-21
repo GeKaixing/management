@@ -1,18 +1,21 @@
+const { spawnSync } = require("child_process");
+
 function resolveFfmpegBin() {
   if (process.env.FFMPEG_PATH) return process.env.FFMPEG_PATH;
-
-  try {
-    // ffmpeg-static returns absolute binary path.
-    // eslint-disable-next-line global-require
-    const ffmpegStatic = require("ffmpeg-static");
-    if (ffmpegStatic) return ffmpegStatic;
-  } catch {
-    // ignore
-  }
-
   return "ffmpeg";
 }
 
+function canExecuteFfmpeg(binPath) {
+  const target = binPath || resolveFfmpegBin();
+  try {
+    const result = spawnSync(target, ["-version"], { stdio: "ignore" });
+    return !result.error;
+  } catch {
+    return false;
+  }
+}
+
 module.exports = {
-  resolveFfmpegBin
+  resolveFfmpegBin,
+  canExecuteFfmpeg
 };

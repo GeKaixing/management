@@ -46,7 +46,6 @@ if ($InstallMethod -eq "git" -and (Get-Command git -ErrorAction SilentlyContinue
 Set-Location $InstallDir
 
 & "C:\Program Files\nodejs\npm.cmd" install
-& "C:\Program Files\nodejs\npm.cmd" install ffmpeg-static
 
 $serverUrl = "http://$serverHost:3000"
 
@@ -54,16 +53,10 @@ $args = @("agent/cli.js", "start", "--server", $serverUrl)
 if ($deviceId) { $args += @("--device", $deviceId) }
 $args += $flags
 
-try {
-  $ffmpegPath = & node -e "process.stdout.write(require('ffmpeg-static') || '')" 2>$null
-} catch {
-  $ffmpegPath = ""
-}
-
-if ($ffmpegPath) {
-  Write-Host "Install complete. FFmpeg-static is available: $ffmpegPath"
+if (Get-Command ffmpeg -ErrorAction SilentlyContinue) {
+  Write-Host "Install complete. ffmpeg is available: $((Get-Command ffmpeg).Source)"
 } else {
-  Write-Warning "Install complete, but ffmpeg-static is not available."
+  Write-Warning "Install complete, but ffmpeg is not available in PATH."
 }
 
 node @args

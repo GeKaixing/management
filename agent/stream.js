@@ -65,6 +65,9 @@ function startStream(config) {
       console.error("ffmpeg exited with code", code);
     }
   });
+  ffmpeg.on("error", (err) => {
+    console.error("ffmpeg failed to start", err && err.message ? err.message : err);
+  });
 
   return ffmpeg;
 }

@@ -69,7 +69,6 @@ fi
 cd "$INSTALL_DIR"
 
 npm install
-npm install ffmpeg-static
 
 SERVER_URL="http://$SERVER_HOST:3000"
 
@@ -79,15 +78,10 @@ if [[ -n "$DEVICE_ID" ]]; then
 fi
 CMD+=("${FLAGS[@]}")
 
-FFMPEG_STATIC_PATH=""
-if node -e "require('ffmpeg-static')" >/dev/null 2>&1; then
-  FFMPEG_STATIC_PATH=$(node -e "process.stdout.write(require('ffmpeg-static') || '')")
-fi
-
-if [[ -n "$FFMPEG_STATIC_PATH" ]]; then
-  echo "Install complete. ffmpeg-static is available: $FFMPEG_STATIC_PATH"
+if command -v ffmpeg >/dev/null 2>&1; then
+  echo "Install complete. ffmpeg is available: $(command -v ffmpeg)"
 else
-  echo "Install complete, but ffmpeg-static is not available."
+  echo "Install complete, but ffmpeg is not available in PATH."
 fi
 
 "${CMD[@]}"

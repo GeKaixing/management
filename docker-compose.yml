@@ -1,0 +1,26 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.server
+    container_name: remote-camera-server
+    environment:
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./storage_data:/app/storage_data
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard
+    container_name: remote-camera-dashboard
+    depends_on:
+      - server
+    environment:
+      NEXT_PUBLIC_SERVER_URL: http://localhost:3000
+    ports:
+      - "3001:3001"
+    restart: unless-stopped

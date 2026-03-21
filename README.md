@@ -48,6 +48,42 @@ PowerShell tip (pass args through npm):
 npm run agent:start --% --device cam-001 --server http://localhost:3000 --screen --input --no-camera
 ```
 
+## Quick start (Docker)
+
+This project includes Docker support for the core server and dashboard.
+
+1. Build and start containers:
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+2. Open services:
+
+   - Server: `http://localhost:3000`
+   - Dashboard: `http://localhost:3001`
+
+3. View logs (optional):
+
+   ```bash
+   docker compose logs -f
+   ```
+
+4. Stop containers:
+
+   ```bash
+   docker compose down
+   ```
+
+Notes:
+- `storage_data` is mounted to the host (`./storage_data`) for persistence.
+- The CLI agent should run on the host machine (not in Docker), because it needs local screen/input/mic/camera access.
+- Example host agent command (connects to Dockerized server):
+
+  ```bash
+  node agent/cli.js start --device cam-001 --server http://localhost:3000 --screen --input --no-camera
+  ```
+
 Common flags:
 
 - `--screen` screen capture

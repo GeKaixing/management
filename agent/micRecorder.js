@@ -104,6 +104,9 @@ function startMicRecorder({
       console.error("ffmpeg mic recorder exited", code);
     }
   });
+  ffmpeg.on("error", (err) => {
+    console.error("ffmpeg mic recorder failed to start", err && err.message ? err.message : err);
+  });
 
   return {
     stop: () => {

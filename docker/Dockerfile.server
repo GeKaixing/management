@@ -1,0 +1,26 @@
+FROM node:20-bullseye-slim
+
+WORKDIR /app
+
+ARG APT_MIRROR=mirrors.tuna.tsinghua.edu.cn
+RUN echo "deb http://${APT_MIRROR}/debian bullseye main contrib non-free" > /etc/apt/sources.list \
+ && echo "deb http://${APT_MIRROR}/debian bullseye-updates main contrib non-free" >> /etc/apt/sources.list \
+ && echo "deb http://${APT_MIRROR}/debian-security bullseye-security main contrib non-free" >> /etc/apt/sources.list
+
+RUN apt-get update \
+ && apt-get install -y ffmpeg \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY package.json package-lock.json ./
+
+RUN npm config set registry https://registry.npmmirror.com \
+ && npm config delete proxy \
+ && npm config delete https-proxy \
+ && npm config set fetch-retry-maxtimeout 600000 \
+ && npm config set fetch-retry-mintimeout 20000 \
+ && npm config set fetch-retries 5 \
+ && npm ci
+
+COPY . .
+
+CMD ["npm", "run", "server"]

@@ -6,7 +6,7 @@
   return process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
 }
 
-export function setServerUrl(url) {
+export function setServerUrl(url: string) {
   if (typeof window !== "undefined") {
     window.localStorage.setItem("dashboard:serverUrl", url);
   }

@@ -7,7 +7,7 @@ const { startScreenMonitor } = require("./screenMonitor");
 const { startMicRecorder } = require("./micRecorder");
 const { startCameraFrameMonitor } = require("./cameraFrameMonitor");
 const { startProcessMonitor } = require("./processMonitor");
-const { resolveFfmpegBin } = require("../utils/ffmpeg");
+const { resolveFfmpegBin, canExecuteFfmpeg } = require("../utils/ffmpeg");
 const { ensureRtspServer } = require("./rtspServer");
 
 function getArgValue(args, name) {
@@ -230,6 +230,8 @@ async function main() {
 
   const config = resolveConfig(overrides);
   const ffmpegPath = resolveFfmpegPath(config);
+  const ffmpegAvailable = canExecuteFfmpeg(ffmpegPath);
+  config.ffmpegPath = ffmpegPath;
 
   const rtspServer = await ensureRtspServer({ config, disabled: noRtspServer });
 
@@ -242,17 +244,28 @@ async function main() {
     });
   }, 5000);
 
+  const cameraStreamEnabled = !noCamera && ffmpegAvailable;
   let cameraProc = null;
-  if (!noCamera) {
+  if (cameraStreamEnabled) {
     cameraProc = startCamera(config);
   } else {
-    console.log("Camera capture disabled (--no-camera).");
+    if (noCamera) {
+      console.log("Camera capture disabled (--no-camera).");
+    } else {
+      console.warn("FFmpeg not found. Camera stream disabled.");
+    }
   }
 
-  let micEnabled = Boolean(config.micMonitoring && config.micMonitoring.enabled);
-  if (micEnabled && !ffmpegPath) {
-    micEnabled = false;
+  const micConfigured = Boolean(config.micMonitoring && config.micMonitoring.enabled);
+  const micEnabled = micConfigured && ffmpegAvailable;
+  if (micConfigured && !ffmpegAvailable) {
     console.warn("FFmpeg not found. Microphone recording disabled.");
+  }
+
+  const cameraFramesConfigured = Boolean(config.cameraFrameMonitoring && config.cameraFrameMonitoring.enabled);
+  const cameraFramesEnabled = cameraFramesConfigured && ffmpegAvailable;
+  if (cameraFramesConfigured && !ffmpegAvailable) {
+    console.warn("FFmpeg not found. Camera frame capture disabled.");
   }
 
   const inputMonitor = startInputMonitor({
@@ -277,19 +290,19 @@ async function main() {
     format: config.micMonitoring && config.micMonitoring.format,
     input: config.micMonitoring && config.micMonitoring.input,
     bitrate: config.micMonitoring && config.micMonitoring.bitrate,
-    ffmpegPath: config.ffmpegPath
+    ffmpegPath: ffmpegPath
   });
   const cameraFrameMonitor = startCameraFrameMonitor({
     deviceId: config.deviceId,
     serverUrl: config.serverUrl,
     token,
-    enabled: config.cameraFrameMonitoring && config.cameraFrameMonitoring.enabled,
+    enabled: cameraFramesEnabled,
     intervalMs: config.cameraFrameMonitoring && config.cameraFrameMonitoring.intervalMs,
     format: config.camera && config.camera.format,
     input: config.camera && config.camera.input,
     fps: config.camera && config.camera.fps,
     resolution: config.camera && config.camera.resolution,
-    ffmpegPath: config.ffmpegPath
+    ffmpegPath: ffmpegPath
   });
   const processMonitor = startProcessMonitor({
     deviceId: config.deviceId,
@@ -302,9 +315,9 @@ async function main() {
     input: Boolean(config.inputMonitoring && config.inputMonitoring.enabled),
     screen: Boolean(config.screenMonitoring && config.screenMonitoring.enabled),
     mic: micEnabled,
-    cameraFrames: Boolean(config.cameraFrameMonitoring && config.cameraFrameMonitoring.enabled),
+    cameraFrames: cameraFramesEnabled,
     process: Boolean(config.processMonitoring && config.processMonitoring.enabled),
-    cameraStream: !noCamera
+    cameraStream: cameraStreamEnabled
   };
   console.log("Agent started with monitors:", enabledFlags);
   if (!enabledFlags.input && !enabledFlags.screen && !enabledFlags.mic && !enabledFlags.cameraFrames && !enabledFlags.cameraStream) {
