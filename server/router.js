@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { verifyDevice } = require("./auth");
+const controlPlaneRouter = require("./controlPlane/router");
 const { createEventEngine } = require("../events/eventEngine");
 const { createPipeline } = require("../stream/pipeline");
 const { loadEvents, getEvent } = require("../storage/db");
@@ -30,6 +31,7 @@ const OFF_DUTY_MS = Number(process.env.OFF_DUTY_MS || 60000);
 const PHONE_USE_MS = Number(process.env.PHONE_USE_MS || 15000);
 const router = express.Router();
 const devices = new Map();
+router.use("/control", controlPlaneRouter);
 
 const eventEngine = createEventEngine();
 const pipeline = createPipeline({ eventEngine, fps: 30, seconds: 10 });
@@ -40,6 +42,10 @@ const LAZE_BUCKET_MS = Number(process.env.LAZE_BUCKET_MS || 10 * 60 * 1000);
 const LAZE_WINDOW_MS = Number(process.env.LAZE_WINDOW_MS || 6 * 60 * 60 * 1000);
 const LONG_OFFLINE_MS = Number(process.env.LONG_OFFLINE_MS || 30 * 60 * 1000);
 const AI_TIMEOUT_MS = Number(process.env.AI_TIMEOUT_MS || 8000);
+const AI_MODELS = (process.env.GEMINI_MODELS || "gemini-2.5-flash,gemini-2.0-flash,gemini-1.5-flash")
+  .split(",")
+  .map((item) => item.trim())
+  .filter(Boolean);
 
 function updateEnvFile(filePath, updates) {
   const nextUpdates = updates || {};
@@ -798,36 +804,59 @@ async function generateAiSummary(devicesList) {
   const payload = buildReportPayload(devicesList, nowMs, LONG_OFFLINE_MS);
   const prompt = buildPrompt(payload);
 
-  let response;
-  try {
-    response = await fetchWithTimeout(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ role: "user", parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.2, maxOutputTokens: 512 }
-        })
-      },
-      AI_TIMEOUT_MS
-    );
-  } catch (err) {
-    const reason = err && err.name === "AbortError" ? "timeout" : "network_error";
-    return { text: buildFallbackSummary(payload), fallback: true, warning: reason };
+  const requestBody = JSON.stringify({
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    generationConfig: { temperature: 0.2, maxOutputTokens: 512 }
+  });
+
+  for (const model of AI_MODELS) {
+    let response;
+    try {
+      response = await fetchWithTimeout(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: requestBody
+        },
+        AI_TIMEOUT_MS
+      );
+    } catch (err) {
+      const reason = err && err.name === "AbortError" ? "timeout" : "network_error";
+      return { text: buildFallbackSummary(payload), fallback: true, warning: reason };
+    }
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const message = data?.error?.message || "gemini_error";
+      const status = Number(data?.error?.code || response.status || 0);
+      if (status === 404 || /not found|not supported/i.test(message)) {
+        continue;
+      }
+      if (status === 429 || /quota exceeded|rate limit|resource_exhausted/i.test(message)) {
+        continue;
+      }
+      return { text: buildFallbackSummary(payload), fallback: true, warning: message };
+    }
+
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!text) {
+      return { text: buildFallbackSummary(payload), fallback: true, warning: "empty_response" };
+    }
+    const normalized = String(text).trim();
+    const tooShort = normalized.length < 120;
+    const lacksDetails = !/员工|设备/.test(normalized);
+    if (tooShort || lacksDetails) {
+      return {
+        text: buildFallbackSummary(payload),
+        fallback: true,
+        warning: "model_output_too_short"
+      };
+    }
+    return { text: normalized, fallback: false, warning: null };
   }
 
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const message = data?.error?.message || "gemini_error";
-    return { text: buildFallbackSummary(payload), fallback: true, warning: message };
-  }
-
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) {
-    return { text: buildFallbackSummary(payload), fallback: true, warning: "empty_response" };
-  }
-  return { text, fallback: false, warning: null };
+  return { text: buildFallbackSummary(payload), fallback: true, warning: "no_supported_model" };
 }
 
 router.post("/report/ai-summary", async (req, res) => {

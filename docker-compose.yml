@@ -1,11 +1,28 @@
 services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: management-postgres
+    environment:
+      POSTGRES_DB: management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./storage_data/postgres:/var/lib/postgresql/data
+    restart: unless-stopped
+
   server:
     build:
       context: .
       dockerfile: docker/Dockerfile.server
     container_name: remote-camera-server
+    depends_on:
+      - postgres
     environment:
       PORT: 3000
+      PG_URL: postgres://postgres:postgres@postgres:5432/management
+      CONTROL_PLANE_REQUIRED: "true"
     ports:
       - "3000:3000"
     volumes:

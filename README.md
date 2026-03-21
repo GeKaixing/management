@@ -133,3 +133,21 @@ Both scripts prompt for:
 - events/: event engine and alerts
 - storage/: storage and database helpers
 - dashboard/: Next.js app (App Router, TS)
+- nocobase/: local NocoBase subproject
+- frappe-hr/: local Frappe HR subproject
+- outline/: local Outline knowledge base subproject
+
+## AI control plane (new)
+
+This repo now includes a PostgreSQL-based AI control plane for cross-subsystem management:
+
+- path: `server/controlPlane/`
+- docs: `docs/ai-control-plane.md`
+- base API: `/control/*`
+- tables: `cp_subsystems`, `cp_tasks`, `cp_audit_logs`
+
+Start with PostgreSQL:
+
+```bash
+docker compose up -d --build
+```

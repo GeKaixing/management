@@ -12,6 +12,7 @@ const navItems = [
   { href: "/", zh: "概览", en: "Overview" },
   { href: "/live", zh: "监控", en: "Monitor" },
   { href: "/report", zh: "汇报", en: "Report" },
+  { href: "/control", zh: "控制平面", en: "Control Plane" },
   { href: "/events", zh: "事件", en: "Events" },
   { href: "/docs", zh: "说明", en: "Docs" },
   { href: "/settings", zh: "设置", en: "Settings" }

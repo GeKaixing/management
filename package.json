@@ -8,6 +8,10 @@
     "agent": "node agent/cli.js",
     "agent:start": "node agent/cli.js start",
     "dashboard": "npm --prefix dashboard run dev",
+    "office": "npm --prefix feishu-office run start",
+    "office:stop": "npm --prefix feishu-office run stop",
+    "office:logs": "npm --prefix feishu-office run logs",
+    "office:zh": "npm --prefix feishu-office run open:zh",
     "test": "node tests/run.js"
   },
   "scriptsInfo": {
@@ -20,6 +24,7 @@
   "dependencies": {
     "express": "^4.22.1",
     "onnxruntime-web": "^1.24.3",
+    "pg": "^8.20.0",
     "screenshot-desktop": "^1.15.3",
     "sharp": "^0.34.5",
     "uiohook-napi": "^1.5.4",

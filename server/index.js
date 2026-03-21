@@ -1,6 +1,7 @@
 const http = require("http");
 const express = require("express");
 const router = require("./router");
+const { initControlPlaneDb } = require("./controlPlane/db");
 const { createSignalingServer } = require("../stream/signaling");
 
 const app = express();
@@ -20,6 +21,25 @@ const server = http.createServer(app);
 createSignalingServer(server);
 
 const port = Number(process.env.PORT || 3000);
-server.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+
+async function start() {
+  try {
+    await initControlPlaneDb();
+    console.log("Control plane database initialized.");
+  } catch (error) {
+    const required = String(process.env.CONTROL_PLANE_REQUIRED || "false").toLowerCase() === "true";
+    if (required) {
+      throw error;
+    }
+    console.warn("Control plane DB init failed, server will continue without control APIs:", error.message);
+  }
+
+  server.listen(port, () => {
+    console.log(`Server listening on http://localhost:${port}`);
+  });
+}
+
+start().catch((error) => {
+  console.error("Server bootstrap failed:", error);
+  process.exit(1);
 });
